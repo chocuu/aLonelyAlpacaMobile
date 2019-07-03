@@ -41,9 +41,12 @@ public class Map {
             bt = Block.BlockType.MOVEABLE;
         } else if (name.Contains("winblock")) {
             bt = Block.BlockType.WIN;
-        } else if (name.Contains("spinning") || name.Contains("arrow")) { //for final && tut level
+        } else if (name.Contains("spinning") || name.Contains("arrow") 
+                    || name.Contains("tut") || name.Contains("Bulk")) { //for final && tut level
             bt = Block.BlockType.NONE;
-        }
+        }// else { // for debugginggz
+        //     Debug.Log("wall block name: " + name);
+        // }
 
         Vector2Int xz;
 

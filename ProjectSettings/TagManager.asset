@@ -17,6 +17,7 @@ TagManager:
   - NonInteractable
   - WinBlockPos
   - WORLD
+  - SupportButton
   layers:
   - Default
   - TransparentFX

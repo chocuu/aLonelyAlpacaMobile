@@ -303,6 +303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511739304}
   - component: {fileID: 511739303}
+  - component: {fileID: 511739305}
   m_Layer: 0
   m_Name: AlpacaSprite
   m_TagString: Untagged
@@ -372,6 +373,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &511739305
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511739302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b197f5cc5d014a4a943f1c831ee9742, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &860469441
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,9 +591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d5a6dde41056e4a9dbff550a2eb760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alpacaSelector: {fileID: 511739302}
-  alpacaSpriteLeft: {fileID: 21300000, guid: 36fdf4fba69d937469b3575978426523, type: 3}
-  alpacaSpriteRight: {fileID: 21300000, guid: b4b3c2cc25772da498629da621f68f31, type: 3}
+  alpacaCursor: {fileID: 511739302}
+  alpacaCursorAnim: {fileID: 511739305}
   ImagePreviewUI: {fileID: 1637203265}
   LevelBannerUI: {fileID: 359099057}
   imagePreviewsArray:
@@ -979,7 +998,7 @@ RectTransform:
   m_GameObject: {fileID: 1736943522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.75, y: 1.75, z: 1}
+  m_LocalScale: {x: 1.8, y: 2.15, z: 1}
   m_Children: []
   m_Father: {fileID: 860469445}
   m_RootOrder: 2
@@ -1065,7 +1084,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e2919bbc4bbd0e488dde1a7ee0a901d, type: 3}
+  m_Sprite: {fileID: -8281502169804180851, guid: b3952ee47e7325149b59bd86e7c4c468,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1092,7 +1112,7 @@ Animator:
   m_GameObject: {fileID: 1736943522}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9d9301966b776324cb3110f29e0973f7, type: 2}
+  m_Controller: {fileID: 9100000, guid: af6edb45dd54e734e930472dfd5739e4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1128,13 +1148,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961824370}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.75, y: 1.75, z: 1}
+  m_LocalScale: {x: 1.8, y: 2.15, z: 1}
   m_Children: []
   m_Father: {fileID: 860469445}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -275, y: -125}
@@ -1216,7 +1236,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e2919bbc4bbd0e488dde1a7ee0a901d, type: 3}
+  m_Sprite: {fileID: 729190429526412507, guid: 4fbf20c5fb94e584a845fc8ba415b367, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1243,7 +1263,7 @@ Animator:
   m_GameObject: {fileID: 1961824370}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9d9301966b776324cb3110f29e0973f7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2ed09a7d25d81da40be84f6a617ce0a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

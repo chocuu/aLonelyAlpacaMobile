@@ -10,9 +10,8 @@ public class UpdateLevelSelectMenu : MonoBehaviour
     // Number of Levels
     public const int numberOfLevels = 26; 
     // Selector Gameobject dragged in from hierarchy
-    public GameObject alpacaSelector;
-    public Sprite alpacaSpriteLeft;
-    public Sprite alpacaSpriteRight;
+    public GameObject alpacaCursor;
+    public Animator alpacaCursorAnim;
     // UI elements from canvas that need to be updated
     public GameObject ImagePreviewUI;
     public GameObject LevelBannerUI;
@@ -80,8 +79,8 @@ public class UpdateLevelSelectMenu : MonoBehaviour
         }
 
         // Load components
-        alpacaPos = alpacaSelector.GetComponent<Transform>();
-        alpacaSR = alpacaSelector.GetComponent<SpriteRenderer>();
+        alpacaPos = alpacaCursor.GetComponent<Transform>();
+        alpacaSR = alpacaCursor.GetComponent<SpriteRenderer>();
         ImagePreviewImage = ImagePreviewUI.GetComponent<Image>();
         LevelBannerImage = LevelBannerUI.GetComponent<Image>();
         NextLevelImage = nextLevelButtArrow.GetComponent<Image>();
@@ -107,10 +106,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
     }
 
     private void flipAlpacaSprite(){
-        if(alpacaSR.sprite == alpacaSpriteLeft)
-            alpacaSR.sprite = alpacaSpriteRight;
-        else
-            alpacaSR.sprite = alpacaSpriteLeft;
+        alpacaCursorAnim.SetBool("is_facing_left", !(alpacaCursorAnim.GetBool("is_facing_left")));
     }
 
     public void NextLevelClicked() {

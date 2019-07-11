@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Arrow
+  m_Name: Alpaca Cursor Right
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,15 +20,15 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -3411083399960839334, guid: 124977b7058c29e4daf02466d50b61fc,
+      value: {fileID: 1566664024595160576, guid: cc77b2eba5afdcf47b81a20bb6469c60,
         type: 3}
     - time: 1
-      value: {fileID: -5537561729243851930, guid: 124977b7058c29e4daf02466d50b61fc,
+      value: {fileID: -4817798502198073516, guid: cc77b2eba5afdcf47b81a20bb6469c60,
         type: 3}
     attribute: m_Sprite
     path: 
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 1
   m_WrapMode: 0
   m_Bounds:
@@ -38,14 +38,14 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
-      attribute: 2015549526
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -3411083399960839334, guid: 124977b7058c29e4daf02466d50b61fc, type: 3}
-    - {fileID: -5537561729243851930, guid: 124977b7058c29e4daf02466d50b61fc, type: 3}
+    - {fileID: 1566664024595160576, guid: cc77b2eba5afdcf47b81a20bb6469c60, type: 3}
+    - {fileID: -4817798502198073516, guid: cc77b2eba5afdcf47b81a20bb6469c60, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

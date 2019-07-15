@@ -18,7 +18,7 @@ public class WorldScript : MonoBehaviour {
     public AudioSource winSound;
     public AudioSource jumpSound;
 	// Reference to the canvas's pan controller; used to switch controls if in pan mode
-	public PanButtonController pan_ctrlr;
+	private PanButtonController pan_ctrlr;
 	Map map;
 	Alpaca alpaca;
 	// used to highlight four quadrants
@@ -48,6 +48,7 @@ public class WorldScript : MonoBehaviour {
 		quadrants[3].enabled = false;
 
 		clickedWhere = lastClickedWhere = 2;
+		pan_ctrlr = GameObject.Find("Pan Butt").GetComponent<PanButtonController>();
 	}
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

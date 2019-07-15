@@ -5,6 +5,12 @@ using UnityEngine;
 public class Zoomer : MonoBehaviour {
 	/* The scene camera. */
 	public Camera cam; 
+	/* Transform of Pan Button, used to bring pan in at half zoom */
+	public PanButtonController pan_ctrlr;
+	private RectTransform panTransform;
+	/* Amount to shift pan transform when making it visible/invisible */
+	private Vector3 panPosInitial;
+	private Vector3 panPosFinal;
 	/* The size of a full-zoomed camera. */
 	private float ZOOM_AMNT_FULL;
 	/* The size of a zoomed camera at half-zoom. */
@@ -47,6 +53,9 @@ public class Zoomer : MonoBehaviour {
 		ZOOM_AMNT_NONE = cam.orthographicSize + zAmount_none;
 		zState = ZoomState.ZOOMED_FULL;
 		lerp_timer = 0;
+		if(pan_ctrlr != null) panTransform = pan_ctrlr.GetComponent<RectTransform>();
+		panPosInitial = new Vector3(-385, 40, 0);
+		panPosFinal = new Vector3(-385, -40, 0);
 	}
 
 	/* Player toggled camera, update the state. */
@@ -97,6 +106,9 @@ public class Zoomer : MonoBehaviour {
 				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_HALF)) {
 					zState = ZoomState.ZOOMED_HALF;
 				}
+				// Bring pan button down
+				if(panTransform != null)
+					panTransform.anchoredPosition = Vector3.Lerp(panTransform.anchoredPosition, panPosFinal, lerp_timer);
 				break;
 			case ZoomState.ZOOMING_OUT_H_N:
 				lerp_timer += ZOOM_SPEED * Time.deltaTime;
@@ -111,6 +123,10 @@ public class Zoomer : MonoBehaviour {
 				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_FULL)) {
 					zState = ZoomState.ZOOMED_FULL;
 				}
+				// Bring pan button back up, disable panning if it was on
+				if(panTransform != null)
+					pan_ctrlr.setIsPanning(false);
+					panTransform.anchoredPosition = Vector3.Lerp(panTransform.anchoredPosition, panPosInitial, lerp_timer);
 				break;	
 			case ZoomState.ZOOMED_FULL:
 				lerp_timer = 0;

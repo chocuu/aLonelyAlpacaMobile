@@ -17,6 +17,8 @@ public class WorldScript : MonoBehaviour {
 
     public AudioSource winSound;
     public AudioSource jumpSound;
+	// Reference to the canvas's pan controller; used to switch controls if in pan mode
+	public PanButtonController pan_ctrlr;
 	Map map;
 	Alpaca alpaca;
 	// used to highlight four quadrants
@@ -429,73 +431,87 @@ public class WorldScript : MonoBehaviour {
 
 	/**
 	 * Processes the input for this update. In charge of:
-	 * - Moving alpaca
-	 * - Picking up/setting down blocks
+	 * 
+	 * # GAME MODE
+	 *  - Moving alpaca
+	 * 	- Picking up/setting down blocks
+	 * # PANNING MODE
+	 *  - Panning, if in panning mode
 	 */
     void ProcessInput() {
-    	if(alpaca.IsDead()) {
-			death_timer -= Time.deltaTime;
-    		if(ClickedNow() && death_timer < 0) { // reset on click
-    			Debug.Log("reset on click");
-    			if(ClickedWhere() != -1)
-    				clickedWhere = ClickedWhere();
-    			SceneManager.LoadSceneAsync( SceneManager.GetActiveScene().name );
-    		}
-    		return;
-    	}
-
-    	// if in process of loading of holding/dropping a block,
-    	// don't process input
-    	if(get) {
-    		tilPickup += Time.deltaTime;
-    		if(tilPickup > 0.3f) { // timer reached, actually process
-				alpaca.StopWalk();
-				get = false;
-				if(control_scheme == 2) return;
-				AttemptPickUpOrPlaceBlock();
-				lastTimeClicked = 999;
+		if(pan_ctrlr!=null && !pan_ctrlr.getIsPanning() || pan_ctrlr==null) {
+		///// GAME MODE /////
+			if(alpaca.IsDead()) {
+				death_timer -= Time.deltaTime;
+				if(ClickedNow() && death_timer < 0) { // reset on click
+					Debug.Log("reset on click");
+					if(ClickedWhere() != -1)
+						clickedWhere = ClickedWhere();
+					SceneManager.LoadSceneAsync( SceneManager.GetActiveScene().name );
+				}
+				return;
 			}
-			return;
-    	}
 
-    	if(!ClickedNow() && didClick) { // click just ended
-    		if(control_scheme == 1) {
-    			clickPos = Input.mousePosition;
-    			clickedWhere = ClickedWhere();
-    			HighlightQuadrant();
-    			alpaca.SetFacingDirection(clickedWhere);
-    			alpaca.UpdateWalk();
-    		}
-    		if(lastTimeClicked < 100) { //did not pick up block
-    			MoveOnClick();
-    			map.LoadTryHoldBlock(new Vector3(0,0,0), false);
-    		}
-    		lastTimeClicked = 0;
-    		ClearHighlights();
-    		if(control_scheme == 0 || control_scheme == 2)
-    			alpaca.StopWalk();
-    		flag = true;
-    	} else if(ClickedNow()) { // click is happening
-    		if(control_scheme == 0 || control_scheme == 2) {
-	     		clickPos = Input.mousePosition;
-	    		clickedWhere = ClickedWhere();
-	    		HighlightQuadrant();
-    			alpaca.SetFacingDirection(clickedWhere);
-    			alpaca.UpdateWalk();
-    		}
-    		lastTimeClicked += Time.deltaTime;
-    		// attempt to pick up block after certain time
-    		if(flag && lastTimeClicked > 0.25f) { 
-    			LoadTryHoldBlock(true);
-    			flag = false;
-    			get = true;
-    			tilPickup = 0;
-    		}
-    	}
-    	HandleFrontBlockHighlight();
-	    if(control_scheme == 2)
-			UpdateBlockButt();
-    	didClick = ClickedNow();
+			// if in process of loading of holding/dropping a block,
+			// don't process input
+			if(get) {
+				tilPickup += Time.deltaTime;
+				if(tilPickup > 0.3f) { // timer reached, actually process
+					alpaca.StopWalk();
+					get = false;
+					if(control_scheme == 2) return;
+					AttemptPickUpOrPlaceBlock();
+					lastTimeClicked = 999;
+				}
+				return;
+			}
+
+			if(!ClickedNow() && didClick) { // click just ended
+				if(control_scheme == 1) {
+					clickPos = Input.mousePosition;
+					clickedWhere = ClickedWhere();
+					HighlightQuadrant();
+					alpaca.SetFacingDirection(clickedWhere);
+					alpaca.UpdateWalk();
+				}
+				if(lastTimeClicked < 100) { //did not pick up block
+					MoveOnClick();
+					map.LoadTryHoldBlock(new Vector3(0,0,0), false);
+				}
+				lastTimeClicked = 0;
+				ClearHighlights();
+				if(control_scheme == 0 || control_scheme == 2)
+					alpaca.StopWalk();
+				flag = true;
+			} else if(ClickedNow()) { // click is happening
+				if(control_scheme == 0 || control_scheme == 2) {
+					clickPos = Input.mousePosition;
+					clickedWhere = ClickedWhere();
+					HighlightQuadrant();
+					alpaca.SetFacingDirection(clickedWhere);
+					alpaca.UpdateWalk();
+				}
+				lastTimeClicked += Time.deltaTime;
+				// attempt to pick up block after certain time
+				if(flag && lastTimeClicked > 0.25f) { 
+					LoadTryHoldBlock(true);
+					flag = false;
+					get = true;
+					tilPickup = 0;
+				}
+			}
+			HandleFrontBlockHighlight();
+			if(control_scheme == 2)
+				UpdateBlockButt();
+			didClick = ClickedNow();
+		} else {
+		///// PANNING MODE /////
+			if(pan_ctrlr!=null && ClickedNow()) {
+				clickPos = Input.mousePosition;
+				clickedWhere = ClickedWhere();
+				pan_ctrlr.MoveCamera(clickedWhere);
+			}
+		}
 	}
 
 	/**

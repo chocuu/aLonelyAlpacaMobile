@@ -6,7 +6,7 @@ public class Zoomer : MonoBehaviour {
 	/* The scene camera. */
 	public Camera cam; 
 	/* Transform of Pan Button, used to bring pan in at half zoom */
-	public PanButtonController pan_ctrlr;
+	private PanButtonController pan_ctrlr;
 	private RectTransform panTransform;
 	/* Amount to shift pan transform when making it visible/invisible */
 	private Vector3 panPosInitial;
@@ -37,12 +37,10 @@ public class Zoomer : MonoBehaviour {
 
 	/* The current state of the zooming. */
 	private enum ZoomState {
-		ZOOMING_OUT_F_H, // full-zoom to half-zoom
-		ZOOMING_OUT_H_N, // half-zoom to no-zoom
-		ZOOMING_IN_N_F, // no-zoom to full-zoom
-		ZOOMED_FULL,
-		ZOOMED_HALF,
-		ZOOMED_NONE
+		ZOOMING_OUT,
+		ZOOMING_IN,
+		ZOOMED_IN,
+		ZOOMED_OUT
 	};
 	private ZoomState zState;
 	private float lerp_timer;
@@ -51,8 +49,9 @@ public class Zoomer : MonoBehaviour {
 		ZOOM_AMNT_FULL = cam.orthographicSize;
 		ZOOM_AMNT_HALF = cam.orthographicSize + zAmount_half;
 		ZOOM_AMNT_NONE = cam.orthographicSize + zAmount_none;
-		zState = ZoomState.ZOOMED_FULL;
+		zState = ZoomState.ZOOMED_IN;
 		lerp_timer = 0;
+		pan_ctrlr = GameObject.Find("Pan Butt").GetComponent<PanButtonController>();
 		if(pan_ctrlr != null) panTransform = pan_ctrlr.GetComponent<RectTransform>();
 		panPosInitial = new Vector3(-385, 40, 0);
 		panPosFinal = new Vector3(-385, -40, 0);
@@ -62,23 +61,17 @@ public class Zoomer : MonoBehaviour {
 	public void toggleZoom() {
 		lerp_timer = 0;
 		switch(zState) {
-			case ZoomState.ZOOMING_OUT_F_H:
-				zState = ZoomState.ZOOMING_OUT_H_N;
+			case ZoomState.ZOOMING_OUT:
+				zState = ZoomState.ZOOMING_IN;
 				break;
-			case ZoomState.ZOOMING_OUT_H_N:
-				zState = ZoomState.ZOOMING_IN_N_F;
+			case ZoomState.ZOOMING_IN:
+				zState = ZoomState.ZOOMING_OUT;
 				break;
-			case ZoomState.ZOOMING_IN_N_F:
-				zState = ZoomState.ZOOMING_OUT_F_H;
+			case ZoomState.ZOOMED_IN:
+				zState = ZoomState.ZOOMING_OUT;
 				break;
-			case ZoomState.ZOOMED_FULL:
-				zState = ZoomState.ZOOMING_OUT_F_H;
-				break;
-			case ZoomState.ZOOMED_HALF:
-				zState = ZoomState.ZOOMING_OUT_H_N;
-				break;
-			case ZoomState.ZOOMED_NONE:
-				zState = ZoomState.ZOOMING_IN_N_F;
+			case ZoomState.ZOOMED_OUT:
+				zState = ZoomState.ZOOMING_IN;
 				break;
 		}
 	}
@@ -100,41 +93,31 @@ public class Zoomer : MonoBehaviour {
 	/* Update the camera position and zoom state. */
 	void resolveZoom() {
 		switch(zState) {
-			case ZoomState.ZOOMING_OUT_F_H:
+			case ZoomState.ZOOMING_OUT:
 				lerp_timer += ZOOM_SPEED * Time.deltaTime;
 				moveCam(cam.orthographicSize, ZOOM_AMNT_HALF);
 				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_HALF)) {
-					zState = ZoomState.ZOOMED_HALF;
+					zState = ZoomState.ZOOMED_OUT;
 				}
 				// Bring pan button down
 				if(panTransform != null)
 					panTransform.anchoredPosition = Vector3.Lerp(panTransform.anchoredPosition, panPosFinal, lerp_timer);
 				break;
-			case ZoomState.ZOOMING_OUT_H_N:
-				lerp_timer += ZOOM_SPEED * Time.deltaTime;
-				moveCam(cam.orthographicSize, ZOOM_AMNT_NONE);
-				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_NONE)) {
-					zState = ZoomState.ZOOMED_NONE;
-				}
-				break;
-			case ZoomState.ZOOMING_IN_N_F:
+			case ZoomState.ZOOMING_IN:
 				lerp_timer += ZOOM_SPEED * Time.deltaTime;
 				moveCam(cam.orthographicSize, ZOOM_AMNT_FULL);
 				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_FULL)) {
-					zState = ZoomState.ZOOMED_FULL;
+					zState = ZoomState.ZOOMED_IN;
 				}
 				// Bring pan button back up, disable panning if it was on
 				if(panTransform != null)
 					pan_ctrlr.setIsPanning(false);
 					panTransform.anchoredPosition = Vector3.Lerp(panTransform.anchoredPosition, panPosInitial, lerp_timer);
 				break;	
-			case ZoomState.ZOOMED_FULL:
+			case ZoomState.ZOOMED_IN:
 				lerp_timer = 0;
 				break;
-			case ZoomState.ZOOMED_HALF:
-				lerp_timer = 0;
-				break;
-			case ZoomState.ZOOMED_NONE:
+			case ZoomState.ZOOMED_OUT:
 				lerp_timer = 0;
 				break;
 		};

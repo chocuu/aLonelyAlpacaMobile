@@ -19,7 +19,7 @@ public class IntroMoveAlpaca : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(moveIt){
-			Debug.Log(rt.position.y);
+			// Debug.Log(rt.position.y);
 			Vector3 temp = rt.position; 
 			if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
 				temp.y = stop_y;

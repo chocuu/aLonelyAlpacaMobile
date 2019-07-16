@@ -510,6 +510,7 @@ public class WorldScript : MonoBehaviour {
 			if(pan_ctrlr!=null && ClickedNow()) {
 				clickPos = Input.mousePosition;
 				clickedWhere = ClickedWhere();
+				HighlightQuadrant();
 				pan_ctrlr.MoveCamera(clickedWhere);
 			}
 		}

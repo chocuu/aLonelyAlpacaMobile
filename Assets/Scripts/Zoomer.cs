@@ -12,23 +12,19 @@ public class Zoomer : MonoBehaviour {
 	private Vector3 panPosInitial;
 	private Vector3 panPosFinal;
 	/* The size of a full-zoomed camera. */
-	private float ZOOM_AMNT_FULL;
+	private float ZOOM_IN_AMNT;
 	/* The size of a zoomed camera at half-zoom. */
-	private float ZOOM_AMNT_HALF;
-	/* The size of a zoomed camera at no-zoom. */
-	private float ZOOM_AMNT_NONE;
-	/* The increase to the camera size that produces half-zoom. */
+	private float ZOOM_OUT_AMNT;
+	/* The increase to the camera size that produces zoom-out. */
 	public float zAmount_half;
-	/* The increase to the camera size that produces no-zoom. */
-	public float zAmount_none;
 	/* How close the camera gets to the zoomed/non-zoomed thresholds. */
 	private const float ZOOM_CLOSENESS = 0.0005f;
 	/* The speed of the camera zoom. */
 	private float ZOOM_SPEED = 0.5f;
 
 	/* The background, which needs to get scaled. */
-	public GameObject background;
-	public GameObject background2;
+	private GameObject background;
+	private GameObject background2;
 	private float origBgScaleX;
 	private float origBgScaleY;
 
@@ -46,11 +42,13 @@ public class Zoomer : MonoBehaviour {
 	private float lerp_timer;
 
 	void Start () {
-		ZOOM_AMNT_FULL = cam.orthographicSize;
-		ZOOM_AMNT_HALF = cam.orthographicSize + zAmount_half;
-		ZOOM_AMNT_NONE = cam.orthographicSize + zAmount_none;
+		ZOOM_IN_AMNT
+ = cam.orthographicSize;
+		ZOOM_OUT_AMNT = cam.orthographicSize + zAmount_half;
 		zState = ZoomState.ZOOMED_IN;
 		lerp_timer = 0;
+		background = GameObject.Find("Background_mid_mtns");
+		background2 = GameObject.Find("Background_peaks");
 		pan_ctrlr = GameObject.Find("Pan Butt").GetComponent<PanButtonController>();
 		if(pan_ctrlr != null) panTransform = pan_ctrlr.GetComponent<RectTransform>();
 		panPosInitial = new Vector3(-385, 40, 0);
@@ -80,8 +78,8 @@ public class Zoomer : MonoBehaviour {
 	void moveCam(float start, float end) {
 		cam.orthographicSize = Mathf.Lerp(start, end, lerp_timer);
 		float scaleProp = 1 / cam.orthographicSize;
-		background.GetComponent<ScaleBackground>().Scale2(scaleProp);
-		background2.GetComponent<ScaleBackground>().Scale2(scaleProp);
+		if(background != null)background.GetComponent<ScaleBackground>().Scale2(scaleProp);
+		else background2.GetComponent<ScaleBackground>().Scale2(scaleProp);
 	}
 
 	/* The camera is close enough to its destination, so we can
@@ -95,8 +93,8 @@ public class Zoomer : MonoBehaviour {
 		switch(zState) {
 			case ZoomState.ZOOMING_OUT:
 				lerp_timer += ZOOM_SPEED * Time.deltaTime;
-				moveCam(cam.orthographicSize, ZOOM_AMNT_HALF);
-				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_HALF)) {
+				moveCam(cam.orthographicSize, ZOOM_OUT_AMNT);
+				if (camMoveDone(cam.orthographicSize, ZOOM_OUT_AMNT)) {
 					zState = ZoomState.ZOOMED_OUT;
 				}
 				// Bring pan button down
@@ -105,8 +103,10 @@ public class Zoomer : MonoBehaviour {
 				break;
 			case ZoomState.ZOOMING_IN:
 				lerp_timer += ZOOM_SPEED * Time.deltaTime;
-				moveCam(cam.orthographicSize, ZOOM_AMNT_FULL);
-				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_FULL)) {
+				moveCam(cam.orthographicSize, ZOOM_IN_AMNT
+		);
+				if (camMoveDone(cam.orthographicSize, ZOOM_IN_AMNT
+		)) {
 					zState = ZoomState.ZOOMED_IN;
 				}
 				// Bring pan button back up, disable panning if it was on

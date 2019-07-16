@@ -407,7 +407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  pan_ctrlr: {fileID: 4076274470766469484}
   zAmount_half: 2.5
   zAmount_none: 8
   background: {fileID: 0}
@@ -1146,7 +1145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2397130653f0533468974caa74f6e604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  camera: {fileID: 4334592071303468464, guid: a533d056255062444bd4e2c89de73606, type: 3}
 --- !u!1 &4076274471278912569
 GameObject:
   m_ObjectHideFlags: 0

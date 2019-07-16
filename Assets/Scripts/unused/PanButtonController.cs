@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PanButtonController : MonoBehaviour
 {
-    public GameObject camera;
     private Transform cameraTransform;
+    private FollowAlpaca follow_alpaca_script;
     private Vector3 moveX;
     private Vector3 moveZ;
     private bool isPanning;
@@ -14,7 +14,9 @@ public class PanButtonController : MonoBehaviour
         isPanning = false;
         moveX = new Vector3(1.0f, 0, 0);
         moveZ = new Vector3(0, 0, 1.0f);
-        cameraTransform = camera.GetComponent<Transform>();
+        GameObject camera_prefab = GameObject.FindWithTag("MainCamera");
+		cameraTransform = camera_prefab.GetComponent<Transform>();
+        follow_alpaca_script = camera_prefab.GetComponent<FollowAlpaca>();
     }
 
     /**
@@ -65,6 +67,6 @@ public class PanButtonController : MonoBehaviour
      */
     public void setIsPanning(bool set) {
         this.isPanning = set;
-        camera.GetComponent<FollowAlpaca>().enabled = !isPanning;
+        follow_alpaca_script.enabled = !isPanning;
     }
 }

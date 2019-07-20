@@ -42,7 +42,7 @@ public class WorldScript : MonoBehaviour {
 	 * 1 = hold anywhere to drop/pick up in facing direction
 	 * 2 = click icon to hold/drop
 	 */
-	private int control_scheme = 0;
+	private int control_scheme = 2;
 	private BlockButt blockButt;
 
 	// Use this for initialization
@@ -63,9 +63,9 @@ public class WorldScript : MonoBehaviour {
 		quadrant_2.GetComponent<RectTransform>().sizeDelta = quad_dim;
 		quadrant_3.GetComponent<RectTransform>().sizeDelta = quad_dim;
 
-		quadrants = new Image[4]{quadrant_0.GetComponent<Image>(), 
-										quadrant_1.GetComponent<Image>(), 
-										quadrant_2.GetComponent<Image>(), 
+		quadrants = new Image[4]{quadrant_0.GetComponent<Image>(),
+										quadrant_1.GetComponent<Image>(),
+										quadrant_2.GetComponent<Image>(),
 										quadrant_3.GetComponent<Image>()};
 		quadrants[0].enabled = false;
 		quadrants[1].enabled = false;
@@ -103,11 +103,11 @@ public class WorldScript : MonoBehaviour {
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = MODEL DECLARATION
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-	
+
 	/**
-	 * Adds a block to the map. Every block declares itself when its GridCoordinates 
+	 * Adds a block to the map. Every block declares itself when its GridCoordinates
 	 * object is initialized (Start() method).
-	 * 
+	 *
 	 * @param {name} Name of block
 	 * @param {last} Previous coordinate of block, if existed
 	 * @param {coords} Location of block
@@ -121,7 +121,7 @@ public class WorldScript : MonoBehaviour {
 
 	/**
 	 * Adds the alpaca model to world. Alpaca object declares itself in its constructor.
-	 * 
+	 *
 	 * @param {a} Alpaca
 	 */
 	public void AddAlpaca(Alpaca a) {
@@ -234,12 +234,12 @@ public class WorldScript : MonoBehaviour {
 				// 	}
 				// }
 				break;
-			case Block.BlockType.GRASS: 
+			case Block.BlockType.GRASS:
 			case Block.BlockType.MOVEABLE:
 				// do nothing
 				return;
 			default:
-				//Debug.Log("Alpaca is on a none block!");
+				//Debug.Log("Alpaca is on a none block! // Can occur @ beating level");
 				return;
 		}
 	}
@@ -307,7 +307,7 @@ public class WorldScript : MonoBehaviour {
 				}
 			}
 		}
-		
+
 		lastClickedWhere = clickedWhere;
     }
 
@@ -327,8 +327,15 @@ public class WorldScript : MonoBehaviour {
     	AttemptPickUpOrPlaceBlock();
     }
 
+    Block lastHighlightBlock = null; // used to unhighlight block in front
+
     void UpdateBlockButt() {
-    	if(blockButt == null) return;
+    	if(blockButt == null && control_scheme != 2) return;
+
+    	if(lastHighlightBlock != null) {
+    		lastHighlightBlock.Unhighlight();
+    		lastHighlightBlock = null;
+    	}
 
     	if(map.IsBlockHeld()) {
     		blockButt.SetColor(new Color(1, 1, 1, 1));
@@ -343,8 +350,11 @@ public class WorldScript : MonoBehaviour {
     		blockButt.SetColor(new Color(1, 1, 1, 0));
 			return;
     	}
-    	if(GetBlockAt(dest) != null && GetBlockAt(dest).b_type == Block.BlockType.MOVEABLE) {
-    		blockButt.SetColor(new Color(1, 1, 1, 0.5f));
+    	lastHighlightBlock = GetBlockAt(dest);
+    	// Is there a block in front of you?
+    	if(lastHighlightBlock != null && lastHighlightBlock.b_type == Block.BlockType.MOVEABLE) {
+    		lastHighlightBlock.Highlight();
+    		blockButt.SetColor(new Color(0.85f, 0.85f, 0.85f, 0.5f));
     	} else {
     		blockButt.SetColor(new Color(1, 1, 1, 0));
     	}
@@ -359,7 +369,7 @@ public class WorldScript : MonoBehaviour {
     	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
     	lastClickedWhere = clickedWhere;
     	// Is there a block above attempted block?
-    	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE) 
+    	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE)
 			return false;
     	bool temp = (map.TryHoldOrPlaceBlock(dest));
     	if(temp) {
@@ -381,7 +391,7 @@ public class WorldScript : MonoBehaviour {
     	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
     	lastClickedWhere = clickedWhere;
     	// Is there a moveable block above attempted block?
-    	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE) 
+    	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE)
 			return false;
     	bool temp = (map.LoadTryHoldBlock(dest, set));
     	return temp;
@@ -409,7 +419,7 @@ public class WorldScript : MonoBehaviour {
 
 	/**
 	 * Processes the input for this update. In charge of:
-	 * 
+	 *
 	 * # GAME MODE
 	 *  - Moving alpaca
 	 * 	- Picking up/setting down blocks
@@ -462,7 +472,7 @@ public class WorldScript : MonoBehaviour {
 					alpaca.StopWalk();
 				flag = true;
 			} else if(ClickedNow()) { // click is happening
-				if(control_scheme == 0) {
+				if(control_scheme == 0 || control_scheme == 2) {
 					clickPos = Input.mousePosition;
 					if(ClickedWhere() == -1)
 						return;
@@ -473,7 +483,7 @@ public class WorldScript : MonoBehaviour {
 				}
 				lastTimeClicked += Time.deltaTime;
 				// attempt to pick up block after certain time
-				if(flag && lastTimeClicked > 0.25f) { 
+				if(flag && lastTimeClicked > 0.25f) {
 					map.PreviewBlock(alpaca.GetCurrAlpacaDest(clickedWhere));
 					LoadTryHoldBlock(true);
 					flag = false;
@@ -505,8 +515,8 @@ public class WorldScript : MonoBehaviour {
 		eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 		List<RaycastResult> results = new List<RaycastResult>();
 		EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-		
-		return Input.GetMouseButton(0) && !(results.Count > 0) && end_timer == 0;	
+
+		return Input.GetMouseButton(0) && !(results.Count > 0) && end_timer == 0;
 	}
 
 	/**

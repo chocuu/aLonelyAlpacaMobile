@@ -143,7 +143,8 @@ public class Alpaca : MonoBehaviour {
     public Image deathImage; // death banner image
     public AudioSource deathSong; // death audio
 
-    int dir = 2; // direction alpaca is facing, set SetFacingDirection for more
+    public int dir = 2; // direction alpaca is facing, set SetFacingDirection for more
+    					// also used for block tutorial
 
     /**
      * View stuff for death (draw death banner & play death music & soften bg music)

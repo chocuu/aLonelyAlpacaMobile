@@ -29,7 +29,7 @@ public class WorldScript : MonoBehaviour {
 	 * 1 = hold anywhere to drop/pick up in facing direction
 	 * 2 = click icon to hold/drop
 	 */
-	private int control_scheme = 0;
+	private int control_scheme = 2;
 
 	// Use this for initialization
 	void Start () {
@@ -172,14 +172,14 @@ public class WorldScript : MonoBehaviour {
 						PlayerPrefs.SetInt("LevelPassed", level);
 					}
 					if(level < 26 && end_timer < 100f) {
-						Debug.Log("reset on end");
 						end_timer = 999f;
 						SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
 					}
 					else {
 						FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
-						final.BeatFinalLevel();
-						currBlock.b_type = Block.BlockType.NONE; // stop processing this block
+						if(final != null)
+							final.BeatFinalLevel();
+						currBlock.b_type = Block.BlockType.NONE; // stop processing this block so stop moving
 					}
 				}
 				break;
@@ -188,7 +188,7 @@ public class WorldScript : MonoBehaviour {
 				// do nothing
 				return;
 			default:
-				Debug.Log("Alpaca is on a none block!");
+				Debug.Log("Alpaca is on a none block! // Can occur @ beating level");
 				return;
 		}
 	}
@@ -304,8 +304,15 @@ public class WorldScript : MonoBehaviour {
     	AttemptPickUpOrPlaceBlock();
     }
 
+    Block lastHighlightBlock = null; // used to unhighlight block in front
+
     void UpdateBlockButt() {
-    	if(blockButt == null) return;
+    	if(blockButt == null && control_scheme != 2) return;
+
+    	if(lastHighlightBlock != null) {
+    		lastHighlightBlock.Unhighlight();
+    		lastHighlightBlock = null;
+    	}
 
     	if(map.IsBlockHeld()) {
     		blockButt.SetColor(new Color(1, 1, 1, 1));
@@ -336,8 +343,11 @@ public class WorldScript : MonoBehaviour {
     		blockButt.SetColor(new Color(1, 1, 1, 0));
 			return;
     	}
-    	if(GetBlockAt(dest) != null && GetBlockAt(dest).b_type == Block.BlockType.MOVEABLE) {
-    		blockButt.SetColor(new Color(1, 1, 1, 0.5f));
+    	lastHighlightBlock = GetBlockAt(dest);
+    	// Is there a block in front of you?
+    	if(lastHighlightBlock != null && lastHighlightBlock.b_type == Block.BlockType.MOVEABLE) {
+    		lastHighlightBlock.Highlight();
+    		blockButt.SetColor(new Color(0.85f, 0.85f, 0.85f, 0.5f));
     	} else {
     		blockButt.SetColor(new Color(1, 1, 1, 0));
     	}

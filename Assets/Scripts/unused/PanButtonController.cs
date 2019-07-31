@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PanButtonController : MonoBehaviour
 {
+    public Image panImage;
+    public Sprite panSpriteSelected;
+    public Sprite panSpriteUnselected;
     private Transform cameraTransform;
     private FollowAlpaca follow_alpaca_script;
     private Vector3 moveX;
@@ -68,5 +72,6 @@ public class PanButtonController : MonoBehaviour
     public void setIsPanning(bool set) {
         this.isPanning = set;
         follow_alpaca_script.enabled = !isPanning;
+        panImage.sprite = (isPanning) ? panSpriteSelected : panSpriteUnselected;
     }
 }

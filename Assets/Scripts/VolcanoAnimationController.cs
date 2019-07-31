@@ -6,12 +6,10 @@ using Anonym.Isometric;
 
 public class VolcanoAnimationController : MonoBehaviour {
 	public float delay = 0f;
-	public 
-	float speed = 2.0f; //how fast it shakes
-	float amount = 20.0f; //how much it shakes
-	float position;
+	public AudioSource volcanoExplosionSound;
+	float speed = 0.55f; //how fast it shakes
+	Vector3 pos;
 	Animator animatorComponent;
-
 	public GameObject player;
 	public GameObject canvas;
 
@@ -19,14 +17,24 @@ public class VolcanoAnimationController : MonoBehaviour {
 	void Start () {
 		//animatorComponent.speed = 0.5f;
 		//StartCoroutine(playAnimation());
-		position = gameObject.transform.position.x;
+		pos = new Vector3(0.71f, 0 ,0.71f);
 		Destroy (gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay); 
 		StartCoroutine(stopMovement());
 	}
 	
+	private bool soundPlayed = false;
 	// Update is called once per frame
 	void Update () {
-		position = Mathf.Sin(Time.time * speed) * amount;
+		if(!soundPlayed && Time.time > 0.5f) {
+			volcanoExplosionSound.Play();
+			soundPlayed = true;
+		}
+		if(Time.time >1.25f) { 
+			pos.x = Mathf.Sin(100 * Time.time * speed);
+			pos.z = Mathf.Sin(100 * Time.time * speed);
+			transform.position = pos;
+			Handheld.Vibrate();
+		}
 	}
 	
 	public IEnumerator stopMovement() {

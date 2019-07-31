@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/** NOTE: Pan Button is brought into view by Zoomer.cs */
 public class PanButtonController : MonoBehaviour
 {
     public Image panImage;

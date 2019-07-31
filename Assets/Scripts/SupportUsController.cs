@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class SupportUsController : MonoBehaviour
 {
     [SerializeField] GameObject supportUsMenu;
-    //[SerializeField] Button supportUsButton;
+    [SerializeField] GameObject supportOptionsMenu;
+    [SerializeField] GameObject donateMenu;
 
     string appleID = "3203751";
     string googleID = "3203750";
@@ -19,18 +20,42 @@ public class SupportUsController : MonoBehaviour
         // TODO: switch to false when live
         Monetization.Initialize(googleID, true);
         Monetization.Initialize(appleID, true);
+        supportUsMenu.SetActive(false);
+        supportOptionsMenu.SetActive(false);
+        donateMenu.SetActive(false);
     }
 
+    /**
+     * Used for the button entering the support screen,
+     * and both back buttons in the support screens (on options and donate page)
+     */
     public void toggleMenu()
     {
 
-        if (!supportUsMenu.activeSelf)
+        if (!supportUsMenu.activeSelf) // no support screen open -> open options
         {
             supportUsMenu.SetActive(true);
-        } else
+            supportOptionsMenu.SetActive(true);
+            donateMenu.SetActive(false);
+        } else if(donateMenu.activeSelf) // donate screen open -> go to options
+        {
+            supportOptionsMenu.SetActive(true);
+            donateMenu.SetActive(false);
+        } else // support options open -> close support screen
         {
             supportUsMenu.SetActive(false);
+            supportOptionsMenu.SetActive(false);
+            donateMenu.SetActive(false);
         }
+    }
+
+    /**
+     * Used for support options page -> donate page
+     */
+    public void goDonatePage()
+    {
+        supportOptionsMenu.SetActive(false);
+        donateMenu.SetActive(true);
     }
 
     public void showAd()

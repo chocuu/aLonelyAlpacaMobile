@@ -25,7 +25,7 @@ public class VolcanoAnimationController : MonoBehaviour {
 	private bool soundPlayed = false;
 	// Update is called once per frame
 	void Update () {
-		if(!soundPlayed && Time.time > 0.5f) {
+		if(!soundPlayed && Time.time > 0.75f) {
 			volcanoExplosionSound.Play();
 			soundPlayed = true;
 		}

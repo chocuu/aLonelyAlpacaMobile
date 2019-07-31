@@ -9,6 +9,8 @@ public class SupportUsController : MonoBehaviour
     [SerializeField] GameObject supportUsMenu;
     [SerializeField] GameObject supportOptionsMenu;
     [SerializeField] GameObject donateMenu;
+    [SerializeField] Image buttonIn;
+    [SerializeField] Image buttonOut;
 
     string appleID = "3203751";
     string googleID = "3203750";
@@ -23,6 +25,8 @@ public class SupportUsController : MonoBehaviour
         supportUsMenu.SetActive(false);
         supportOptionsMenu.SetActive(false);
         donateMenu.SetActive(false);
+        buttonIn.enabled = true;
+        buttonOut.enabled = false;
     }
 
     /**
@@ -37,6 +41,8 @@ public class SupportUsController : MonoBehaviour
             supportUsMenu.SetActive(true);
             supportOptionsMenu.SetActive(true);
             donateMenu.SetActive(false);
+            buttonIn.enabled = false;
+            buttonOut.enabled = true;
         } else if(donateMenu.activeSelf) // donate screen open -> go to options
         {
             supportOptionsMenu.SetActive(true);
@@ -46,6 +52,8 @@ public class SupportUsController : MonoBehaviour
             supportUsMenu.SetActive(false);
             supportOptionsMenu.SetActive(false);
             donateMenu.SetActive(false);
+            buttonIn.enabled = true;
+            buttonOut.enabled = false;
         }
     }
 

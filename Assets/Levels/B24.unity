@@ -25171,7 +25171,7 @@ GameObject:
   - component: {fileID: 676257241}
   - component: {fileID: 676257243}
   m_Layer: 0
-  m_Name: T_F-54_(09,-05)__grass_A
+  m_Name: T_F-54_(09,-05)__grass_K
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38222,18 +38222,6 @@ PrefabInstance:
 --- !u!4 &1109874177 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1109874176}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1109874178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1109874176}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1109874179 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e,
     type: 3}
   m_PrefabInstance: {fileID: 1109874176}
   m_PrefabAsset: {fileID: 0}
@@ -53018,7 +53006,7 @@ GameObject:
   - component: {fileID: 1575996230}
   - component: {fileID: 1575996232}
   m_Layer: 0
-  m_Name: T_F-54_(09,-04)__grass_A
+  m_Name: T_F-54_(09,-04)__grass_K
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53475,12 +53463,17 @@ PrefabInstance:
         type: 3}
       propertyPath: background
       value: 
-      objectReference: {fileID: 1109874179}
+      objectReference: {fileID: 0}
     - target: {fileID: 996668562190964942, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
       propertyPath: background2
       value: 
-      objectReference: {fileID: 1109874178}
+      objectReference: {fileID: 0}
+    - target: {fileID: 996668562190964942, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: zAmount_half
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 224940004372651808, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
       propertyPath: m_RootOrder

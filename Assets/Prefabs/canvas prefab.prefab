@@ -411,7 +411,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   zoomOutSound: {fileID: 2553400020984362722}
   zoomInSound: {fileID: 2749340378161531513}
-  zAmount_half: 2.5
+  zAmount_half: 3
   bgScaleAmnt: 0
   timer: 0
 --- !u!82 &2553400020984362722

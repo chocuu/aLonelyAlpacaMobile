@@ -1166,7 +1166,7 @@ GameObject:
   - component: {fileID: 26520378}
   - component: {fileID: 26520382}
   m_Layer: 0
-  m_Name: T_F-36_(02,-01)__grass_K
+  m_Name: T_F-36_(02,-01)__block_beta_grass
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38513,7 +38513,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 1238247192}
+      objectReference: {fileID: 0}
     - target: {fileID: 114329817668308066, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
         type: 3}
       propertyPath: background
@@ -38528,7 +38528,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 1238247192}
+      objectReference: {fileID: 0}
     - target: {fileID: 114824065293360172, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
         type: 3}
       propertyPath: zAmount
@@ -52266,12 +52266,6 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 1edfdb3c00a0b0341b00d6a9bcbc92c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
---- !u!20 &1238247192 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1238247191}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1238247195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1535350428743942, guid: a766938edf27ac3478ad5627f052337e,
@@ -80372,7 +80366,7 @@ GameObject:
   - component: {fileID: 1897390852}
   - component: {fileID: 1897390856}
   m_Layer: 0
-  m_Name: T_F-36_(02,00)__grass_K
+  m_Name: T_F-36_(02,00)__block_beta_grass
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84010,7 +84004,7 @@ PrefabInstance:
     - target: {fileID: 996668562190964942, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
       propertyPath: zAmount_half
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224940004372651808, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}

@@ -72,8 +72,6 @@ public class SupportUsController : MonoBehaviour
         }
         else {
             lerp_timer = 0;
-            comingDown = false;
-            goingUp = false;
         }
     }
     /**

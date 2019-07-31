@@ -174,14 +174,14 @@ public class WorldScript : MonoBehaviour {
 					if(PlayerPrefs.GetInt("LevelPassed") < level) {
 						PlayerPrefs.SetInt("LevelPassed", level);
 					}
-					if(level < 26 && end_timer < 100f) {
-						Debug.Log("reset on end");
+					if(level < 28 && end_timer < 100f) {
 						end_timer = 999f;
 						SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
 					}
 					else {
 						FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
-						final.BeatFinalLevel();
+						if(final != null)
+							final.BeatFinalLevel();
 						currBlock.b_type = Block.BlockType.NONE; // stop processing this block
 					}
 				}

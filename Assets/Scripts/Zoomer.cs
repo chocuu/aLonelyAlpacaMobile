@@ -5,10 +5,13 @@ using UnityEngine;
 public class Zoomer : MonoBehaviour {
 	/* The scene camera. */
 	public Camera cam; 
-	/* Transform of Pan Button, used to bring pan in at half zoom */
+	/** Sounds played when zooming in/out */
+	public AudioSource zoomOutSound;
+	public AudioSource zoomInSound;
+	/* Transform of Pan Button, used to bring pan in at zoom-out */
 	private PanButtonController pan_ctrlr;
 	private RectTransform panTransform;
-	/* Amount to shift pan transform when making it visible/invisible */
+	/* Position of the pan button on the screen when it's shown or not*/
 	private Vector3 panPosInitial;
 	private Vector3 panPosFinal;
 	/* The size of a full-zoomed camera. */
@@ -42,8 +45,7 @@ public class Zoomer : MonoBehaviour {
 	private float lerp_timer;
 
 	void Start () {
-		ZOOM_IN_AMNT
- = cam.orthographicSize;
+		ZOOM_IN_AMNT = cam.orthographicSize;
 		ZOOM_OUT_AMNT = cam.orthographicSize + zAmount_half;
 		zState = ZoomState.ZOOMED_IN;
 		lerp_timer = 0;
@@ -55,21 +57,25 @@ public class Zoomer : MonoBehaviour {
 		panPosFinal = new Vector3(-385, -40, 0);
 	}
 
-	/* Player toggled camera, update the state. */
+	/* Player toggled camera, update the state and play the right sound. */
 	public void toggleZoom() {
 		lerp_timer = 0;
 		switch(zState) {
 			case ZoomState.ZOOMING_OUT:
 				zState = ZoomState.ZOOMING_IN;
-				break;
-			case ZoomState.ZOOMING_IN:
-				zState = ZoomState.ZOOMING_OUT;
-				break;
-			case ZoomState.ZOOMED_IN:
-				zState = ZoomState.ZOOMING_OUT;
+				zoomInSound.Play();
 				break;
 			case ZoomState.ZOOMED_OUT:
 				zState = ZoomState.ZOOMING_IN;
+				zoomInSound.Play();
+				break;	
+			case ZoomState.ZOOMING_IN:
+				zState = ZoomState.ZOOMING_OUT;
+				zoomOutSound.Play();
+				break;
+			case ZoomState.ZOOMED_IN:
+				zState = ZoomState.ZOOMING_OUT;
+				zoomOutSound.Play();
 				break;
 		}
 	}

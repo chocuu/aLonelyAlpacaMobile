@@ -12772,7 +12772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1055367784236320, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4228833587824526, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16631,7 +16631,7 @@ GameObject:
   - component: {fileID: 531011942}
   - component: {fileID: 531011946}
   m_Layer: 0
-  m_Name: T_F06_(08,03)__magma_block
+  m_Name: T_F06_(08,03)__magma_A
   m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21650,7 +21650,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1775833641516320, guid: a3c9e7f02adc60e449c6dfac7c23914c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 996668562190964942, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
@@ -21666,12 +21666,12 @@ PrefabInstance:
         type: 3}
       propertyPath: background
       value: 
-      objectReference: {fileID: 1758634553}
+      objectReference: {fileID: 0}
     - target: {fileID: 996668562190964942, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
       propertyPath: background2
       value: 
-      objectReference: {fileID: 1758634552}
+      objectReference: {fileID: 0}
     - target: {fileID: 996668562190964942, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
       propertyPath: zAmount_half
@@ -39157,7 +39157,7 @@ GameObject:
   - component: {fileID: 1321837857}
   - component: {fileID: 1321837861}
   m_Layer: 0
-  m_Name: T_F09_(07,03)__block_beta_grass
+  m_Name: T_F09_(07,03)__grass_I
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41412,7 +41412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0298c9c6b909e274ebe8a32ce87c6682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 1758634551}
+  cam: {fileID: 0}
+  zoomOutSound: {fileID: 0}
+  zoomInSound: {fileID: 0}
   zAmount_half: 0
   bgScaleAmnt: 0
   timer: 0
@@ -45053,7 +45055,7 @@ GameObject:
   - component: {fileID: 1523934133}
   - component: {fileID: 1523934137}
   m_Layer: 0
-  m_Name: T_F09_(08,04)__block_beta_grass
+  m_Name: T_F09_(08,04)__grass_C
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46869,7 +46871,7 @@ GameObject:
   - component: {fileID: 1600618432}
   - component: {fileID: 1600618436}
   m_Layer: 0
-  m_Name: T_F06_(12,03)__magma_block
+  m_Name: T_F06_(12,03)__magma_A
   m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46948,7 +46950,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1600618432}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1600618434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50839,21 +50841,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.29
-      objectReference: {fileID: 0}
     - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: deathImage
@@ -50869,26 +50856,23 @@ PrefabInstance:
       propertyPath: nextLevel
       value: B16
       objectReference: {fileID: 0}
+    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
---- !u!20 &1758634551 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1758634550}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1758634552 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1758634550}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1758634553 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1758634550}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1758634554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e,
@@ -59860,7 +59844,7 @@ GameObject:
   - component: {fileID: 2053691976}
   - component: {fileID: 2053691980}
   m_Layer: 0
-  m_Name: T_F06_(13,03)__magma_block
+  m_Name: T_F06_(13,03)__magma_A_magma_A
   m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

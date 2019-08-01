@@ -174,7 +174,7 @@ public class WorldScript : MonoBehaviour {
 					if(PlayerPrefs.GetInt("LevelPassed") < level) {
 						PlayerPrefs.SetInt("LevelPassed", level);
 					}
-					if(level < 28 && end_timer < 100f) {
+					if(end_timer < 100f) {
 						end_timer = 999f;
 						SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
 					}

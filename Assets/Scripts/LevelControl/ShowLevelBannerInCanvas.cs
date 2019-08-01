@@ -20,6 +20,7 @@ public class ShowLevelBannerInCanvas : MonoBehaviour {
 		sceneName = SceneManager.GetActiveScene().name;
 		Regex getNumber = new Regex(@"\d+$");
         var levelNumber = Int32.Parse(getNumber.Match(sceneName).ToString());	
+        if(levelNumber == 0) levelNumber = 1;
 		uiImage.overrideSprite = LevelBannerList[levelNumber - 1];
 
 		//Begin Fading

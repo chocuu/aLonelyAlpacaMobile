@@ -84,6 +84,34 @@ public class Alpaca : MonoBehaviour {
     	return coords;
     }
 
+    /**
+	 * Return the block in front of the alpaca (in direction its facing)
+	 *
+	 * clickedWhere is where the alpaca is facing
+	 */
+	public Vector3 GetCurrAlpacaDest(int clickedWhere) 
+	{
+		Vector3 dest = GetCurrAlpacaLocation();
+    	switch(clickedWhere) {
+    		case 0:
+    			dest.x--;
+    			break;
+    		case 1:
+    			dest.z++;
+    			break;
+    		case 2:
+    			dest.x++;
+    			break;
+    		case 3:
+    			dest.z--;
+    			break;
+    		default:
+    			Debug.Log("incorrect clickedWhere in curralpacadest call");
+    			return new Vector3(0,0,0);
+    	}
+    	return dest;
+	}
+
     private float GetY() {
     	return gameObject.transform.position.y + 0.3f;
     }

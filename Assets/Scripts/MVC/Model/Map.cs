@@ -100,7 +100,7 @@ public class Map {
     }
 
     /**
-     * 
+     * Start animation of poof when trying to hold a block
      */
     public bool LoadTryHoldBlock(Vector3 coords, bool set) {
         if(held_block != null) return false;
@@ -162,6 +162,7 @@ public class Map {
                 return false;
             coords = top.getCoords();
             coords.y++;
+            held_block.Unhighlight();
             held_block.setCoords(coords);
             if(map.TryGetValue(xz, out get)) {
                 get.Remove((int)coords.y);
@@ -208,4 +209,37 @@ public class Map {
     public bool IsBlockHeld() {
         return held_block != null;
     }
+
+    public void PreviewBlock(Vector3 coords) {
+        Debug.Log("preview block start");
+        if(held_block == null) return;
+        Debug.Log("1");
+        if(GetBlock(coords) != null) 
+            return;
+        Debug.Log("2");
+        Block top = GetHighestBlockBelow(coords);
+        if(top == null)
+            return;
+        Debug.Log("3");
+        coords = top.getCoords();
+        coords.y++;
+        coords.x = (float)Math.Round(coords.x);
+        coords.y = (float)Math.Round(coords.y);
+        coords.z = (float)Math.Round(coords.z);
+        held_block.LowOpacity();
+        held_block.setCoords(coords);
+        // Vector2Int xz = new Vector2Int((int)coords.x,(int) coords.z);
+        // SortedList<int, Block> get;
+        // if(map.TryGetValue(xz, out get)) {
+        //     get.Remove((int)coords.y);
+        //     get.Add((int)coords.y, held_block);
+        // } else {
+        //     get = new SortedList<int, Block>();
+        //     map.Add(xz, get);
+        //     get.Add((int)coords.y, held_block);
+        // }
+        held_block.Move(coords);
+        Debug.Log("preview block end");
+    }
+
 }

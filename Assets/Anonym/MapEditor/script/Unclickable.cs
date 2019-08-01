@@ -9,6 +9,7 @@ public class Unclickable : MonoBehaviour {
     SpriteRenderer sr;
     Color normalColor;
     Color canBeDroppedOnColor;
+    Color previewColor;
     
     Sprite normal;
     Sprite wSprite;
@@ -21,6 +22,7 @@ public class Unclickable : MonoBehaviour {
 		sr = GetComponentInChildren<SpriteRenderer>();
         normalColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         canBeDroppedOnColor = new Color(0.85f, 0.85f, 0.85f, 1.0f);
+        previewColor = new Color(1.0f, 1.0f, 1.0f, 0.5f);
         
         normal = Resources.Load<Sprite>("Sprites/normal_unclick");
         wSprite = Resources.Load<Sprite>("Sprites/W_Unclick");
@@ -44,6 +46,10 @@ public class Unclickable : MonoBehaviour {
     
     public void setNormalSprite() {
         sr.sprite = normal;
+    }
+
+    public void setDropping() {
+        sr.color = previewColor;
     }
     
     public void setWASDsprite(int facingVal) {

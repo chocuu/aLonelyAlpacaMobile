@@ -8,6 +8,7 @@ public class currentLevelName : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad(gameObject);
+		PlayerPrefs.DeleteAll();
 #if UNITY_EDITOR
 		PlayerPrefs.DeleteAll();
 		// PlayerPrefs.SetInt("LevelPassed", 28);

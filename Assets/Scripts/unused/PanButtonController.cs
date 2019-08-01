@@ -10,12 +10,21 @@ public class PanButtonController : MonoBehaviour
     public Sprite panSpriteSelected;
     public Sprite panSpriteUnselected;
     public AudioSource panClickSound;
-    public GameObject panBorder;
+    public GameObject panBorderA;
+    public GameObject panBorderB;
+    public GameObject panBorderC;
     private Transform cameraTransform;
     private FollowAlpaca follow_alpaca_script;
     private Vector3 moveX;
     private Vector3 moveZ;
     private bool isPanning;
+
+    private void SetPanBorder(bool set) {
+        panBorderA.SetActive(set);
+        panBorderB.SetActive(set);
+        panBorderC.SetActive(set);
+    }
+
     // Start is called before the first frame update
     void Start() {
         isPanning = false;
@@ -24,7 +33,7 @@ public class PanButtonController : MonoBehaviour
         GameObject camera_prefab = GameObject.FindWithTag("MainCamera");
 		cameraTransform = camera_prefab.GetComponent<Transform>();
         follow_alpaca_script = camera_prefab.GetComponent<FollowAlpaca>();
-        panBorder.SetActive(false);
+        SetPanBorder(false);
     }
 
     /**
@@ -78,6 +87,6 @@ public class PanButtonController : MonoBehaviour
         this.isPanning = set;
         follow_alpaca_script.enabled = !isPanning;
         panImage.sprite = (isPanning) ? panSpriteSelected : panSpriteUnselected;
-        panBorder.SetActive(set);
+        SetPanBorder(set);
     }
 }

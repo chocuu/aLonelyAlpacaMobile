@@ -8,7 +8,7 @@ public class Donate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        thanksObj.SetActive(false);
     }
 
     // Update is called once per frame

@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 public class UpdateLevelSelectMenu : MonoBehaviour
 {   
     // Number of Levels
-    public const int numberOfLevels = 26; 
+    public const int numberOfLevels = 28; 
     // Selector Gameobject dragged in from hierarchy
     public GameObject alpacaCursor;
     public Animator alpacaCursorAnim;
@@ -99,7 +99,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
         ImagePreviewImage.sprite = imagePreviewsArray[currentLevel];
         LevelBannerImage.sprite = levelBannersArray[currentLevel];
         
-        // Start with right flipping
+        // Start with right flipping (HARDCODED VALUES)
         if((currentLevel>=6 && currentLevel <= 12) || 
                 (currentLevel >= 19 && currentLevel <= 23))
             flipAlpacaSprite();
@@ -116,7 +116,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
             alpacaPos.position = levelPositions[currentLevel];
         }
         
-        // Flip alpaca sprite at certain levels
+        // Flip alpaca sprite at certain levels (HARDCODED VALUES)
         if(currentLevel == 6 || currentLevel == 13 || currentLevel == 19 || currentLevel == 24)
             flipAlpacaSprite();
         
@@ -138,7 +138,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
             alpacaPos.position = levelPositions[currentLevel];
         }
         
-        // Flip alpaca sprite at certain levels
+        // Flip alpaca sprite at certain levels (HARDCODED VALUES)
         if(currentLevel == 5 || currentLevel == 12 || currentLevel == 18 || currentLevel == 23)
             flipAlpacaSprite();
         

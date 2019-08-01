@@ -8,9 +8,11 @@ public class FinalWinBlockController : MonoBehaviour
 {
 
   private AudioSource endSong;
+  /** star's main gameobject and iso2d object */
   public GameObject star_obj;
   public GameObject star_Iso2d;
   public GameObject Background;
+  /* Reference to fading script */
   private FadeOutWSprite FIScript;
   public float time_till_fade_to_fin;
   public float FIN_time;
@@ -18,15 +20,16 @@ public class FinalWinBlockController : MonoBehaviour
   private Transform star_tf;
   public GameObject credits;
   public GameObject player;
-
   public GameObject cam;
   private Transform cam_tf;
+  private bool startCredits;
   private bool moveItStar;
   private bool moveItCam;
   private const float moveSpeed = 3f;
   private const float final_pan_pos = 17.5f;
   private const float final_pan_pos_c = 19f;
-
+  private Vector3 finalPanPos_star = new Vector3(0, 17.5f, 0);
+  private Vector3 finalPanPos_cam = new Vector3(0, 19f, 0);
   // Use this for initialization
   void Start()
   {
@@ -38,6 +41,9 @@ public class FinalWinBlockController : MonoBehaviour
     star_tf = star_obj.GetComponent<Transform>();
     cam_tf = cam.GetComponent<Transform>();
     FIScript = Background.GetComponent<FadeOutWSprite>();
+    //startCredits = false;
+    moveItStar = true;
+    moveItCam = true;
   }
 
   public void BeatFinalLevel()
@@ -45,48 +51,44 @@ public class FinalWinBlockController : MonoBehaviour
       endSong.Play();
       player.GetComponent<WorldScript>().enabled = false;
       star_animator.speed = 2;
-      moveItStar = true;
-      moveItCam = true;
+      startCredits = true;
   }
 
   // Update is called once per frame
-  bool done, donec;
-  void Update()
-  {
-    if (moveItStar || moveItCam)
-    {
+  private bool done_s; // true if star is done moving
+  private bool donec; // true if camera is done moving
+  void Update() {
+    if (startCredits && (moveItCam || moveItStar)){
       Vector3 temp = star_tf.position;
       temp.y += moveSpeed * Time.deltaTime;
-      if (moveItStar)
-      {
+      
+      // Move Star
+      if (moveItStar){
         if (temp.y <= final_pan_pos) star_tf.position = temp;
-        else
-        {
+        else{
           temp.y = final_pan_pos;
           star_tf.position = temp;
           star_animator.speed = 0;
           star_animator.Play("final_winstar", 0, 0);
           moveItStar = false;
-          done = true;
         }
       }
 
+      // Move Camera
       Vector3 tempc = cam_tf.position;
       tempc.y += moveSpeed * Time.deltaTime;
-      if (moveItCam)
-      {
+      if (moveItCam){
         if (tempc.y <= final_pan_pos_c) cam_tf.position = tempc;
-        else
-        {
+        else{
           tempc.y = final_pan_pos_c;
           cam_tf.position = temp;
           moveItCam = false;
-          donec = true;
         }
       }
     }
-    else if (done && donec)
-    {
+
+    // Star and Camera have both finished moving -> proceed to credits
+    else if (!moveItStar && !moveItCam) {
       StartCoroutine(FadeAfterTime(time_till_fade_to_fin));
     }
   }

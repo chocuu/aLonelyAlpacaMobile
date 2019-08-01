@@ -20,8 +20,8 @@ public class EndCreditsController : MonoBehaviour {
 	private float timeAccum;
 	//private bool speedyCreds;
 	public float initial_speed;
-	private const float initial_pos = -950f;
-	private const float final_position = 1790f;
+	private const float initial_pos = -1005f;
+	private const float final_position = 400f;
 	private const float time_delay = 0f;
 
 	// Use this for initialization
@@ -44,22 +44,20 @@ public class EndCreditsController : MonoBehaviour {
 		}
 		else{
 			if(!done){
-				Vector3 temp = rt.position; 
-				if(Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)){
-					moveSpeed = initial_speed*4;
-					//moveSpeed = speedyCreds ? initial_speed : (initial_speed*3);
-					//speedyCreds = !speedyCreds;
-				}
-				else if(rt.position.y >= (final_position*0.8f)){
+				Vector3 temp = rt.anchoredPosition; 
+				if(Input.GetMouseButton(0)) moveSpeed = initial_speed*4;
+				else if(rt.anchoredPosition.y >= (final_position*0.8f)){
 					moveSpeed-= 2.5f*Time.deltaTime;
 					if(moveSpeed<=20) moveSpeed = 20;
 				}
 				else moveSpeed = initial_speed;
+
 				temp.y += moveSpeed*Time.deltaTime;
-				rt.position = temp;
-				if(rt.position.y >= final_position){
+				rt.anchoredPosition = temp;
+				
+				if(rt.anchoredPosition.y >= final_position){
 					temp.y = final_position;
-					rt.position = temp;
+					rt.anchoredPosition = temp;
 					done = true;
 				}
 			}

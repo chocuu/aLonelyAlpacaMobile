@@ -15,6 +15,7 @@ using Anonym.Isometric;
  */
 public class WorldScript : MonoBehaviour {
 
+	private int numberOfLevels = 28;
     public AudioSource winSound;
     public AudioSource jumpSound;
 	// Reference to the canvas's pan controller; used to switch controls if in pan mode
@@ -176,12 +177,12 @@ public class WorldScript : MonoBehaviour {
 					}
 					if(end_timer < 100f) {
 						end_timer = 999f;
-						SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
+						if(level != numberOfLevels)
+							SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
 					}
 					else {
 						FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
-						if(final != null)
-							final.BeatFinalLevel();
+						if(final != null) final.BeatFinalLevel();
 						currBlock.b_type = Block.BlockType.NONE; // stop processing this block
 					}
 				}

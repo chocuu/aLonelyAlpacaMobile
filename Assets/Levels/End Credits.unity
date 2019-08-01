@@ -337,7 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 379835904}
   endOfSceneLocation: 
-  currSceneTime: 3
+  currSceneTime: 4
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!1 &164709704
@@ -446,6 +446,52 @@ PrefabInstance:
       propertyPath: m_Name
       value: player prefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 95093271680838662, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1edfdb3c00a0b0341b00d6a9bcbc92c8, type: 2}
+    - target: {fileID: 95093271680838662, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212413659681596994, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b770acbb5c186cb41a22280fa21e0f60,
+        type: 3}
+    - target: {fileID: 212413659681596994, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212413659681596994, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: near clip plane
@@ -497,22 +543,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.2
@@ -549,42 +579,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 82234210983772764, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1571941515456266399, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212413659681596994, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b770acbb5c186cb41a22280fa21e0f60,
-        type: 3}
-    - target: {fileID: 212413659681596994, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212413659681596994, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95093271680838662, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 1edfdb3c00a0b0341b00d6a9bcbc92c8, type: 2}
-    - target: {fileID: 95093271680838662, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 767754646}
   endOfSceneLocation: 
-  currSceneTime: 3
+  currSceneTime: 4
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!114 &328192371
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 624179041}
   endOfSceneLocation: 
-  currSceneTime: 3
+  currSceneTime: 4
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!114 &519366565
@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 1818416730}
   endOfSceneLocation: 
-  currSceneTime: 3
+  currSceneTime: 4
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!114 &852120908
@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 1132666997}
   endOfSceneLocation: 
-  currSceneTime: 3
+  currSceneTime: 4
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!114 &967060492
@@ -1701,7 +1701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 1739754746}
   endOfSceneLocation: 
-  currSceneTime: 3
+  currSceneTime: 4
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!114 &1030263725
@@ -2258,7 +2258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 929674894}
   endOfSceneLocation: 
-  currSceneTime: 3
+  currSceneTime: 4
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!114 &1296263549
@@ -2527,7 +2527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstScreenAfterCreds: {fileID: 1172385363}
   endPauseTime: 4
-  initial_speed: 35
+  initial_speed: 40
 --- !u!114 &1507907869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2596,7 +2596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 1878687797}
   endOfSceneLocation: 
-  currSceneTime: 3
+  currSceneTime: 4
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!114 &1518400837
@@ -2706,7 +2706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 350301422}
   endOfSceneLocation: 
-  currSceneTime: 3
+  currSceneTime: 4
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!114 &1589816924

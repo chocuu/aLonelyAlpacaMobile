@@ -45,19 +45,21 @@ public class UpdateLevelSelectMenu : MonoBehaviour
                                             new Vector3(-314f, -82f, 93f),
                                             new Vector3(-332.5f, -103f, 93f),
                                             new Vector3(-358f, -114f, 93f),
-                                            new Vector3(-397f, -121.5f, 93f),
-                                            new Vector3(-405f, -136f, 93f),
-                                            new Vector3(-365f, -129f, 93f),
-                                            new Vector3(-326f, -131.5f, 93f),
-                                            new Vector3(-294f, -117f, 93f),
+                                            new Vector3(-395f, -117f, 93f),
+                                            new Vector3(-405f, -132.5f, 93f),
+                                            new Vector3(-369.5f, -128f, 93f),
+                                            new Vector3(-336.5f, -131.5f, 93f),
+                                            new Vector3(-302f, -126.5f, 93f),
                                             new Vector3(-278.5f, -88.5f, 93f),
                                             new Vector3(-247f, -68.5f, 93f),
                                             new Vector3(-223f, -81f, 93f),
                                             new Vector3(-197f, -109f, 93f),
                                             new Vector3(-239f, -108f, 93f),
-                                            new Vector3(-271.7f, -134.5f, 93f),
-                                            new Vector3(-324f, -161f, 93f),
-                                            new Vector3(-364.5f, -163f, 93f),
+                                            new Vector3(-262f, -124f, 93f),
+                                            new Vector3(-288.5f, -147.5f, 93f),
+                                            new Vector3(-312.5f, -161f, 93f),
+                                            new Vector3(-338f, -161.5f, 93f),
+                                            new Vector3(-369f, -161.5f, 93f),
                                             new Vector3(-402.5f, -154.5f, 93f),
                                             new Vector3(-379f, -175f, 93f),
                                             new Vector3(-335f, -178f, 93f),
@@ -117,7 +119,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
         }
         
         // Flip alpaca sprite at certain levels (HARDCODED VALUES)
-        if(currentLevel == 6 || currentLevel == 13 || currentLevel == 19 || currentLevel == 24)
+        if(currentLevel == 6 || currentLevel == 13 || currentLevel == 21 || currentLevel == 26)
             flipAlpacaSprite();
         
         // Make level arrows appear/disapper at certain level
@@ -139,7 +141,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
         }
         
         // Flip alpaca sprite at certain levels (HARDCODED VALUES)
-        if(currentLevel == 5 || currentLevel == 12 || currentLevel == 18 || currentLevel == 23)
+        if(currentLevel == 5 || currentLevel == 12 || currentLevel == 20 || currentLevel == 26)
             flipAlpacaSprite();
         
         // Make level arrows appear/disapper at certain level

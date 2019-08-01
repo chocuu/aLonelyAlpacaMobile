@@ -45,8 +45,8 @@ public class EndCreditsController : MonoBehaviour {
 		else{
 			if(!done){
 				Vector3 temp = rt.anchoredPosition; 
-				if(Input.GetMouseButton(0)) moveSpeed = initial_speed*4;
-				else if(rt.anchoredPosition.y >= (final_position*0.8f)){
+				// if(Input.GetMouseButton(0)) moveSpeed = initial_speed*4;
+				if(rt.anchoredPosition.y >= (final_position*0.8f)){
 					moveSpeed-= 2.5f*Time.deltaTime;
 					if(moveSpeed<=20) moveSpeed = 20;
 				}

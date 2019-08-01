@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 511739304}
   smoothSpeed: 0.125
-  offset: {x: 0, y: -40, z: -150}
+  offset: {x: 0, y: -40, z: -135}
 --- !u!81 &422027381
 AudioListener:
   m_ObjectHideFlags: 0
@@ -409,7 +409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422027379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -280, y: -54, z: -5}
+  m_LocalPosition: {x: -280, y: -54, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -808,16 +808,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a34250ac518473e45a09a07abb4695aa, type: 3}
   - {fileID: 21300000, guid: 4dfcc1ff70ce7a047a2aa5105ec94d16, type: 3}
   - {fileID: 21300000, guid: 843239be269eb6442b7c565c5e244a0b, type: 3}
-  - {fileID: 21300000, guid: 3746aabbfe901f041b50cfddc2b2bdd6, type: 3}
+  - {fileID: 21300000, guid: a753c0325be4e4c829d3f23e94116de7, type: 3}
   - {fileID: 21300000, guid: a9d84be7934053f4099126a65ae9d7e6, type: 3}
   - {fileID: 21300000, guid: c70dfc6380cfef140b1a3c8f12b13b02, type: 3}
   - {fileID: 21300000, guid: 278686b6e05b46145a78ec0308c78a91, type: 3}
   - {fileID: 21300000, guid: 1fa34e373dca2f948b14c9aba37621a0, type: 3}
   - {fileID: 21300000, guid: c62396fba7a696a4ea3a1b99bada40a9, type: 3}
   - {fileID: 21300000, guid: 83dc7ce38dccb4f309e35900ef90e84d, type: 3}
-  - {fileID: 21300000, guid: 4f9f5680dda694270b22f7ee238bce60, type: 3}
+  - {fileID: 21300000, guid: c3bd3e2f3cebd44c896bb0df8f286e65, type: 3}
   - {fileID: 21300000, guid: bbca12ec45c334cc2adf939b3624ae51, type: 3}
-  - {fileID: 21300000, guid: 69ad17c0bb393a5498a500719ae05836, type: 3}
+  - {fileID: 21300000, guid: e93154cf83651f640a9d0674f0a4ecd7, type: 3}
+  - {fileID: 21300000, guid: f30b485ad48252e45848acc2cd95f1f7, type: 3}
+  - {fileID: 21300000, guid: 3de309efd0f814ff6847b5eda892837c, type: 3}
   levelBannersArray:
   - {fileID: 21300000, guid: a713efaba5b994c4ca8213f97d529019, type: 3}
   - {fileID: 21300000, guid: d9e4bd4e86ba30b45bcd19ca836d01b9, type: 3}
@@ -845,6 +847,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c7413e57da57c3541aa610cbf5afeecc, type: 3}
   - {fileID: 21300000, guid: a88365387d5deeb4f9939b71f61570e2, type: 3}
   - {fileID: 21300000, guid: 8d6b15fed1056b04a810ab16d075c016, type: 3}
+  - {fileID: 21300000, guid: b800daf41eb1e4175a65a93970641504, type: 3}
+  - {fileID: 21300000, guid: 22d80b09943884e2b83dd3d3129c1a7c, type: 3}
   nextLevelButtArrow: {fileID: 1736943522}
   prevLevelButtArrow: {fileID: 1961824370}
 --- !u!4 &1049393545

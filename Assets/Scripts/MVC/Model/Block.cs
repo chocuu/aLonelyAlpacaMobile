@@ -68,4 +68,9 @@ public class Block : IComparable {
         if(coord_obj.GetComponent<Unclickable>() != null)
             coord_obj.GetComponent<Unclickable>().setNormalColor();
     }
+
+    public void LowOpacity() {
+        if(coord_obj.GetComponent<Unclickable>() != null)
+            coord_obj.GetComponent<Unclickable>().setDropping();
+    }
 }

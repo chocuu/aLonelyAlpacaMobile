@@ -208,23 +208,7 @@ public class WorldScript : MonoBehaviour {
 		if(!alpaca.HasBlock())
 			return;
 
-    	Vector3 dest = alpaca.GetCurrAlpacaLocation();
-    	switch(clickedWhere) {
-    		case 0:
-    			dest.x--;
-    			break;
-    		case 1:
-    			dest.z++;
-    			break;
-    		case 2:
-    			dest.x++;
-    			break;
-    		case 3:
-    			dest.z--;
-    			break;
-    		default:
-    			return;
-    	}
+    	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
 
 		highlighted = map.GetHighestBlockBelow(dest);
 		if(highlighted != null && GetBlockAt(dest) == null) {
@@ -244,23 +228,7 @@ public class WorldScript : MonoBehaviour {
 			return;
 		}
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
-    	Vector3 dest = curr;
-    	switch(clickedWhere) {
-    		case 0:
-    			dest.x--;
-    			break;
-    		case 1:
-    			dest.z++;
-    			break;
-    		case 2:
-    			dest.x++;
-    			break;
-    		case 3:
-    			dest.z--;
-    			break;
-    		default:
-    			return;
-    	}
+    	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
 
 		if(GetBlockAt(dest) != null) { // Is there a block right in front? --> climb mode
 			if(GetBlockAbove(curr) != null) // Is there a block above alpaca?
@@ -316,23 +284,7 @@ public class WorldScript : MonoBehaviour {
     	}
 
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
-    	Vector3 dest = curr;
-    	switch(clickedWhere) {
-    		case 0:
-    			dest.x--;
-    			break;
-    		case 1:
-    			dest.z++;
-    			break;
-    		case 2:
-    			dest.x++;
-    			break;
-    		case 3:
-    			dest.z--;
-    			break;
-    		default:
-    			return;
-    	}
+    	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
 
 		// Is there a block above attempted block?
     	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE) {
@@ -352,23 +304,7 @@ public class WorldScript : MonoBehaviour {
      */
     bool AttemptPickUpOrPlaceBlock() {
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
-    	Vector3 dest = curr;
-    	switch(clickedWhere) {
-    		case 0:
-    			dest.x--;
-    			break;
-    		case 1:
-    			dest.z++;
-    			break;
-    		case 2:
-    			dest.x++;
-    			break;
-    		case 3:
-    			dest.z--;
-    			break;
-    		default:
-    			return false;
-    	}
+    	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
     	lastClickedWhere = clickedWhere;
     	// Is there a block above attempted block?
     	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE) 
@@ -389,23 +325,7 @@ public class WorldScript : MonoBehaviour {
     bool LoadTryHoldBlock(bool set) {
     	if(control_scheme == 2) return false;
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
-    	Vector3 dest = curr;
-    	switch(clickedWhere) {
-    		case 0:
-    			dest.x--;
-    			break;
-    		case 1:
-    			dest.z++;
-    			break;
-    		case 2:
-    			dest.x++;
-    			break;
-    		case 3:
-    			dest.z--;
-    			break;
-    		default:
-    			return false;
-    	}
+    	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
     	lastClickedWhere = clickedWhere;
     	// Is there a moveable block above attempted block?
     	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE) 
@@ -456,6 +376,7 @@ public class WorldScript : MonoBehaviour {
 			// if in process of loading of holding/dropping a block,
 			// don't process input
 			if(get) {
+				Debug.Log("holding");
 				tilPickup += Time.deltaTime;
 				if(tilPickup > 0.3f) { // timer reached, actually process
 					alpaca.StopWalk();
@@ -495,6 +416,7 @@ public class WorldScript : MonoBehaviour {
 				lastTimeClicked += Time.deltaTime;
 				// attempt to pick up block after certain time
 				if(flag && lastTimeClicked > 0.25f) { 
+					map.PreviewBlock(alpaca.GetCurrAlpacaDest(clickedWhere));
 					LoadTryHoldBlock(true);
 					flag = false;
 					get = true;

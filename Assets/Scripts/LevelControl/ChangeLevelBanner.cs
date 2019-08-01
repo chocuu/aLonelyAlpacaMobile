@@ -14,8 +14,8 @@ public class ChangeLevelBanner : MonoBehaviour, IPointerEnterHandler {
 	// Use this for initialization
 	void Start () {
 		levelPassed = GameObject.Find("LevelMenuController").GetComponent<LevelMenuControllerScript>().levelPassed;
-		if(levelPassed < 26) defaultLevelNumber = levelPassed + 1;
-		if(levelPassed == 26) defaultLevelNumber = levelPassed;
+		if(levelPassed < 28) defaultLevelNumber = levelPassed + 1;
+		if(levelPassed == 28) defaultLevelNumber = levelPassed;
 		levelBanner = GameObject.Find("LevelBanner").GetComponent<Image>();
 		levelBanner.sprite = GameObject.Find("banner" + defaultLevelNumber).GetComponent<SpriteRenderer>().sprite;
 

@@ -11,7 +11,7 @@ public class SupportUsController : MonoBehaviour
     [SerializeField] GameObject donateMenu;
     public RectTransform supportButtTransform;
     /* start and end positions of the support buttons */
-    public Vector3 unselectedPosition = new Vector3(-50.0f, -40.0f, 0);
+    public Vector3 unselectedPosition = new Vector3(-50.0f, -37.0f, 0);
     public Vector3 selectedPosition = new Vector3(-50.0f, -55.0f, 0);
     /* state of whether button is coming down or going up */
     private bool comingDown;
@@ -63,11 +63,11 @@ public class SupportUsController : MonoBehaviour
     /** Called every frame */
     void Update () {
         if(comingDown) {
-            lerp_timer += Time.deltaTime;
+            lerp_timer += 2 * Time.deltaTime;
 			supportButtTransform.anchoredPosition = Vector3.Lerp(supportButtTransform.anchoredPosition, selectedPosition, lerp_timer);
         }
         else if(goingUp) {
-            lerp_timer += Time.deltaTime;
+            lerp_timer += 2 * Time.deltaTime;
 			supportButtTransform.anchoredPosition = Vector3.Lerp(supportButtTransform.anchoredPosition, unselectedPosition, lerp_timer);
         }
         else {

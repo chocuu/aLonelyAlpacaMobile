@@ -9,6 +9,7 @@ public class PanButtonController : MonoBehaviour
     public Image panImage;
     public Sprite panSpriteSelected;
     public Sprite panSpriteUnselected;
+    public AudioSource panClickSound;
     private Transform cameraTransform;
     private FollowAlpaca follow_alpaca_script;
     private Vector3 moveX;
@@ -61,6 +62,7 @@ public class PanButtonController : MonoBehaviour
      * Called when pan button is clicked
      */
     public void panButtonClicked(){
+        panClickSound.Play();
         this.setIsPanning(!isPanning);
     }
 

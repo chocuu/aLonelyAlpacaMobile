@@ -25,11 +25,10 @@ public class FinalWinBlockController : MonoBehaviour
   private bool startCredits;
   private bool moveItStar;
   private bool moveItCam;
-  private const float moveSpeed = 3f;
-  private const float final_pan_pos = 17.5f;
+  private const float moveSpeed = 2.5f;
+  private const float final_pan_pos = 17.3775f;
   private const float final_pan_pos_c = 19f;
-  private Vector3 finalPanPos_star = new Vector3(0, 17.5f, 0);
-  private Vector3 finalPanPos_cam = new Vector3(0, 19f, 0);
+
   // Use this for initialization
   void Start()
   {
@@ -41,22 +40,19 @@ public class FinalWinBlockController : MonoBehaviour
     star_tf = star_obj.GetComponent<Transform>();
     cam_tf = cam.GetComponent<Transform>();
     FIScript = Background.GetComponent<FadeOutWSprite>();
-    //startCredits = false;
+    startCredits = false;
     moveItStar = true;
     moveItCam = true;
   }
 
-  public void BeatFinalLevel()
-  {
+  public void BeatFinalLevel(){
       endSong.Play();
       player.GetComponent<WorldScript>().enabled = false;
-      star_animator.speed = 2;
+      star_animator.speed = 3;
       startCredits = true;
   }
 
   // Update is called once per frame
-  private bool done_s; // true if star is done moving
-  private bool donec; // true if camera is done moving
   void Update() {
     if (startCredits && (moveItCam || moveItStar)){
       Vector3 temp = star_tf.position;
@@ -88,15 +84,18 @@ public class FinalWinBlockController : MonoBehaviour
     }
 
     // Star and Camera have both finished moving -> proceed to credits
-    else if (!moveItStar && !moveItCam) {
+    else if (startCredits && !moveItStar && !moveItCam) {
       StartCoroutine(FadeAfterTime(time_till_fade_to_fin));
     }
   }
 
   IEnumerator FadeAfterTime(float time)
   {
+    Debug.Log("starting fade in 1");
     yield return new WaitForSeconds(time);
+    Debug.Log("fading");
     FIScript.FadeOut();
+    yield return new WaitForSeconds(time);
     credits.SetActive(true);
     StartCoroutine(CredsAfterTime(FIN_time));
   }

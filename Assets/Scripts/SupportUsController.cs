@@ -9,6 +9,7 @@ public class SupportUsController : MonoBehaviour
     [SerializeField] GameObject supportUsMenu;
     [SerializeField] GameObject supportOptionsMenu;
     [SerializeField] GameObject donateMenu;
+    [SerializeField] GameObject thanksImage;
     public RectTransform supportButtTransform;
     /* start and end positions of the support buttons */
     public Vector3 unselectedPosition = new Vector3(-50.0f, -37.0f, 0);
@@ -44,17 +45,20 @@ public class SupportUsController : MonoBehaviour
             supportUsMenu.SetActive(true);
             supportOptionsMenu.SetActive(true);
             donateMenu.SetActive(false);
+            thanksImage.SetActive(false);
             comingDown = true;
             goingUp = false;
         } else if(donateMenu.activeSelf) // donate screen open -> go to options
         {
             supportOptionsMenu.SetActive(true);
             donateMenu.SetActive(false);
+            thanksImage.SetActive(false);
         } else // support options open -> close support screen
         {
             supportUsMenu.SetActive(false);
             supportOptionsMenu.SetActive(false);
             donateMenu.SetActive(false);
+            thanksImage.SetActive(false);
             comingDown = false;
             goingUp = true;
         }
@@ -93,6 +97,8 @@ public class SupportUsController : MonoBehaviour
             if (ad != null)
             {
                 ad.Show();
+                supportOptionsMenu.SetActive(false);
+                thanksImage.SetActive(true);
             }
         }
     }

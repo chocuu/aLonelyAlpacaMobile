@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7051,6 +7051,7 @@ MonoBehaviour:
   - {fileID: 961754995}
   - {fileID: 880166504}
   - {fileID: 1303373832}
+  - {fileID: 1268001651}
   - {fileID: 17851757}
   - {fileID: 1589957711}
   - {fileID: 584357277}
@@ -7078,9 +7079,7 @@ MonoBehaviour:
   - {fileID: 878227295}
   - {fileID: 1979696512}
   - {fileID: 645526331}
-  - {fileID: 166043647}
   - {fileID: 1125799428}
-  - {fileID: 1268001651}
   - {fileID: 493893937}
   - {fileID: 56034205}
   - {fileID: 798551635}
@@ -7115,6 +7114,7 @@ MonoBehaviour:
   - {fileID: 572308526}
   - {fileID: 1326885741}
   - {fileID: 626058320}
+  - {fileID: 166043647}
   - {fileID: 418106309}
   - {fileID: 890995708}
   - {fileID: 1298282242}
@@ -39670,7 +39670,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a2ac6a442c9d24bc898d06a99e0dce84, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -43572,7 +43572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1268001653}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1268001649}
   _so: {fileID: 1268001652}
   _attachedList:
@@ -43616,7 +43616,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 1268001649}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &1269280737
 GameObject:
   m_ObjectHideFlags: 0

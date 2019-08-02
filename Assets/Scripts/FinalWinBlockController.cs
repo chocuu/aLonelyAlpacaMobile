@@ -12,6 +12,7 @@ public class FinalWinBlockController : MonoBehaviour
   public GameObject star_obj;
   public GameObject star_Iso2d;
   public GameObject Background;
+  public GameObject canvasPrefab;
   /* Reference to fading script */
   private FadeOutWSprite FIScript;
   public float time_till_fade_to_fin;
@@ -48,6 +49,7 @@ public class FinalWinBlockController : MonoBehaviour
   public void BeatFinalLevel(){
       endSong.Play();
       player.GetComponent<WorldScript>().enabled = false;
+      canvasPrefab.SetActive(false);
       star_animator.speed = 3;
       startCredits = true;
   }

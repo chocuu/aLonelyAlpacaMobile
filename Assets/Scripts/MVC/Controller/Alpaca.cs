@@ -107,7 +107,7 @@ public class Alpaca : MonoBehaviour {
     			break;
     		default:
     			Debug.Log("incorrect clickedWhere in curralpacadest call");
-    			return new Vector3(0,0,0);
+    			return dest;
     	}
     	return dest;
 	}

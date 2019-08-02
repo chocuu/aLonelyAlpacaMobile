@@ -26,6 +26,7 @@ public class WorldScript : MonoBehaviour {
 	public GameObject quadrant_0, quadrant_1, quadrant_2, quadrant_3;
 	private Image[] quadrants;
 	private BlockButt blockButt;
+	private int level;
 
 	/**
 	 * 0 = hold in quadrant to drop/pick up
@@ -36,6 +37,7 @@ public class WorldScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		PlayerPrefs.SetString ("lastLoadedScene", SceneManager.GetActiveScene ().name);
 		if(map == null) {
 			map = new Map(100, 100);
 		}

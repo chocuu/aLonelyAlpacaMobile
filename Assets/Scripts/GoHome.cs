@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,6 +23,31 @@ public class GoHome : MonoBehaviour
     currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
     SceneManager.LoadSceneAsync(levelSelect, LoadSceneMode.Single);
 
+  }
+
+  private void goLastPassedLevel() {
+    int level = PlayerPrefs.GetInt("LevelPassed") + 1;
+    if(level > 28 || level <= 1) { // out of bounds level
+      Destroy(GameObject.Find("MusicTime"));
+      SceneManager.LoadScene("B0.5 - Intro", LoadSceneMode.Single);
+    }
+    else if(level == 28) { // last level
+      SceneManager.LoadScene("B" + (PlayerPrefs.GetInt("LevelPassed")), LoadSceneMode.Single);
+    }
+    else {
+      SceneManager.LoadScene("B" + (PlayerPrefs.GetInt("LevelPassed") + 1), LoadSceneMode.Single);
+    }
+  }
+
+  public void resumeGame()
+  {
+    string prevLvl = PlayerPrefs.GetString("lastLoadedScene");
+    if(Application.CanStreamedLevelBeLoaded(prevLvl)
+      && !prevLvl.Equals(menuLevel) 
+      && !prevLvl.Equals(levelSelect))
+        SceneManager.LoadScene(prevLvl, LoadSceneMode.Single);
+    else 
+      goLastPassedLevel();
   }
 
   public void goBackToPreviousLevel() {

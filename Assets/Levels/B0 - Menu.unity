@@ -176,6 +176,7 @@ MonoBehaviour:
   supportUsMenu: {fileID: 1906615342}
   supportOptionsMenu: {fileID: 911329582}
   donateMenu: {fileID: 733516246}
+  thanksImage: {fileID: 0}
   supportButtTransform: {fileID: 984090964}
   unselectedPosition: {x: -50, y: -37, z: 0}
   selectedPosition: {x: -50, y: -55, z: 0}
@@ -948,7 +949,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 431564221}
+      - m_Target: {fileID: 114468995008167606, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+          type: 3}
         m_MethodName: resumeGame
         m_Mode: 1
         m_Arguments:
@@ -1030,6 +1032,7 @@ MonoBehaviour:
   supportUsMenu: {fileID: 1906615342}
   supportOptionsMenu: {fileID: 0}
   donateMenu: {fileID: 0}
+  thanksImage: {fileID: 0}
   supportButtTransform: {fileID: 0}
   unselectedPosition: {x: -50, y: -40, z: 0}
   selectedPosition: {x: -50, y: -53, z: 0}

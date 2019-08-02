@@ -4561,7 +4561,7 @@ GameObject:
   - component: {fileID: 138524996}
   - component: {fileID: 138525000}
   m_Layer: 0
-  m_Name: T_F15_(10,04)__block_beta_grass
+  m_Name: T_F15_(10,04)__grass_C
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7078,7 +7078,7 @@ GameObject:
   - component: {fileID: 203989692}
   - component: {fileID: 203989696}
   m_Layer: 0
-  m_Name: T_F06_(07,03)__magma_block
+  m_Name: T_F06_(07,03)__magma_A
   m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7604,7 +7604,7 @@ GameObject:
   - component: {fileID: 217177175}
   - component: {fileID: 217177179}
   m_Layer: 0
-  m_Name: T_F18_(07,04)__block_beta_grass
+  m_Name: T_F18_(07,04)__grass_C
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12772,7 +12772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1055367784236320, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4228833587824526, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14217,7 +14217,7 @@ GameObject:
   - component: {fileID: 455582180}
   - component: {fileID: 455582184}
   m_Layer: 0
-  m_Name: T_F15_(09,04)__block_beta_grass
+  m_Name: T_F15_(09,04)__grass_C
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21650,7 +21650,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1775833641516320, guid: a3c9e7f02adc60e449c6dfac7c23914c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 996668562190964942, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
@@ -31527,7 +31527,7 @@ GameObject:
   - component: {fileID: 1082634103}
   - component: {fileID: 1082634107}
   m_Layer: 0
-  m_Name: T_F18_(06,04)__block_beta_grass
+  m_Name: T_F18_(06,04)__grass_C
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44234,7 +44234,7 @@ GameObject:
   - component: {fileID: 1482032452}
   - component: {fileID: 1482032456}
   m_Layer: 0
-  m_Name: T_F12_(11,04)__block_beta_grass
+  m_Name: T_F12_(11,04)__grass_C
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -14,18 +14,18 @@ public class LvlBlockTutorial_2 : MonoBehaviour
 {
     public Image dropRight;
 	public Image quadrant1;
+    public Image quadrant2;
 	public Alpaca alpaca;
-
-	Vector3 alpacaDrop1 = new Vector3(2, -2, -4);
-	Vector3 alpacaDrop2 = new Vector3(2, -5, -2);
+    Vector3 alpacaDrop0 = new Vector3(1, 1, -4);
+	Vector3 alpacaDrop1 = new Vector3(1, 1, -5);
+	Vector3 alpacaDrop2 = new Vector3(2, -2, -4);
+	Vector3 alpacaDrop3 = new Vector3(2, -5, -2);
 
     // Start is called before the first frame update
     void Start()
     {
-        dropRight.enabled = false;
         quadrant1.enabled = false;
-
-        dropRight.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.75f);
+        quadrant2.enabled = false;
     }
 
     bool Equals(Vector3 a, Vector3 b) {
@@ -36,10 +36,15 @@ public class LvlBlockTutorial_2 : MonoBehaviour
     void Update()
     {
     	Vector3 alpacaPos = alpaca.GetCurrAlpacaLocation();
-        if(alpaca.HasBlock() && (Equals(alpacaDrop1, alpacaPos) || Equals(alpacaDrop2, alpacaPos))) {
-            dropRight.enabled = quadrant1.enabled = true;
-        } else {
-            dropRight.enabled = quadrant1.enabled = false;
+        if(alpaca.HasBlock()){
+            if( Equals(alpacaDrop0, alpacaPos) || Equals(alpacaDrop1, alpacaPos)) 
+                quadrant2.enabled = true;
+            else if( Equals(alpacaDrop2, alpacaPos) || Equals(alpacaDrop3, alpacaPos))
+                quadrant1.enabled = true;
+            else
+                quadrant1.enabled = quadrant2.enabled = false;
         }
+        else 
+            quadrant1.enabled = quadrant2.enabled = false;
     }
 }

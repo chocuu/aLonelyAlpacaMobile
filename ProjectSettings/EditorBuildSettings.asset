@@ -33,10 +33,10 @@ EditorBuildSettings:
     path: Assets/Levels/B5.unity
     guid: 9b6f0abf93cc857489814b92db283d4f
   - enabled: 1
-    path: Assets/Levels/B6.unity
+    path: Assets/Levels/B7.unity
     guid: 95356057fad74480d97ae3344b25b0eb
   - enabled: 1
-    path: Assets/Levels/B7.unity
+    path: Assets/Levels/B6.unity
     guid: 86a27c20b37471643a96d3cf0e8955e4
   - enabled: 1
     path: Assets/Levels/B8.unity

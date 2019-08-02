@@ -29,14 +29,14 @@ public class WinCollision : MonoBehaviour
       winSound.Play();
       sceneIndex = SceneManager.GetActiveScene().buildIndex;
       levelPassed = PlayerPrefs.GetInt("LevelPassed");
-      Debug.Log("sceneIndex: " + sceneIndex + ", levelPassed: " + levelPassed);
+      //Debug.Log("sceneIndex: " + sceneIndex + ", levelPassed: " + levelPassed);
       if (levelPassed < sceneIndex)
       {
-        Debug.Log("levePassed < sceneIndex :^0");
+        //Debug.Log("levePassed < sceneIndex :^0");
         PlayerPrefs.SetInt("LevelPassed", sceneIndex);
       }
       SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
-      Debug.Log("Player moving on to level " + nextLevel);
+      //Debug.Log("Player moving on to level " + nextLevel);
     }
   }
 

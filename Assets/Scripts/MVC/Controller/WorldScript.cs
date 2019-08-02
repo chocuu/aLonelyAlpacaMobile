@@ -194,7 +194,7 @@ public class WorldScript : MonoBehaviour {
 				// do nothing
 				return;
 			default:
-				Debug.Log("Alpaca is on a none block!");
+				//Debug.Log("Alpaca is on a none block!");
 				return;
 		}
 	}
@@ -368,7 +368,7 @@ public class WorldScript : MonoBehaviour {
 			if(alpaca.IsDead()) {
 				death_timer -= Time.deltaTime;
 				if(ClickedNow() && death_timer < 0) { // reset on click
-					Debug.Log("reset on click");
+					//Debug.Log("reset on click");
 					if(ClickedWhere() != -1)
 						clickedWhere = ClickedWhere();
 					SceneManager.LoadSceneAsync( SceneManager.GetActiveScene().name );
@@ -379,7 +379,7 @@ public class WorldScript : MonoBehaviour {
 			// if in process of loading of holding/dropping a block,
 			// don't process input
 			if(get) {
-				Debug.Log("holding");
+				//Debug.Log("holding");
 				tilPickup += Time.deltaTime;
 				if(tilPickup > 0.3f) { // timer reached, actually process
 					alpaca.StopWalk();

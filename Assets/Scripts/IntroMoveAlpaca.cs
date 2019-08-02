@@ -6,32 +6,31 @@ public class IntroMoveAlpaca : MonoBehaviour {
 
 	// Use this for initialization
 	
-	public RectTransform rt;
+	public RectTransform pacaPicRectTransform;
 	public GameObject shadow;
 	private bool moveIt;
 	private float moveSpeed;
-	private float stop_y = Screen.height * 0.6f;
+	private float stop_y = 62f;//Screen.height * 0.6f;
 
 	void Start () {	
-		moveSpeed = 160f;
+		moveSpeed = 110f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(moveIt){
-			// Debug.Log(rt.position.y);
-			Vector3 temp = rt.position; 
-			if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
+			Vector3 temp = pacaPicRectTransform.anchoredPosition; 
+			if(Input.GetMouseButtonDown(0)){
 				temp.y = stop_y;
-				rt.position = temp;
+				pacaPicRectTransform.anchoredPosition = temp;
 				moveIt = false;
 			}
 			else{
 				temp.y += moveSpeed*Time.deltaTime;
-				rt.position = temp;
-				if(rt.position.y >= stop_y){
+				pacaPicRectTransform.anchoredPosition = temp;
+				if(pacaPicRectTransform.anchoredPosition.y >= stop_y){
 					temp.y = stop_y;
-					rt.position = temp;
+					pacaPicRectTransform.anchoredPosition = temp;
 					moveIt = false;
 			}
 		}		
@@ -39,7 +38,7 @@ public class IntroMoveAlpaca : MonoBehaviour {
 }
 
 	public void setMoveIt(bool move){ 
-		Debug.Log("set move it");
+		// Debug.Log("set move it");
 		this.moveIt = move;
 		shadow.GetComponent<FadeImage>().FadeOut();
 	}

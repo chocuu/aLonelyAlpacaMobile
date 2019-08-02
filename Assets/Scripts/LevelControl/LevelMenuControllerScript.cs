@@ -416,7 +416,7 @@ public class LevelMenuControllerScript : MonoBehaviour
         break;
     }
 
-    Debug.Log("levelPassed: " + levelPassed);
+    // Debug.Log("levelPassed: " + levelPassed);
     GameObject previousLevel = GameObject.Find("GameObject");
     if (previousLevel != null) {
         levelPassed = int.Parse(Regex.Match(previousLevel.GetComponent<currentLevelName>().currentLevelNameString, @"\d+").Value);
@@ -438,7 +438,7 @@ public class LevelMenuControllerScript : MonoBehaviour
     if (mostRecentLevel == 26) findThisButton = "B" + (mostRecentLevel).ToString() + "Button";
 
     GameObject mostRecentStar = GameObject.Find(findThisButton);
-    Debug.Log(mostRecentStar);
+    // Debug.Log(mostRecentStar);
     Vector3 mostRecentStarPosition = mostRecentStar.GetComponent<RectTransform>().position;
 
     GameObject alpacaSprite = GameObject.Find("AlpacaSprite");

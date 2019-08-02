@@ -106,7 +106,7 @@ public class Alpaca : MonoBehaviour {
     			dest.z--;
     			break;
     		default:
-    			Debug.Log("incorrect clickedWhere in curralpacadest call");
+    			//Debug.Log("incorrect clickedWhere in curralpacadest call");
     			return dest;
     	}
     	return dest;
@@ -154,7 +154,7 @@ public class Alpaca : MonoBehaviour {
     	popSound.Play();
     	animator.SetBool("poof", has);
 		animator.SetBool("is_blockpaca", has);
-		animator.SetBool("drop_block", !has);
+		//animator.SetBool("drop_block", !has); //does not exist
 		lastBlock = has;
     }
 
@@ -203,7 +203,7 @@ public class Alpaca : MonoBehaviour {
     }
 
     public void SetFlamed() {
-    	Debug.Log("death by fire");
+    	//Debug.Log("death by fire");
     	animator.SetBool("walkse", false);
 		animator.SetBool("walksw", false);
 		animator.SetBool("walknw", false);

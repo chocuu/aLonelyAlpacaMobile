@@ -211,16 +211,16 @@ public class Map {
     }
 
     public void PreviewBlock(Vector3 coords) {
-        Debug.Log("preview block start");
+        //Debug.Log("preview block start");
         if(held_block == null) return;
-        Debug.Log("1");
+        //Debug.Log("1");
         if(GetBlock(coords) != null) 
             return;
-        Debug.Log("2");
+        //Debug.Log("2");
         Block top = GetHighestBlockBelow(coords);
         if(top == null)
             return;
-        Debug.Log("3");
+        //Debug.Log("3");
         coords = top.getCoords();
         coords.y++;
         coords.x = (float)Math.Round(coords.x);
@@ -239,7 +239,7 @@ public class Map {
         //     get.Add((int)coords.y, held_block);
         // }
         held_block.Move(coords);
-        Debug.Log("preview block end");
+        //Debug.Log("preview block end");
     }
 
 }

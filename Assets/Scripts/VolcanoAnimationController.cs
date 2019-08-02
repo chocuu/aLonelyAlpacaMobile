@@ -33,6 +33,7 @@ public class VolcanoAnimationController : MonoBehaviour {
 				soundPlayed = true;
 			}	
 			pos.x = Mathf.Sin(100 * Time.time * speed);
+			pos.y = -1;
 			pos.z = Mathf.Sin(100 * Time.time * speed);
 			transform.position = pos;
 			Handheld.Vibrate();

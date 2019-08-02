@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/**
- * Handles background scaling. Should keep it fills the entire screen.
- * (Used by Zoomer script)
- */
-public class ScaleBackground : MonoBehaviour
+public class ScaleBackgroundVolcano : MonoBehaviour
 {
 	public SpriteRenderer render;
 	float width;
@@ -31,7 +27,7 @@ public class ScaleBackground : MonoBehaviour
 		width = render.sprite.bounds.size.x;
 		height = render.sprite.bounds.size.y;
 
-		var worldScreenWidth = Camera.main.orthographicSize * 8 + s*1.5f;
+		var worldScreenWidth = Camera.main.orthographicSize * 9.5 + s*1.5f;
 		var worldScreenHeight = (worldScreenWidth / Screen.width) * Screen.height;
 
 		Vector3 scale = new Vector3((float) worldScreenWidth / width, (float) worldScreenWidth / width,1);
@@ -47,7 +43,7 @@ public class ScaleBackground : MonoBehaviour
 		width = render.sprite.bounds.size.x;
 		height = render.sprite.bounds.size.y;
 
-		var worldScreenWidth = Camera.main.orthographicSize * 8 + s*1.5f;
+		var worldScreenWidth = Camera.main.orthographicSize * 10 + s*1.5f;
 		var worldScreenHeight = (worldScreenWidth / Screen.width) * Screen.height;
 
 		Vector3 scale = new Vector3((float) worldScreenWidth / width, (float) worldScreenWidth / width,1);
@@ -60,3 +56,4 @@ public class ScaleBackground : MonoBehaviour
         
     }
 }
+

@@ -19,8 +19,7 @@ public class LvlBlockTutorial_2 : MonoBehaviour
     Vector3 alpacaDrop0 = new Vector3(1, 1, -4);
 	Vector3 alpacaDrop1 = new Vector3(1, 1, -5);
 	Vector3 alpacaDrop2 = new Vector3(2, -2, -4);
-	Vector3 alpacaDrop3 = new Vector3(2, -5, -2);
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +38,7 @@ public class LvlBlockTutorial_2 : MonoBehaviour
         if(alpaca.HasBlock()){
             if( Equals(alpacaDrop0, alpacaPos) || Equals(alpacaDrop1, alpacaPos)) 
                 quadrant2.enabled = true;
-            else if( Equals(alpacaDrop2, alpacaPos) || Equals(alpacaDrop3, alpacaPos))
+            else if( Equals(alpacaDrop2, alpacaPos))
                 quadrant1.enabled = true;
             else
                 quadrant1.enabled = quadrant2.enabled = false;

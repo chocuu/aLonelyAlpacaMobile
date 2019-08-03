@@ -72,12 +72,12 @@ public class UpdateLevelSelectMenu : MonoBehaviour
     
     void Start() {
 
-        // Put selector at the player's farthest completed level if they enter level selct from menu
+        // Put selector at the player's most recent level if they enter level selct from menu
         // and put them at the level the paused from if they enter level select from a level
         GameObject previousLevel = GameObject.Find("GameObject");
         if (previousLevel != null) {
             currentLevel = int.Parse(Regex.Match(previousLevel.GetComponent<currentLevelName>().currentLevelNameString, @"\d+").Value);
-            currentLevel = (currentLevel == 0) ? PlayerPrefs.GetInt("LevelPassed"): (currentLevel - 1);
+            currentLevel = (currentLevel == 0) ? int.Parse(PlayerPrefs.GetString("lastLoadedScene").Substring(1))-1: (currentLevel - 1);
         }
 
         if(currentLevel < 0 || currentLevel >= numberOfLevels) 

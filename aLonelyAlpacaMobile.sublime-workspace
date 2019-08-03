@@ -12,55 +12,10 @@
 	"buffers":
 	[
 		{
-			"file": "Assets/Scripts/MVC/Controller/WorldScript.cs",
-			"settings":
-			{
-				"buffer_size": 13366,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/MVC/Controller/Lvl1Tutorial.cs",
-			"settings":
-			{
-				"buffer_size": 4310,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/MVC/Controller/LvlBlockTutorial_2.cs",
-			"settings":
-			{
-				"buffer_size": 1362,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/MVC/Controller/Alpaca.cs",
-			"settings":
-			{
-				"buffer_size": 6876,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Assets/Scripts/MVC/Model/Block.cs",
 			"settings":
 			{
-				"buffer_size": 1814,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/MVC/Model/Map.cs",
-			"settings":
-			{
-				"buffer_size": 7375,
+				"buffer_size": 1975,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -69,34 +24,88 @@
 			"file": "Assets/Anonym/MapEditor/script/Unclickable.cs",
 			"settings":
 			{
-				"buffer_size": 1573,
+				"buffer_size": 1727,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Anonym/MapEditor/script/GridCoordinates.cs",
+			"file": "Assets/Scripts/MVC/Controller/WorldScript.cs",
 			"settings":
 			{
-				"buffer_size": 6824,
+				"buffer_size": 15115,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/ScaleBackground.cs",
+			"file": "Assets/Scripts/MVC/Model/Map.cs",
 			"settings":
 			{
-				"buffer_size": 1016,
+				"buffer_size": 8812,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/GoHome.cs",
+			"settings":
+			{
+				"buffer_size": 1993,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/LevelControl/DisableResumeAtFirst.cs",
+			"settings":
+			{
+				"buffer_size": 767,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/Scripts/FadeOutWSprite.cs",
+			"file": "Assets/Scripts/LevelControl/currentLevelName.cs",
 			"settings":
 			{
-				"buffer_size": 1148,
+				"buffer_size": 412,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/SupportUsController.cs",
+			"settings":
+			{
+				"buffer_size": 3524,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MVC/Controller/Alpaca.cs",
+			"settings":
+			{
+				"buffer_size": 7470,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/LevelControl/ChangeLevelBanner.cs",
+			"settings":
+			{
+				"buffer_size": 1705,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/LevelControl/UpdateLevelSelectMenu.cs",
+			"settings":
+			{
+				"buffer_size": 8234,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -144,6 +153,7 @@
 	"expanded_folders":
 	[
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/LevelControl",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Model",
@@ -151,24 +161,34 @@
 	],
 	"file_history":
 	[
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/Lvl1Tutorial.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/Reset.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/StartButton.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/LevelControl/currentLevelName.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/LevelControl/LevelMenuControllerScript.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Model/Map.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/ScaleBackground.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/FadeOutWSprite.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/LevelControl/DisableResumeAtFirst.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/SupportUsController.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/TileTint.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/Unclickable.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/Zoomer.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/WorldScript.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/UpdateLevelSelectMenu.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/Lvl1Tutorial.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/GridCoordinates.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/Alpaca.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/LvlBlockTutorial_2.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/Reset.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/IsometricCharacterController.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/LvlBlockTutorial.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/LvlBlockTutorial_2.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/ResetGame.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/GoHome.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/FinalWinBlockController.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/KeyInputAssist.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Model/Map.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/CutsceneController.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/IntroMoveAlpaca.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/EndCreditsController.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/Alpaca.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/LevelControlScript.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/GridCoordinates.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/FadeOutWSprite.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/PressSpaceToAdvance.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/FadeSyncer.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/FadeImage.cs",
@@ -176,10 +196,8 @@
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/LevelMenuControllerScript.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/changeFacingDirection.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/IsoTransform.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/ScaleBackground.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/SkipNonInteractable.cs",
 		"/Users/alpacz/Documents/git.nosync/cude/Assets/Scripts/Zoomer.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/WorldScript.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/IsometricMovement.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/fireBlockCollision.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Model/MoveableBlock.cs",
@@ -204,7 +222,7 @@
 	],
 	"find":
 	{
-		"height": 24.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -218,6 +236,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getcurralpacadest",
+			"level",
+			"menuLevel",
+			"NextLevelClicked",
+			"nextlevelimage",
+			"levelPositions",
+			"block",
+			"PreviewBlock",
+			"TryHoldBlock",
+			"UnPrev",
+			"setCoords",
+			"try_held_block",
+			"coords",
+			"LoadTryHold",
+			"try_held_block",
+			">= ",
 			"lastClicked",
 			"highlighted",
 			"BOOP",
@@ -329,23 +363,7 @@
 			"falling",
 			"fall_diff",
 			"is_falling",
-			"has_block",
-			"_parent",
-			"transform",
-			"base",
-			"DirQ",
-			"Update()",
-			"Update",
-			"KeyToMouse",
-			"animator",
-			"clickedwhere",
-			"Time.",
-			"didClick",
-			"transform",
-			"animator",
-			"fire",
-			"death",
-			"using"
+			"has_block"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -363,82 +381,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 10,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/MVC/Controller/WorldScript.cs",
+					"file": "Assets/Scripts/MVC/Model/Block.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13366,
+						"buffer_size": 1975,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11015,
-								11015
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1423.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/MVC/Controller/Lvl1Tutorial.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4310,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1182.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/MVC/Controller/LvlBlockTutorial_2.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1362,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								1134,
+								1134
 							]
 						],
 						"settings":
@@ -451,24 +411,54 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Assets/Scripts/MVC/Controller/Alpaca.cs",
+					"buffer": 1,
+					"file": "Assets/Anonym/MapEditor/script/Unclickable.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6876,
+						"buffer_size": 1727,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								669,
-								669
+								349,
+								349
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/MVC/Controller/WorldScript.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5326,
+								5326
 							]
 						],
 						"settings":
@@ -476,27 +466,87 @@
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1194.0,
+						"translation.y": 2245.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "Assets/Scripts/MVC/Model/Block.cs",
+					"buffer": 3,
+					"file": "Assets/Scripts/MVC/Model/Map.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1814,
+						"buffer_size": 8812,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								153,
-								153
+								6121,
+								6121
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/GoHome.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/LevelControl/DisableResumeAtFirst.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								492,
+								492
 							]
 						],
 						"settings":
@@ -513,138 +563,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Assets/Scripts/MVC/Model/Map.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7375,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7311,
-								7314
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2142.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
 					"buffer": 6,
-					"file": "Assets/Anonym/MapEditor/script/Unclickable.cs",
+					"file": "Assets/Scripts/LevelControl/currentLevelName.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1573,
+						"buffer_size": 412,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								137,
-								137
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Assets/Anonym/MapEditor/script/GridCoordinates.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6824,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5065,
-								5065
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2400.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "Assets/Scripts/ScaleBackground.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1016,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								975,
-								975
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "Assets/Scripts/FadeOutWSprite.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1148,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								101,
-								101
+								266,
+								266
 							]
 						],
 						"settings":
@@ -656,7 +588,124 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Assets/Scripts/SupportUsController.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2835,
+								2835
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 672.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Assets/Scripts/MVC/Controller/Alpaca.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2854,
+								2854
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1150.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Assets/Scripts/LevelControl/ChangeLevelBanner.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								395,
+								395
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Assets/Scripts/LevelControl/UpdateLevelSelectMenu.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4663,
+								4663
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 850.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -664,7 +713,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -709,7 +758,7 @@
 	"project": "aLonelyAlpacaMobile.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

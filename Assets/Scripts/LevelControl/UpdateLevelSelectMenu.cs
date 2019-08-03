@@ -80,7 +80,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
             currentLevel = (currentLevel == 0) ? PlayerPrefs.GetInt("LevelPassed"): (currentLevel - 1);
         }
 
-        if(currentLevel < 0 || currentLevel > numberOfLevels) 
+        if(currentLevel < 0 || currentLevel >= numberOfLevels) 
             currentLevel = 0;
 
         // Load components

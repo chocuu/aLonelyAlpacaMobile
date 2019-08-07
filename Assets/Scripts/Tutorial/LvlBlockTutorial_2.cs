@@ -23,8 +23,7 @@ public class LvlBlockTutorial_2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        quadrant1.enabled = false;
-        quadrant2.enabled = false;
+        quadrant1.enabled = quadrant2.enabled = dropRight.enabled = false;
     }
 
     bool Equals(Vector3 a, Vector3 b) {
@@ -36,14 +35,20 @@ public class LvlBlockTutorial_2 : MonoBehaviour
     {
     	Vector3 alpacaPos = alpaca.GetCurrAlpacaLocation();
         if(alpaca.HasBlock()){
-            if( Equals(alpacaDrop0, alpacaPos) || Equals(alpacaDrop1, alpacaPos)) 
+            if( Equals(alpacaDrop0, alpacaPos) || Equals(alpacaDrop1, alpacaPos)) {
                 quadrant2.enabled = true;
-            else if( Equals(alpacaDrop2, alpacaPos))
+                dropRight.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.25f);
+                dropRight.enabled = true;
+            }
+            else if( Equals(alpacaDrop2, alpacaPos)) {
                 quadrant1.enabled = true;
+                dropRight.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.75f);
+                dropRight.enabled = true;
+            }
             else
-                quadrant1.enabled = quadrant2.enabled = false;
+                quadrant1.enabled = quadrant2.enabled = dropRight.enabled = false;
         }
         else 
-            quadrant1.enabled = quadrant2.enabled = false;
+            quadrant1.enabled = quadrant2.enabled = dropRight.enabled = false;
     }
 }

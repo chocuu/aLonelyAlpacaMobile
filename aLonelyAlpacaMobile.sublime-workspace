@@ -222,7 +222,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -381,7 +381,7 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -411,7 +411,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -438,7 +438,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 9,
@@ -466,10 +466,10 @@
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2245.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -496,10 +496,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -515,8 +515,8 @@
 						"selection":
 						[
 							[
-								525,
-								525
+								563,
+								563
 							]
 						],
 						"settings":
@@ -545,8 +545,8 @@
 						"selection":
 						[
 							[
-								492,
-								492
+								686,
+								686
 							]
 						],
 						"settings":
@@ -559,7 +559,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -575,8 +575,8 @@
 						"selection":
 						[
 							[
-								266,
-								266
+								412,
+								412
 							]
 						],
 						"settings":
@@ -588,7 +588,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -615,10 +615,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 672.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -643,7 +643,7 @@
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1150.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
@@ -691,8 +691,8 @@
 						"selection":
 						[
 							[
-								4663,
-								4663
+								4436,
+								4436
 							]
 						],
 						"settings":
@@ -702,10 +702,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 850.0,
+						"translation.y": 1467.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -713,7 +713,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 24.0
 	},
 	"input":
 	{
@@ -758,7 +758,7 @@
 	"project": "aLonelyAlpacaMobile.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":

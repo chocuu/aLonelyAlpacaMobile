@@ -210,6 +210,9 @@ public class Map {
         return held_block != null;
     }
 
+    /**
+     * Used to draw moveable block at a lower opacity
+     */
     public void PreviewBlock(Vector3 coords) {
         //Debug.Log("preview block start");
         if(held_block == null) return;

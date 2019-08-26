@@ -5472,7 +5472,7 @@ GameObject:
   - component: {fileID: 152646535}
   - component: {fileID: 152646539}
   m_Layer: 0
-  m_Name: T_F-09_(04,02)__block_poof_0
+  m_Name: T_F-09_(03,-01)__block_poof_0
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5551,7 +5551,7 @@ MonoBehaviour:
   _grid: {fileID: 1971292625}
   bSnapFree: 0
   _autoName: {fileID: 152646535}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &152646537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5580,7 +5580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152646532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -3, z: 2}
+  m_LocalPosition: {x: 3, y: -3, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1832642828}
@@ -12245,11 +12245,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114267059788626970, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
-        type: 3}
-      propertyPath: deathImage
-      value: 
-      objectReference: {fileID: 1894945142}
     - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12282,6 +12277,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114267059788626970, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 3}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 1894945142}
     m_RemovedComponents:
     - {fileID: 114329817668308066, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 3}
@@ -16565,7 +16565,7 @@ MonoBehaviour:
   _grid: {fileID: 1971292625}
   bSnapFree: 0
   _autoName: {fileID: 489504039}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &490293947
 GameObject:
   m_ObjectHideFlags: 0
@@ -54709,7 +54709,7 @@ MonoBehaviour:
   _grid: {fileID: 1971292625}
   bSnapFree: 0
   _autoName: {fileID: 1570832312}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1570832314
 MonoBehaviour:
   m_ObjectHideFlags: 0

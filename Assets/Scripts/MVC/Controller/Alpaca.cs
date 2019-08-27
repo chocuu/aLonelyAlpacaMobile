@@ -85,7 +85,7 @@ public class Alpaca : MonoBehaviour {
     }
 
     /**
-	 * Return the block in front of the alpaca (in direction its facing)
+	 * Return the block vecotr in front of the alpaca (in direction its facing)
 	 *
 	 * clickedWhere is where the alpaca is facing
 	 */

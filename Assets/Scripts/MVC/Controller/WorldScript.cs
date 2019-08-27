@@ -127,6 +127,13 @@ public class WorldScript : MonoBehaviour {
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 	/**
+	 * Helper function for Block Tutorial
+	 */
+	public Block GetBlockAlpacaFacing() {
+		return GetBlockAt(alpaca.GetCurrAlpacaDest(clickedWhere));
+	}
+
+	/**
 	 * Get the block below the given location.
 	 */
 	Block GetBlockBelow(Vector3 loc) {
@@ -353,6 +360,10 @@ public class WorldScript : MonoBehaviour {
 
 	float death_timer = 0.5f; // Used to delay before you can click screen to restart after death
 
+	public int AlpClickedWhere() {
+		return clickedWhere;
+	}
+
 	/**
 	 * Processes the input for this update. In charge of:
 	 * 
@@ -369,8 +380,7 @@ public class WorldScript : MonoBehaviour {
 				death_timer -= Time.deltaTime;
 				if(ClickedNow() && death_timer < 0) { // reset on click
 					//Debug.Log("reset on click");
-					if(ClickedWhere() != -1)
-						clickedWhere = ClickedWhere();
+					clickedWhere = ClickedWhere();
 					SceneManager.LoadSceneAsync( SceneManager.GetActiveScene().name );
 				}
 				return;
@@ -392,13 +402,13 @@ public class WorldScript : MonoBehaviour {
 			}
 
 			if(!ClickedNow() && didClick) { // click just ended
-				if(control_scheme == 1) {
-					clickPos = Input.mousePosition;
-					clickedWhere = ClickedWhere();
-					HighlightQuadrant();
-					alpaca.SetFacingDirection(clickedWhere);
-					alpaca.UpdateWalk();
-				}
+				// if(control_scheme == 1) {
+				// 	clickPos = Input.mousePosition;
+				// 	clickedWhere = ClickedWhere();
+				// 	HighlightQuadrant();
+				// 	alpaca.SetFacingDirection(clickedWhere);
+				// 	alpaca.UpdateWalk();
+				// }
 				if(lastTimeClicked < 100) { //did not pick up block
 					MoveOnClick();
 					map.LoadTryHoldBlock(new Vector3(0,0,0), false);
@@ -409,8 +419,10 @@ public class WorldScript : MonoBehaviour {
 					alpaca.StopWalk();
 				flag = true;
 			} else if(ClickedNow()) { // click is happening
-				if(control_scheme == 0 || control_scheme == 2) {
+				if(control_scheme == 0) {
 					clickPos = Input.mousePosition;
+					if(ClickedWhere() == -1)
+						return;
 					clickedWhere = ClickedWhere();
 					HighlightQuadrant();
 					alpaca.SetFacingDirection(clickedWhere);

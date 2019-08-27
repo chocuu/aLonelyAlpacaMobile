@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System;
 
 /**
@@ -12,38 +13,114 @@ using System;
  */
 public class LvlBlockTutorial_2 : MonoBehaviour
 {
-    public Image dropRight;
-	public Image quadrant1;
-    public Image quadrant2;
+    public GameObject quadrant_0, quadrant_1, quadrant_2, quadrant_3;
+    public Image alp_0, alp_1, alp_2, alp_3;
+    public Animator alpanim_0, alpanim_1, alpanim_2, alpanim_3;
+    private GameObject[] quadrants;
+    WorldScript world;
 	public Alpaca alpaca;
     Vector3 alpacaDrop0 = new Vector3(1, 1, -4);
 	Vector3 alpacaDrop1 = new Vector3(1, 1, -5);
 	Vector3 alpacaDrop2 = new Vector3(2, -2, -4);
+    Vector3 alpacaDrop3 = new Vector3(2, -5, -2);
+    Vector3 alpacaDrop4 = new Vector3(2, -8, -0);
+    Vector3 alpacaDrop5 = new Vector3(2, -8, -1);
     
     // Start is called before the first frame update
     void Start()
     {
-        quadrant1.enabled = false;
-        quadrant2.enabled = false;
+        if(GameObject.FindGameObjectsWithTag("WORLD").Length > 0) {
+            world = GameObject.FindGameObjectsWithTag("WORLD")[0].GetComponent<WorldScript>();
+        }
+
+        quadrants = new GameObject[4]{quadrant_0, quadrant_1, quadrant_2, quadrant_3};
+
+        // quadrant1.enabled = quadrant2.enabled = dropRight.enabled = false;
+
+        alp_0.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.75f);
+        alp_1.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.75f);
+        alp_3.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.25f);
+        alp_2.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.25f);
+       
     }
 
     bool Equals(Vector3 a, Vector3 b) {
 		return Math.Round(a.x - b.x)  == 0 && Math.Round(a.z - b.z) == 0 && Math.Round(a.y - b.y) == 0;
     }
 
+    /**
+     * forward = true, play animations as original 
+     * otherwise rewind the animation
+     */
+    void SetAnimForward(bool forward) {
+        if(forward) {
+            alpanim_0.SetFloat("speed", 1.0f); 
+            alpanim_1.SetFloat("speed", 1.0f);
+            alpanim_2.SetFloat("speed", 1.0f); 
+            alpanim_3.SetFloat("speed", 1.0f);
+        } else {
+            alpanim_0.SetFloat("speed", -1.0f); 
+            alpanim_1.SetFloat("speed", -1.0f);
+            alpanim_2.SetFloat("speed", -1.0f); 
+            alpanim_3.SetFloat("speed", -1.0f);
+        }
+    }
+
+    void ClearQuadrants() {
+        quadrants[0].SetActive(false); 
+        quadrants[1].SetActive(false); 
+        quadrants[2].SetActive(false);
+        quadrants[3].SetActive(false); 
+    }
+
+
+    bool hadBlock = false; 
+
     // Update is called once per frame
     void Update()
     {
     	Vector3 alpacaPos = alpaca.GetCurrAlpacaLocation();
+
         if(alpaca.HasBlock()){
-            if( Equals(alpacaDrop0, alpacaPos) || Equals(alpacaDrop1, alpacaPos)) 
-                quadrant2.enabled = true;
-            else if( Equals(alpacaDrop2, alpacaPos))
-                quadrant1.enabled = true;
-            else
-                quadrant1.enabled = quadrant2.enabled = false;
+            if(!hadBlock)
+                ClearQuadrants();
+            SetAnimForward(true);
+            if( Equals(alpacaDrop0, alpacaPos) || Equals(alpacaDrop1, alpacaPos) ||
+                        (Math.Round(4 - alpacaPos.x)  == 0 && Math.Round(-11 - alpacaPos.y) == 0)
+                        || Equals(alpacaDrop4, alpacaPos) || Equals(alpacaDrop5, alpacaPos)) {
+                quadrants[2].SetActive(true);
+            }
+            else if( Equals(alpacaDrop2, alpacaPos) || Equals(alpacaDrop3, alpacaPos)) {
+                quadrants[1].SetActive(true);
+            }
+            else {
+                quadrants[1].SetActive(false); 
+                quadrants[2].SetActive(false);
+            }
         }
-        else 
-            quadrant1.enabled = quadrant2.enabled = false;
+        else {
+            SetAnimForward(false);
+            if(world.GetBlockAlpacaFacing() != null && world.GetBlockAlpacaFacing().b_type == Block.BlockType.MOVEABLE &&
+                alpacaPos.y > -14) {
+                quadrants[world.AlpClickedWhere()].SetActive(true);
+            } else {
+                ClearQuadrants();
+            }
+        }
+
+        hadBlock = alpaca.HasBlock();
+    }
+
+    /**
+     * Returns true iff there was a click during this update.
+     */
+    bool ClickedNow() {
+        // check if is on ui button (this version works for mobile too)
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        
+        return Input.GetMouseButton(0) && !(results.Count > 0); 
     }
 }

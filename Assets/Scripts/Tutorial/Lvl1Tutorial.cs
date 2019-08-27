@@ -20,9 +20,6 @@ public class Lvl1Tutorial : MonoBehaviour
     public GameObject allarrows;
 	private Image[] quadrants;
 
-    // scaling used to keep tutorial images proper size
-    private Vector3 SCALE = new Vector3(Screen.width * 0.001f, Screen.width * 0.001f, 1);
-
 	bool didFade = false;
     // Start is called before the first frame update
     void Start()
@@ -35,18 +32,6 @@ public class Lvl1Tutorial : MonoBehaviour
 		quadrants[1].enabled = false;
 		quadrants[2].enabled = false;
 		quadrants[3].enabled = false;
-
-        // Debug.Log(Screen.width);
-        if(quadrants[0] != null) 
-            quadrants[0].rectTransform.localScale = quadrants[1].rectTransform.localScale 
-                = quadrants[2].rectTransform.localScale = quadrants[3].rectTransform.localScale 
-                = SCALE;
-
-        if(tutImage != null)
-            tutImage.GetComponent<Image>().rectTransform.localScale = SCALE;
-
-        if(allarrows != null)
-            allarrows.GetComponent<Image>().rectTransform.localScale = SCALE;
 
         if(tutImage != null) {
             tutImage.color = new Color(1, 1, 1, 0);

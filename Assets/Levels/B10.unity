@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 12695888}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1971292626}
   _autoName: {fileID: 12695884}
   _so: {fileID: 12695887}
   _attachedList:
@@ -394,7 +394,7 @@ MonoBehaviour:
   _grid: {fileID: 1971292625}
   bSnapFree: 0
   _autoName: {fileID: 12695884}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &13694026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3145,7 +3145,7 @@ GameObject:
   - component: {fileID: 103557107}
   - component: {fileID: 103557111}
   m_Layer: 0
-  m_Name: T_F-11_(03,01)__block_beta_grass
+  m_Name: T_F-12_(03,01)__block_beta_grass
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3253,7 +3253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103557104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: -3.6666665, z: 1}
+  m_LocalPosition: {x: 3, y: -4, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 512706858}
@@ -12245,6 +12245,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114267059788626970, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 3}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 1894945142}
     - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12277,11 +12282,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114267059788626970, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
-        type: 3}
-      propertyPath: deathImage
-      value: 
-      objectReference: {fileID: 1894945142}
     m_RemovedComponents:
     - {fileID: 114329817668308066, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 3}
@@ -28157,7 +28157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833109892}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
-  m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1475237592}
@@ -37957,7 +37957,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 228e582d7f5f540c080406770a560034, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -57747,7 +57747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652860454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: -2.9999998, z: 2}
+  m_LocalPosition: {x: 3, y: -3, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1475237592}
@@ -67384,7 +67384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1945149432}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1971292626}
   _autoName: {fileID: 1945149428}
   _so: {fileID: 1945149431}
   _attachedList:

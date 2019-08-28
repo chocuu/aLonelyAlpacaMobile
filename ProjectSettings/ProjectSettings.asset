@@ -164,7 +164,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.MangoSnoopers.ALonelyAlpaca
   buildNumber: {}
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -257,8 +257,9 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: mangosnoopers.keystore'
-  AndroidKeyaliasName: snoopskey
+  AndroidKeystoreName: C:/Users/Joshua Diaz/Documents/Projects/A Lonely Alpaca Mobile/App
+    Store Photos/user.keystore
+  AndroidKeyaliasName: snooperkey
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

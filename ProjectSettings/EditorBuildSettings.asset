@@ -34,10 +34,10 @@ EditorBuildSettings:
     guid: 9b6f0abf93cc857489814b92db283d4f
   - enabled: 1
     path: Assets/Levels/B6.unity
-    guid: 95356057fad74480d97ae3344b25b0eb
+    guid: 86a27c20b37471643a96d3cf0e8955e4
   - enabled: 1
     path: Assets/Levels/B7.unity
-    guid: 86a27c20b37471643a96d3cf0e8955e4
+    guid: 95356057fad74480d97ae3344b25b0eb
   - enabled: 1
     path: Assets/Levels/B8.unity
     guid: c06547d0ca200d6458601257447f438c
@@ -46,43 +46,43 @@ EditorBuildSettings:
     guid: c55d2be046dd54da9a2136442bd3c1b7
   - enabled: 1
     path: Assets/Levels/B10.unity
-    guid: c3eecb8e48332483abc2dd4cf9a8cdd1
+    guid: 8232693ae18516543a29a1b96ace028e
   - enabled: 1
     path: Assets/Levels/B11.unity
     guid: 89672aeb6d4884635bf9020eee19b5e8
   - enabled: 1
     path: Assets/Levels/B12.unity
-    guid: 2628e2f6300b5458b907a9222951fb57
+    guid: c3eecb8e48332483abc2dd4cf9a8cdd1
   - enabled: 1
     path: Assets/Levels/B13.unity
-    guid: 4f3b15d616a2a1545bd4862fcbcd4551
+    guid: 2274bd9bbdb6b4eb2b56478482224311
   - enabled: 1
     path: Assets/Levels/B14.unity
-    guid: 3ace43d740272456bbf5a27aa82239c4
+    guid: 2628e2f6300b5458b907a9222951fb57
   - enabled: 1
     path: Assets/Levels/B15.unity
-    guid: a0cd1bb1dd422124aa84e9b24482c056
+    guid: 4f3b15d616a2a1545bd4862fcbcd4551
   - enabled: 1
     path: Assets/Levels/B16.unity
-    guid: 7f992bf5c3b60b8408d686ea635c295f
+    guid: 3ace43d740272456bbf5a27aa82239c4
   - enabled: 1
     path: Assets/Levels/B17.unity
     guid: aa57e3c83e101b74792e2ad544584552
   - enabled: 1
     path: Assets/Levels/B18.unity
-    guid: 4d7757274acc53d4cab6af763db2ed09
+    guid: a0cd1bb1dd422124aa84e9b24482c056
   - enabled: 1
     path: Assets/Levels/B19.unity
-    guid: 2274bd9bbdb6b4eb2b56478482224311
+    guid: 7f992bf5c3b60b8408d686ea635c295f
   - enabled: 1
     path: Assets/Levels/B20.unity
-    guid: f138e533f6ada47fb96d9fe061c42a91
+    guid: d0a84f9ebe2210b49846d0bdd2badda6
   - enabled: 1
     path: Assets/Levels/B21.unity
     guid: 5f89c9f514338b547a0ca77a77a09de5
   - enabled: 1
     path: Assets/Levels/B22.unity
-    guid: 8232693ae18516543a29a1b96ace028e
+    guid: f138e533f6ada47fb96d9fe061c42a91
   - enabled: 1
     path: Assets/Levels/B23.unity
     guid: 74bde036290213c4f9b8d8b741737d8d
@@ -91,10 +91,10 @@ EditorBuildSettings:
     guid: 3e44c530fe6e04f44ae0611143c2056f
   - enabled: 1
     path: Assets/Levels/B25.unity
-    guid: 3acfe06bf17adb949985e0921309e7f9
+    guid: 4d7757274acc53d4cab6af763db2ed09
   - enabled: 1
     path: Assets/Levels/B26.unity
-    guid: a18838358f75c204183890894f04f11c
+    guid: cfefe32bd1fbe514aae660d84648f6d5
   - enabled: 1
     path: Assets/Levels/B27.unity
     guid: 2fbfbbc8964d3450d84d34e719eeca24

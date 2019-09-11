@@ -37,5 +37,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 /build_ios/
+*.aab
 
 */ProjectVersion.txt

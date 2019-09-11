@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -797,11 +797,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 970983a8e8ee55c4aa919ab3802e8fb5, type: 3}
   - {fileID: 21300000, guid: a4e0cf2a58b56444bb2c0ecb965a8ba9, type: 3}
   - {fileID: 21300000, guid: 2da68be2a830bdb4e9d739a3fc31f8a9, type: 3}
-  - {fileID: 21300000, guid: c9313b991ea6ced4e9cb85d13f0cb16e, type: 3}
   - {fileID: 21300000, guid: 8032e48e04ba616458e8383d05329748, type: 3}
-  - {fileID: 21300000, guid: d0a1a68b045e08c4094daf7dfb911329, type: 3}
-  - {fileID: 21300000, guid: 22eba94739ea92c40ad61e304b8f9c4f, type: 3}
+  - {fileID: 21300000, guid: c9313b991ea6ced4e9cb85d13f0cb16e, type: 3}
   - {fileID: 21300000, guid: 934488e6004d0ee499407ff3286226fa, type: 3}
+  - {fileID: 21300000, guid: 8336d7ae4bba94444a1d8f5d7794ce05, type: 3}
+  - {fileID: 21300000, guid: c4685db7e4a87254e98f38556e9a382b, type: 3}
   - {fileID: 21300000, guid: 87cb48eb016144c14914757105ca423e, type: 3}
   - {fileID: 21300000, guid: b3fbcd4fca6b05a4eb32401d5aad36a9, type: 3}
   - {fileID: 21300000, guid: c97412c05bc7ca641adc03f591e1b3df, type: 3}
@@ -818,8 +818,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c3bd3e2f3cebd44c896bb0df8f286e65, type: 3}
   - {fileID: 21300000, guid: bbca12ec45c334cc2adf939b3624ae51, type: 3}
   - {fileID: 21300000, guid: e93154cf83651f640a9d0674f0a4ecd7, type: 3}
-  - {fileID: 21300000, guid: f30b485ad48252e45848acc2cd95f1f7, type: 3}
-  - {fileID: 21300000, guid: 3de309efd0f814ff6847b5eda892837c, type: 3}
   levelBannersArray:
   - {fileID: 21300000, guid: a713efaba5b994c4ca8213f97d529019, type: 3}
   - {fileID: 21300000, guid: d9e4bd4e86ba30b45bcd19ca836d01b9, type: 3}
@@ -847,8 +845,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c7413e57da57c3541aa610cbf5afeecc, type: 3}
   - {fileID: 21300000, guid: a88365387d5deeb4f9939b71f61570e2, type: 3}
   - {fileID: 21300000, guid: 8d6b15fed1056b04a810ab16d075c016, type: 3}
-  - {fileID: 21300000, guid: b800daf41eb1e4175a65a93970641504, type: 3}
-  - {fileID: 21300000, guid: 22d80b09943884e2b83dd3d3129c1a7c, type: 3}
   nextLevelButtArrow: {fileID: 1736943522}
   prevLevelButtArrow: {fileID: 1961824370}
 --- !u!4 &1049393545

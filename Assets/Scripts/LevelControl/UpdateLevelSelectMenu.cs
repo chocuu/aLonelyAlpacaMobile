@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 public class UpdateLevelSelectMenu : MonoBehaviour
 {   
     // Number of Levels
-    public const int numberOfLevels = 28; 
+    public const int numberOfLevels = 26; 
     // Selector Gameobject dragged in from hierarchy
     public GameObject alpacaCursor;
     public Animator alpacaCursorAnim;
@@ -55,14 +55,14 @@ public class UpdateLevelSelectMenu : MonoBehaviour
                                             new Vector3(-223f, -81f, 93f),
                                             new Vector3(-197f, -109f, 93f),
                                             new Vector3(-239f, -108f, 93f),
-                                            new Vector3(-262f, -124f, 93f),
+                                            //new Vector3(-262f, -124f, 93f),
                                             new Vector3(-288.5f, -147.5f, 93f),
                                             new Vector3(-312.5f, -161f, 93f),
                                             new Vector3(-338f, -161.5f, 93f),
                                             new Vector3(-369f, -161.5f, 93f),
                                             new Vector3(-402.5f, -154.5f, 93f),
                                             new Vector3(-379f, -175f, 93f),
-                                            new Vector3(-335f, -178f, 93f),
+                                            //new Vector3(-335f, -178f, 93f),
                                             new Vector3(-300f, -175f, 93f),
                                             new Vector3(-258.5f, -161f, 93f),
                                             new Vector3(-224f, -147f, 93f),
@@ -71,7 +71,6 @@ public class UpdateLevelSelectMenu : MonoBehaviour
                                             };
     
     void Start() {
-
         // Put selector at the player's most recent level if they enter level selct from menu
         // and put them at the level the paused from if they enter level select from a level
         GameObject previousLevel = GameObject.Find("GameObject");
@@ -122,7 +121,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
         }
         
         // Flip alpaca sprite at certain levels (HARDCODED VALUES)
-        if(currentLevel == 6 || currentLevel == 13 || currentLevel == 21 || currentLevel == 26)
+        if(currentLevel == 6 || currentLevel == 13 || currentLevel == 20 || currentLevel == 24)
             flipAlpacaSprite();
         
         // Make level arrows appear/disapper at certain level
@@ -144,7 +143,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
         }
         
         // Flip alpaca sprite at certain levels (HARDCODED VALUES)
-        if(currentLevel == 5 || currentLevel == 12 || currentLevel == 20 || currentLevel == 26)
+        if(currentLevel == 5 || currentLevel == 12 || currentLevel == 19 || currentLevel == 23)
             flipAlpacaSprite();
         
         // Make level arrows appear/disapper at certain level

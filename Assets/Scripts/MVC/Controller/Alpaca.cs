@@ -14,6 +14,11 @@ public class Alpaca : MonoBehaviour {
 	float dest_y = -100; // destined height (y coord), -100 if not falling
 	bool squash = false; // will squash when reach destination
 	bool dead = false; // whether alpaca be dead
+	
+	private bool isMoving = false; 
+	private Vector3 movingDest; // where alpaca is being sent if it's moving
+	private float moveSpeed = 12; // how fast alpaca moves
+
 	const float OFFSET = 0.23f; // sketchy offset that you shift alpaca down for
 	public AudioSource landSound;
 	public AudioSource popSound;
@@ -68,6 +73,15 @@ public class Alpaca : MonoBehaviour {
 			if(squash) {
 				SetSquashed();
 				squash = false;
+			}
+		}
+	
+		// Smooth Movement
+		if(isMoving){
+			transform.position = Vector3.MoveTowards(transform.position, movingDest, moveSpeed * Time.deltaTime);
+			if(Vector3.Distance(transform.position, movingDest) <= 0.005){
+				transform.position	= movingDest;
+				isMoving = false;
 			}
 		}
 	}
@@ -136,8 +150,10 @@ public class Alpaca : MonoBehaviour {
 			dest_y = dir.y - OFFSET;
 		} else {
 			UpdateWalk();
+			isMoving = true;
 			dir.y -= OFFSET;
-			gameObject.transform.position = dir;
+			movingDest = dir;
+			//gameObject.transform.position = dir;
 		}
     }
 

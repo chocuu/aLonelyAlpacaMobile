@@ -64,13 +64,17 @@ extern "C" {
 
 extern "C" {
 
-void UnityAdsInitialize(const char * gameId, bool testMode) {
+void UnityAdsInitialize(const char * gameId, bool testMode, bool enablePerPlacementLoad) {
     static UnityAdsUnityWrapperDelegate * unityAdsUnityWrapperDelegate = NULL;
     if(unityAdsUnityWrapperDelegate == NULL) {
         unityAdsUnityWrapperDelegate = [[UnityAdsUnityWrapperDelegate alloc] init];
     }
-    [UnityAds initialize:[NSString stringWithUTF8String:gameId] delegate:unityAdsUnityWrapperDelegate testMode:testMode];
+    [UnityAds initialize:[NSString stringWithUTF8String:gameId] delegate:unityAdsUnityWrapperDelegate testMode:testMode enablePerPlacementLoad:enablePerPlacementLoad];
     InitializeUnityAdsPurchasingWrapper();
+}
+
+void UnityAdsLoad(const char * placementId) {
+    [UnityAds load:[NSString stringWithUTF8String:placementId]];
 }
 
 void UnityAdsShow(const char * placementId) {

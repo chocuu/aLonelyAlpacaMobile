@@ -58,8 +58,8 @@ static bool s_showAfterLoad;
 
 - (void)unityAdsBannerDidLoad:(NSString *)placementId view:(UIView*)view {
     s_banner = view;
+    const char * rawPlacementId = UnityAdsCopyString([placementId UTF8String]);
     if (bannerLoadCallback != NULL) {
-        const char * rawPlacementId = UnityAdsCopyString([placementId UTF8String]);
         bannerLoadCallback(rawPlacementId);
         free((void *)rawPlacementId);
     }
@@ -67,16 +67,11 @@ static bool s_showAfterLoad;
         s_showAfterLoad = false;
         UIView *container = UnityGetGLViewController().view;
         [container addSubview:s_banner];
+        bannerShowCallback(rawPlacementId);
     }
 }
 
 - (void)unityAdsBannerDidUnload:(NSString *)placementId {
-    s_banner = nil;
-    if (bannerUnloadCallback != NULL) {
-        const char * rawPlacementId = UnityAdsCopyString([placementId UTF8String]);
-        bannerUnloadCallback(rawPlacementId);
-        free((void *)rawPlacementId);
-    }
 }
 @end
 
@@ -94,6 +89,7 @@ void UnityAdsBannerShow(const char * placementId, bool showAfterLoad) {
         if (s_banner.superview == nil) {
             UIView *container = UnityGetGLViewController().view;
             [container addSubview:s_banner];
+            bannerShowCallback(placementId);
         }
     }
 }
@@ -101,6 +97,7 @@ void UnityAdsBannerShow(const char * placementId, bool showAfterLoad) {
 void UnityAdsBannerHide(bool shouldDestroy) {
     if (shouldDestroy) {
         [UnityAdsBanner destroy];
+        s_banner = nil;
     } else {
         if (s_banner != nil && s_banner.superview != nil) {
             [s_banner removeFromSuperview];

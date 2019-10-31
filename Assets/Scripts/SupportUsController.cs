@@ -6,28 +6,36 @@ using UnityEngine.UI;
 
 public class SupportUsController : MonoBehaviour
 {
+    /** Store information */
+    private string appleID = "3203751";
+    private string googleID = "3203750";
+    private string videoAdID = "rewardedVideo";
+    private string appID = "com.MangoSnoopers.ALonelyAlpaca";
+    [SerializeField] private bool testMode = false;
+
+    /* UI Stuff */
     [SerializeField] GameObject supportUsMenu;
     [SerializeField] GameObject supportOptionsMenu;
     [SerializeField] GameObject donateMenu;
     [SerializeField] GameObject thanksImage;
+    
+    /* Support Button Position */
     public RectTransform supportButtTransform;
     /* start and end positions of the support buttons */
     public Vector3 unselectedPosition = new Vector3(-50.0f, -37.0f, 0);
     public Vector3 selectedPosition = new Vector3(-50.0f, -55.0f, 0);
+
     /* state of whether button is coming down or going up */
     private bool comingDown;
     private bool goingUp;
     private float lerp_timer;
-    string appleID = "3203751";
-    string googleID = "3203750";
-    string videoAdID = "rewardedVideo";
+
 
     // Start is called before the first frame update
     void Start()
     {
-        // TODO: switch to false when live
-        Monetization.Initialize(googleID, true);
-        Monetization.Initialize(appleID, true);
+        Monetization.Initialize(googleID, testMode);
+        Monetization.Initialize(appleID, testMode);
         supportUsMenu.SetActive(false);
         supportOptionsMenu.SetActive(false);
         donateMenu.SetActive(false);
@@ -103,8 +111,32 @@ public class SupportUsController : MonoBehaviour
         }
     }
 
-    public void leaveReview()
-    {
-        // TODO: take to play/app store
+    public void OpenReviewPage() {
+        #if UNITY_ANDROID
+        Application.OpenURL("market://details?id=" + appID);
+        #elif UNITY_IPHONE
+        Application.OpenURL("itms-apps://itunes.apple.com/app/id" + appID);
+        #else
+        Debug.Log("NOT ON MOBILE DEVICE");
+        #endif
+    }
+
+    // Donation Methods
+    public void DonatePressed1Dollar() {
+        IAPManager.Instance.PurchaseDonation1Dollar();
+        donateMenu.SetActive(false);
+        thanksImage.SetActive(true);
+    }
+
+    public void DonatePressed3Dollar() {
+        IAPManager.Instance.PurchaseDonation3Dollar();
+        donateMenu.SetActive(false);
+        thanksImage.SetActive(true);
+    }
+
+    public void DonatePressed5Dollar() {
+        IAPManager.Instance.PurchaseDonation5Dollar();
+        donateMenu.SetActive(false);
+        thanksImage.SetActive(true);
     }
 }

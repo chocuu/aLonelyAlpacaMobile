@@ -1,90 +1,249 @@
 fileFormatVersion: 2
 guid: 0b0c1c47ad114de4dbbf9b50e5b2a7e8
-timeCreated: 1503722610
-licenseType: Store
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: iso-64x64-building_0
-    21300002: iso-64x64-building_1
-    21300004: iso-64x64-building_2
-    21300006: iso-64x64-building_3
-    21300008: iso-64x64-building_4
-    21300010: iso-64x64-building_5
-    21300012: iso-64x64-building_6
-    21300014: iso-64x64-building_7
-    21300016: iso-64x64-building_8
-    21300018: iso-64x64-building_9
-    21300020: iso-64x64-building_10
-    21300022: iso-64x64-building_11
-    21300024: iso-64x64-building_12
-    21300026: iso-64x64-building_13
-    21300028: iso-64x64-building_14
-    21300030: iso-64x64-building_15
-    21300032: iso-64x64-building_16
-    21300034: iso-64x64-building_17
-    21300036: iso-64x64-building_18
-    21300038: iso-64x64-building_19
-    21300040: iso-64x64-building_20
-    21300042: iso-64x64-building_21
-    21300044: iso-64x64-building_22
-    21300046: iso-64x64-building_23
-    21300048: iso-64x64-building_24
-    21300050: iso-64x64-building_25
-    21300052: iso-64x64-building_26
-    21300054: iso-64x64-building_27
-    21300056: iso-64x64-building_28
-    21300058: iso-64x64-building_29
-    21300060: iso-64x64-building_30
-    21300062: iso-64x64-building_31
-    21300064: iso-64x64-building_32
-    21300066: iso-64x64-building_33
-    21300068: iso-64x64-building_34
-    21300070: iso-64x64-building_35
-    21300072: iso-64x64-building_36
-    21300074: iso-64x64-building_37
-    21300076: iso-64x64-building_38
-    21300078: iso-64x64-building_39
-    21300080: iso-64x64-building_40
-    21300082: iso-64x64-building_41
-    21300084: iso-64x64-building_42
-    21300086: iso-64x64-building_43
-    21300088: iso-64x64-building_44
-    21300090: iso-64x64-building_45
-    21300092: iso-64x64-building_46
-    21300094: iso-64x64-building_47
-    21300096: iso-64x64-building_48
-    21300098: iso-64x64-building_49
-    21300100: iso-64x64-building_50
-    21300102: iso-64x64-building_51
-    21300104: iso-64x64-building_52
-    21300106: iso-64x64-building_53
-    21300108: iso-64x64-building_54
-    21300110: iso-64x64-building_55
-    21300112: iso-64x64-building_56
-    21300114: iso-64x64-building_57
-    21300116: iso-64x64-building_58
-    21300118: iso-64x64-building_59
-    21300120: iso-64x64-building_60
-    21300122: iso-64x64-building_61
-    21300124: iso-64x64-building_62
-    21300126: iso-64x64-building_63
-    21300128: iso-64x64-building_64
-    21300130: iso-64x64-building_65
-    21300132: iso-64x64-building_66
-    21300134: iso-64x64-building_67
-    21300136: iso-64x64-building_68
-    21300138: iso-64x64-building_69
-    21300140: iso-64x64-building_70
-    21300142: iso-64x64-building_71
-    21300144: iso-64x64-building_72
-    21300146: iso-64x64-building_73
-    21300148: iso-64x64-building_74
-    21300150: iso-64x64-building_75
-    21300152: iso-64x64-building_76
-    21300154: iso-64x64-building_77
-    21300156: iso-64x64-building_78
-    21300158: iso-64x64-building_79
-  serializedVersion: 4
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: iso-64x64-building_0
+  - first:
+      213: 21300002
+    second: iso-64x64-building_1
+  - first:
+      213: 21300004
+    second: iso-64x64-building_2
+  - first:
+      213: 21300006
+    second: iso-64x64-building_3
+  - first:
+      213: 21300008
+    second: iso-64x64-building_4
+  - first:
+      213: 21300010
+    second: iso-64x64-building_5
+  - first:
+      213: 21300012
+    second: iso-64x64-building_6
+  - first:
+      213: 21300014
+    second: iso-64x64-building_7
+  - first:
+      213: 21300016
+    second: iso-64x64-building_8
+  - first:
+      213: 21300018
+    second: iso-64x64-building_9
+  - first:
+      213: 21300020
+    second: iso-64x64-building_10
+  - first:
+      213: 21300022
+    second: iso-64x64-building_11
+  - first:
+      213: 21300024
+    second: iso-64x64-building_12
+  - first:
+      213: 21300026
+    second: iso-64x64-building_13
+  - first:
+      213: 21300028
+    second: iso-64x64-building_14
+  - first:
+      213: 21300030
+    second: iso-64x64-building_15
+  - first:
+      213: 21300032
+    second: iso-64x64-building_16
+  - first:
+      213: 21300034
+    second: iso-64x64-building_17
+  - first:
+      213: 21300036
+    second: iso-64x64-building_18
+  - first:
+      213: 21300038
+    second: iso-64x64-building_19
+  - first:
+      213: 21300040
+    second: iso-64x64-building_20
+  - first:
+      213: 21300042
+    second: iso-64x64-building_21
+  - first:
+      213: 21300044
+    second: iso-64x64-building_22
+  - first:
+      213: 21300046
+    second: iso-64x64-building_23
+  - first:
+      213: 21300048
+    second: iso-64x64-building_24
+  - first:
+      213: 21300050
+    second: iso-64x64-building_25
+  - first:
+      213: 21300052
+    second: iso-64x64-building_26
+  - first:
+      213: 21300054
+    second: iso-64x64-building_27
+  - first:
+      213: 21300056
+    second: iso-64x64-building_28
+  - first:
+      213: 21300058
+    second: iso-64x64-building_29
+  - first:
+      213: 21300060
+    second: iso-64x64-building_30
+  - first:
+      213: 21300062
+    second: iso-64x64-building_31
+  - first:
+      213: 21300064
+    second: iso-64x64-building_32
+  - first:
+      213: 21300066
+    second: iso-64x64-building_33
+  - first:
+      213: 21300068
+    second: iso-64x64-building_34
+  - first:
+      213: 21300070
+    second: iso-64x64-building_35
+  - first:
+      213: 21300072
+    second: iso-64x64-building_36
+  - first:
+      213: 21300074
+    second: iso-64x64-building_37
+  - first:
+      213: 21300076
+    second: iso-64x64-building_38
+  - first:
+      213: 21300078
+    second: iso-64x64-building_39
+  - first:
+      213: 21300080
+    second: iso-64x64-building_40
+  - first:
+      213: 21300082
+    second: iso-64x64-building_41
+  - first:
+      213: 21300084
+    second: iso-64x64-building_42
+  - first:
+      213: 21300086
+    second: iso-64x64-building_43
+  - first:
+      213: 21300088
+    second: iso-64x64-building_44
+  - first:
+      213: 21300090
+    second: iso-64x64-building_45
+  - first:
+      213: 21300092
+    second: iso-64x64-building_46
+  - first:
+      213: 21300094
+    second: iso-64x64-building_47
+  - first:
+      213: 21300096
+    second: iso-64x64-building_48
+  - first:
+      213: 21300098
+    second: iso-64x64-building_49
+  - first:
+      213: 21300100
+    second: iso-64x64-building_50
+  - first:
+      213: 21300102
+    second: iso-64x64-building_51
+  - first:
+      213: 21300104
+    second: iso-64x64-building_52
+  - first:
+      213: 21300106
+    second: iso-64x64-building_53
+  - first:
+      213: 21300108
+    second: iso-64x64-building_54
+  - first:
+      213: 21300110
+    second: iso-64x64-building_55
+  - first:
+      213: 21300112
+    second: iso-64x64-building_56
+  - first:
+      213: 21300114
+    second: iso-64x64-building_57
+  - first:
+      213: 21300116
+    second: iso-64x64-building_58
+  - first:
+      213: 21300118
+    second: iso-64x64-building_59
+  - first:
+      213: 21300120
+    second: iso-64x64-building_60
+  - first:
+      213: 21300122
+    second: iso-64x64-building_61
+  - first:
+      213: 21300124
+    second: iso-64x64-building_62
+  - first:
+      213: 21300126
+    second: iso-64x64-building_63
+  - first:
+      213: 21300128
+    second: iso-64x64-building_64
+  - first:
+      213: 21300130
+    second: iso-64x64-building_65
+  - first:
+      213: 21300132
+    second: iso-64x64-building_66
+  - first:
+      213: 21300134
+    second: iso-64x64-building_67
+  - first:
+      213: 21300136
+    second: iso-64x64-building_68
+  - first:
+      213: 21300138
+    second: iso-64x64-building_69
+  - first:
+      213: 21300140
+    second: iso-64x64-building_70
+  - first:
+      213: 21300142
+    second: iso-64x64-building_71
+  - first:
+      213: 21300144
+    second: iso-64x64-building_72
+  - first:
+      213: 21300146
+    second: iso-64x64-building_73
+  - first:
+      213: 21300148
+    second: iso-64x64-building_74
+  - first:
+      213: 21300150
+    second: iso-64x64-building_75
+  - first:
+      213: 21300152
+    second: iso-64x64-building_76
+  - first:
+      213: 21300154
+    second: iso-64x64-building_77
+  - first:
+      213: 21300156
+    second: iso-64x64-building_78
+  - first:
+      213: 21300158
+    second: iso-64x64-building_79
+  externalObjects: {}
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -102,6 +261,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -112,7 +273,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -124,49 +285,67 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Android
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: WebGL
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -184,6 +363,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_1
       rect:
@@ -198,6 +384,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_2
       rect:
@@ -212,6 +405,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_3
       rect:
@@ -226,6 +426,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_4
       rect:
@@ -240,6 +447,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_5
       rect:
@@ -254,6 +468,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_6
       rect:
@@ -268,6 +489,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_7
       rect:
@@ -282,6 +510,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_8
       rect:
@@ -296,6 +531,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_9
       rect:
@@ -310,6 +552,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_10
       rect:
@@ -324,6 +573,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_11
       rect:
@@ -338,6 +594,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_12
       rect:
@@ -352,6 +615,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_13
       rect:
@@ -366,6 +636,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_14
       rect:
@@ -380,6 +657,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_15
       rect:
@@ -394,6 +678,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_16
       rect:
@@ -408,6 +699,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_17
       rect:
@@ -422,6 +720,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_18
       rect:
@@ -436,6 +741,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_19
       rect:
@@ -450,6 +762,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_20
       rect:
@@ -464,6 +783,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_21
       rect:
@@ -478,6 +804,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_22
       rect:
@@ -492,6 +825,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_23
       rect:
@@ -506,6 +846,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_24
       rect:
@@ -520,6 +867,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_25
       rect:
@@ -534,6 +888,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_26
       rect:
@@ -548,6 +909,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_27
       rect:
@@ -562,6 +930,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_28
       rect:
@@ -576,6 +951,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_29
       rect:
@@ -590,6 +972,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_30
       rect:
@@ -604,6 +993,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_31
       rect:
@@ -618,6 +1014,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_32
       rect:
@@ -632,6 +1035,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_33
       rect:
@@ -646,6 +1056,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_34
       rect:
@@ -660,6 +1077,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_35
       rect:
@@ -674,6 +1098,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_36
       rect:
@@ -688,6 +1119,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_37
       rect:
@@ -702,6 +1140,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_38
       rect:
@@ -716,6 +1161,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_39
       rect:
@@ -730,6 +1182,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_40
       rect:
@@ -744,6 +1203,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_41
       rect:
@@ -758,6 +1224,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_42
       rect:
@@ -772,6 +1245,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_43
       rect:
@@ -786,6 +1266,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_44
       rect:
@@ -800,6 +1287,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_45
       rect:
@@ -814,6 +1308,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_46
       rect:
@@ -828,6 +1329,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_47
       rect:
@@ -842,6 +1350,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_48
       rect:
@@ -856,6 +1371,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_49
       rect:
@@ -870,6 +1392,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_50
       rect:
@@ -884,6 +1413,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_51
       rect:
@@ -898,6 +1434,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_52
       rect:
@@ -912,6 +1455,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_53
       rect:
@@ -926,6 +1476,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_54
       rect:
@@ -940,6 +1497,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_55
       rect:
@@ -954,6 +1518,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_56
       rect:
@@ -968,6 +1539,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_57
       rect:
@@ -982,6 +1560,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_58
       rect:
@@ -996,6 +1581,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_59
       rect:
@@ -1010,6 +1602,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_60
       rect:
@@ -1024,6 +1623,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_61
       rect:
@@ -1038,6 +1644,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_62
       rect:
@@ -1052,6 +1665,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_63
       rect:
@@ -1066,6 +1686,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_64
       rect:
@@ -1080,6 +1707,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_65
       rect:
@@ -1094,6 +1728,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_66
       rect:
@@ -1108,6 +1749,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_67
       rect:
@@ -1122,6 +1770,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_68
       rect:
@@ -1136,6 +1791,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_69
       rect:
@@ -1150,6 +1812,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_70
       rect:
@@ -1164,6 +1833,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_71
       rect:
@@ -1178,6 +1854,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_72
       rect:
@@ -1192,6 +1875,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_73
       rect:
@@ -1206,6 +1896,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_74
       rect:
@@ -1220,6 +1917,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_75
       rect:
@@ -1234,6 +1938,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_76
       rect:
@@ -1248,6 +1959,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_77
       rect:
@@ -1262,6 +1980,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_78
       rect:
@@ -1276,6 +2001,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: iso-64x64-building_79
       rect:
@@ -1290,9 +2022,26 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

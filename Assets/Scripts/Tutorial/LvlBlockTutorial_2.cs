@@ -37,11 +37,18 @@ public class LvlBlockTutorial_2 : MonoBehaviour
 
         // quadrant1.enabled = quadrant2.enabled = dropRight.enabled = false;
 
-        alp_0.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.75f);
-        alp_1.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.75f);
-        alp_3.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.25f);
-        alp_2.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.25f);
-       
+        Vector2 alp_dim = new Vector2(Screen.width * 0.125f, Screen.width * 0.125f);
+        alp_0.rectTransform.sizeDelta = alp_dim;
+        alp_1.rectTransform.sizeDelta = alp_dim;
+        alp_3.rectTransform.sizeDelta = alp_dim;
+        alp_2.rectTransform.sizeDelta = alp_dim;
+
+        //resize the quadrants
+        Vector2 quad_dim = new Vector2(Screen.width*0.5f, Screen.height*0.5f);
+		quadrants[0].GetComponent<RectTransform>().sizeDelta = quad_dim;
+		quadrants[1].GetComponent<RectTransform>().sizeDelta = quad_dim;
+		quadrants[2].GetComponent<RectTransform>().sizeDelta = quad_dim;
+		quadrants[3].GetComponent<RectTransform>().sizeDelta = quad_dim;
     }
 
     bool Equals(Vector3 a, Vector3 b) {

@@ -15,7 +15,8 @@ using Anonym.Isometric;
  */
 public class WorldScript : MonoBehaviour {
 
-	private int numberOfLevels = 28;
+	private const int numberOfLevels = 28;
+
     public AudioSource winSound;
     public AudioSource jumpSound;
 	// Reference to the canvas's pan controller; used to switch controls if in pan mode
@@ -41,6 +42,14 @@ public class WorldScript : MonoBehaviour {
 		if(map == null) {
 			map = new Map(100, 100);
 		}
+
+		// Scale quadrants to the screen width & height
+		Vector2 quad_dim = new Vector2(Screen.width*0.5f, Screen.height*0.5f);
+		quadrant_0.GetComponent<RectTransform>().sizeDelta = quad_dim;
+		quadrant_1.GetComponent<RectTransform>().sizeDelta = quad_dim;
+		quadrant_2.GetComponent<RectTransform>().sizeDelta = quad_dim;
+		quadrant_3.GetComponent<RectTransform>().sizeDelta = quad_dim;
+
 		quadrants = new Image[4]{quadrant_0.GetComponent<Image>(), 
 										quadrant_1.GetComponent<Image>(), 
 										quadrant_2.GetComponent<Image>(), 

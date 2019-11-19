@@ -39,6 +39,13 @@ public class LvlBlockTutorial : MonoBehaviour
         holdRight.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.75f);
         dropLeft.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.25f);
         dropRight.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.25f);
+
+        //resize the quadrants
+        Vector2 quad_dim = new Vector2(Screen.width*0.5f, Screen.height*0.5f);
+		quadrant0.GetComponent<RectTransform>().sizeDelta = quad_dim;
+		quadrant1.GetComponent<RectTransform>().sizeDelta = quad_dim;
+		quadrant2.GetComponent<RectTransform>().sizeDelta = quad_dim;
+		quadrant3.GetComponent<RectTransform>().sizeDelta = quad_dim;
     }
 
     bool equals(Vector3 a, Vector3 b) {

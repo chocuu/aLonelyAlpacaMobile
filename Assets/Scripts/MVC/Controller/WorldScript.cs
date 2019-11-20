@@ -16,18 +16,24 @@ using Anonym.Isometric;
 public class WorldScript : MonoBehaviour {
 
 	private const int numberOfLevels = 28;
-
-    public AudioSource winSound;
-    public AudioSource jumpSound;
-	// Reference to the canvas's pan controller; used to switch controls if in pan mode
-	private PanButtonController pan_ctrlr;
 	Map map;
 	Alpaca alpaca;
+	private int level;
+
+	// The amount of "moves" the player has made
+	public int num_moves;
+	//public Text num_moves_text;
+
+	// Sounds
+    public AudioSource winSound;
+    public AudioSource jumpSound;
+
+	// Reference to the canvas's pan controller; used to switch controls if in pan mode
+	private PanButtonController pan_ctrlr;
+
 	// used to highlight four quadrants
 	public GameObject quadrant_0, quadrant_1, quadrant_2, quadrant_3;
 	private Image[] quadrants;
-	private BlockButt blockButt;
-	private int level;
 
 	/**
 	 * 0 = hold in quadrant to drop/pick up
@@ -35,6 +41,7 @@ public class WorldScript : MonoBehaviour {
 	 * 2 = click icon to hold/drop
 	 */
 	private int control_scheme = 0;
+	private BlockButt blockButt;
 
 	// Use this for initialization
 	void Start () {
@@ -129,6 +136,7 @@ public class WorldScript : MonoBehaviour {
 	void Update () {
 		ProcessCurrBlock();
 		ProcessInput();
+		//num_moves_text.text = num_moves.ToString();
 	}
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -253,24 +261,28 @@ public class WorldScript : MonoBehaviour {
 			if(GetBlockAbove(curr) != null) // Is there a block above alpaca?
 				return;
 			else {
-				if(GetBlockAbove(dest) != null) // Is there a block the one right in front?
+				if(GetBlockAbove(dest) != null) // Is there a block above the block right in front of alpaca?
 					return;
-				else if(GetBlockAt(dest).b_type != Block.BlockType.WALL ) { // Is the block one banning walking?
+				else if(GetBlockAt(dest).b_type != Block.BlockType.WALL ) { // Does the block NOT ban walking / is not a wall?
 					jumpSound.Play();
 					dest.y++;
 					alpaca.Move(dest);
+					num_moves ++;
 				}
 			}
 		} else {
 			if(GetBlockBelow(dest) != null) { // Is there a block that can walk on straight?
-				if(GetBlockBelow(dest).b_type != Block.BlockType.WALL)	// Is it a block to not walk on? --> don't move
+				if(GetBlockBelow(dest).b_type != Block.BlockType.WALL) { // Is it a block we can walk on?
 					alpaca.Move(dest);
+					num_moves ++;
+				}
 			} else {
 				Block top = map.GetHighestBlockBelow(dest);
 				if(top != null && top.b_type != Block.BlockType.WALL) { // Is there a block alpaca can fall on?
 					dest = top.getCoords();
 					dest.y++;
 					alpaca.Move(dest);
+					num_moves ++;
 				}
 			}
 		}
@@ -331,6 +343,7 @@ public class WorldScript : MonoBehaviour {
     	bool temp = (map.TryHoldOrPlaceBlock(dest));
     	if(temp) {
     		alpaca.SetBlock(map.IsBlockHeld());
+			num_moves ++;
     	} else {
     		map.LoadTryHoldBlock(dest, false);
     	}
@@ -383,7 +396,7 @@ public class WorldScript : MonoBehaviour {
 	 *  - Panning, if in panning mode
 	 */
     void ProcessInput() {
-		if(pan_ctrlr!=null && !pan_ctrlr.getIsPanning() || pan_ctrlr==null) {
+		if((pan_ctrlr!=null && !pan_ctrlr.getIsPanning()) || pan_ctrlr==null) {
 		///// GAME MODE /////
 			if(alpaca.IsDead()) {
 				death_timer -= Time.deltaTime;

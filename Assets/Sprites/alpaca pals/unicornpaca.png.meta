@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: 7e64ae813e1b1fc4a88e73d4507480e6
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: unicornpaca_0
-    21300002: unicornpaca_1
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: unicornpaca_0
+  - first:
+      213: 21300002
+    second: unicornpaca_1
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -60,7 +64,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -71,7 +75,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -82,7 +87,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -93,6 +99,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -112,6 +119,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 0621bdd6838f2524f8901418bb175441
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -132,6 +140,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ebc644641d8ce774a8278157db3e2646
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -140,10 +149,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 6e0bdd65ac0adaa40bd9cdd704e824bc
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

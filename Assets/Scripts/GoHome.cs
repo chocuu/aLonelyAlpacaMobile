@@ -8,21 +8,41 @@ public class GoHome : MonoBehaviour
 {
   public string menuLevel = "B0 - Menu";
   public string levelSelect = "Level Select Menu Mobile";
+  public GameObject confirmScreen;
   GameObject currentLevel;
   currentLevelName currentLevelScript;
   GameObject previousLevel;
   currentLevelName previousLevelScript;
+  bool confirm_selection = false; // false = goToLevelSelect, true = goHome 
 
   public void goHome() {
     SceneManager.LoadScene(menuLevel, LoadSceneMode.Single);
   }
 
-  public void goToLevelSelect() {
-    currentLevel = GameObject.Find("GameObject");
-    currentLevelScript = currentLevel.GetComponent<currentLevelName>();
-    currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
-    SceneManager.LoadSceneAsync(levelSelect, LoadSceneMode.Single);
+  public void restart() {
+    confirm_selection=true;
+    confirmScreen.SetActive(true);
+  }
 
+  public void goToLevelSelect() {
+    confirm_selection=false;
+    confirmScreen.SetActive(true);
+  }
+
+  public void confirm() {
+    if(confirm_selection) {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    } else {
+      currentLevel = GameObject.Find("GameObject");
+      currentLevelScript = currentLevel.GetComponent<currentLevelName>();
+      currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
+      SceneManager.LoadSceneAsync(levelSelect, LoadSceneMode.Single);
+    }
+    confirmScreen.SetActive(false);
+  }
+
+  public void closeConfirm() {
+    confirmScreen.SetActive(false);
   }
 
   private void goLastPassedLevel() {

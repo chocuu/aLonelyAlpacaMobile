@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9217,6 +9217,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: toggleZoom
       objectReference: {fileID: 0}
+    - target: {fileID: 114413331158596200, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1721303165}
+    - target: {fileID: 114413331158596200, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 114818914659375992, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1721303165}
+    - target: {fileID: 114818914659375992, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goToLevelSelect
+      objectReference: {fileID: 0}
     - target: {fileID: 224940004372651808, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9327,6 +9347,26 @@ PrefabInstance:
       propertyPath: zAmount_half
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8517996028880808513, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1721303165}
+    - target: {fileID: 8517996028880808513, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832396087536836168, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1721303165}
+    - target: {fileID: 8832396087536836168, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: closeConfirm
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3c9e7f02adc60e449c6dfac7c23914c, type: 3}
 --- !u!114 &597526457 stripped
@@ -9341,6 +9381,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &597526458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5645135253315788471, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+    type: 3}
+  m_PrefabInstance: {fileID: 597526456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &599257995
 GameObject:
   m_ObjectHideFlags: 0
@@ -26793,8 +26839,25 @@ PrefabInstance:
       propertyPath: background2
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114468995008167606, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 3}
+      propertyPath: confirmScreen
+      value: 
+      objectReference: {fileID: 597526458}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 3}
+--- !u!114 &1721303165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114468995008167606, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1721303164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ab3d49c079a6f46bf47aac568a0898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1721661929
 GameObject:
   m_ObjectHideFlags: 0
@@ -30597,7 +30660,7 @@ MonoBehaviour:
   _grid: {fileID: 325309184}
   bSnapFree: 0
   _autoName: {fileID: 1971602650}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1971602652
 MonoBehaviour:
   m_ObjectHideFlags: 0

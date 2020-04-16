@@ -18,6 +18,7 @@ TagManager:
   - WinBlockPos
   - WORLD
   - SupportButton
+  - ConfirmScreen
   layers:
   - Default
   - TransparentFX

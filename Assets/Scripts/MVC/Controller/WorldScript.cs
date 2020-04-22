@@ -15,7 +15,7 @@ using Anonym.Isometric;
  */
 public class WorldScript : MonoBehaviour {
 
-	private const int numberOfLevels = 28;
+	private const int numberOfLevels = 26;
 	Map map;
 	Alpaca alpaca;
 	private int level;
@@ -49,6 +49,11 @@ public class WorldScript : MonoBehaviour {
 		if(map == null) {
 			map = new Map(100, 100);
 		}
+
+#if UNITY_EDITOR
+		//PlayerPrefs.DeleteAll();
+		PlayerPrefs.SetInt("LevelPassed", numberOfLevels);
+#endif
 
 		// Scale quadrants to the screen width & height
 		Vector2 quad_dim = new Vector2(Screen.width*0.5f, Screen.height*0.5f);

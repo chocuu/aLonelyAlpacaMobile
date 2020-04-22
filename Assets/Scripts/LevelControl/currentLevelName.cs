@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class currentLevelName : MonoBehaviour {
 
+	private int numLevels;
+
 	public string currentLevelNameString;
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad(gameObject);
-#if UNITY_EDITOR
-		PlayerPrefs.DeleteAll();
-		// PlayerPrefs.SetInt("LevelPassed", 28);
-#endif
 	}
 	
 	// Update is called once per frame

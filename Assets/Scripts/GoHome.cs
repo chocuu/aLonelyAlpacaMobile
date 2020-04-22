@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GoHome : MonoBehaviour
 {
+  private const int numLevels = 28;
   public string menuLevel = "B0 - Menu";
   public string levelSelect = "Level Select Menu Mobile";
   public GameObject confirmScreen;
@@ -27,6 +28,13 @@ public class GoHome : MonoBehaviour
   public void goToLevelSelect() {
     confirm_selection=false;
     confirmScreen.SetActive(true);
+  }
+
+  public void goToLevelSelectFromMainMenu() {
+    currentLevel = GameObject.Find("GameObject");
+    currentLevelScript = currentLevel.GetComponent<currentLevelName>();
+    currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
+    SceneManager.LoadSceneAsync(levelSelect, LoadSceneMode.Single);
   }
 
   public void confirm() {
@@ -51,7 +59,7 @@ public class GoHome : MonoBehaviour
       Destroy(GameObject.Find("MusicTime"));
       SceneManager.LoadScene("B0.5 - Intro", LoadSceneMode.Single);
     }
-    else if(level == 28) { // last level
+    else if(level == numLevels) { // last level
       SceneManager.LoadScene("B" + (PlayerPrefs.GetInt("LevelPassed")), LoadSceneMode.Single);
     }
     else {

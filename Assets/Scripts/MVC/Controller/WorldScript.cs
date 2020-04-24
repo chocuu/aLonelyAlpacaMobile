@@ -20,9 +20,8 @@ public class WorldScript : MonoBehaviour {
 	Alpaca alpaca;
 	private int level;
 
-	// The amount of "moves" the player has made
-	public int num_moves;
-	//public Text num_moves_text;
+	// Scoreboard keeps track of level time and numberOfMoves
+	public ScoreboardController scoreboardController;
 
 	// Sounds
     public AudioSource winSound;
@@ -49,11 +48,6 @@ public class WorldScript : MonoBehaviour {
 		if(map == null) {
 			map = new Map(100, 100);
 		}
-
-#if UNITY_EDITOR
-		//PlayerPrefs.DeleteAll();
-		PlayerPrefs.SetInt("LevelPassed", numberOfLevels);
-#endif
 
 		// Scale quadrants to the screen width & height
 		Vector2 quad_dim = new Vector2(Screen.width*0.5f, Screen.height*0.5f);
@@ -141,7 +135,6 @@ public class WorldScript : MonoBehaviour {
 	void Update () {
 		ProcessCurrBlock();
 		ProcessInput();
-		//num_moves_text.text = num_moves.ToString();
 	}
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -203,14 +196,22 @@ public class WorldScript : MonoBehaviour {
 				end_timer += Time.deltaTime;
 				if(end_timer > 0.2f) {
 					int level = int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
+					// Update Farther Reached Level stat
 					if(PlayerPrefs.GetInt("LevelPassed") < level) {
 						PlayerPrefs.SetInt("LevelPassed", level);
 					}
+					// Wait for just a sec, then load next level
 					if(end_timer < 100f) {
 						end_timer = 999f;
-						if(level != numberOfLevels)
+						if(level != numberOfLevels){
+							// scoreboardController.processFinalScore(level);
+							// Debug.Log("T: " + PlayerPrefs.GetFloat("Level" + level+ "BestTime"));
+							// Debug.Log("N: " + PlayerPrefs.GetInt("Level" + level + "BestNumMovesMade"));
+							// Debug.Log("S: " + PlayerPrefs.GetFloat("Level" + level + "BestScore"));
 							SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
+						}
 					}
+					// While waiting, check if we're on the final level -- if yes load credits sequence instead.
 					else {
 						FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
 						if(final != null) final.BeatFinalLevel();
@@ -272,14 +273,14 @@ public class WorldScript : MonoBehaviour {
 					jumpSound.Play();
 					dest.y++;
 					alpaca.Move(dest);
-					num_moves ++;
+					scoreboardController.incrementNumMoves();
 				}
 			}
 		} else {
 			if(GetBlockBelow(dest) != null) { // Is there a block that can walk on straight?
 				if(GetBlockBelow(dest).b_type != Block.BlockType.WALL) { // Is it a block we can walk on?
 					alpaca.Move(dest);
-					num_moves ++;
+					scoreboardController.incrementNumMoves();
 				}
 			} else {
 				Block top = map.GetHighestBlockBelow(dest);
@@ -287,7 +288,7 @@ public class WorldScript : MonoBehaviour {
 					dest = top.getCoords();
 					dest.y++;
 					alpaca.Move(dest);
-					num_moves ++;
+					scoreboardController.incrementNumMoves();
 				}
 			}
 		}
@@ -348,7 +349,7 @@ public class WorldScript : MonoBehaviour {
     	bool temp = (map.TryHoldOrPlaceBlock(dest));
     	if(temp) {
     		alpaca.SetBlock(map.IsBlockHeld());
-			num_moves ++;
+			scoreboardController.incrementNumMoves();
     	} else {
     		map.LoadTryHoldBlock(dest, false);
     	}

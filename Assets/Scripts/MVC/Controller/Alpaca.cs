@@ -92,9 +92,15 @@ public class Alpaca : MonoBehaviour {
 	public Vector3 GetCurrAlpacaLocation()
     {
     	Vector3 coords = gameObject.transform.position;
-		coords.x = (float)Math.Round(coords.x);
-		coords.y = (float)Math.Round(coords.y);
-		coords.z = (float)Math.Round(coords.z);
+		if(isMoving) {
+			coords.x = movingDest.x;
+			coords.y = movingDest.y;
+			coords.z = movingDest.z;	
+		} else {
+			coords.x = (float)Mathf.Round(coords.x);
+			coords.y = (float)Mathf.Round(coords.y);
+			coords.z = (float)Mathf.Round(coords.z);
+		}
     	return coords;
     }
 

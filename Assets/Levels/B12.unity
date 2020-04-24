@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7363,6 +7363,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &929697506
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1535350428743942, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_Name
+      value: player prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.23911761
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.36964384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.09904577
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8923991
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 30.000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 1323403258}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
 --- !u!1 &952073328
 GameObject:
   m_ObjectHideFlags: 0
@@ -10833,6 +10895,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1414433601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e,
+    type: 3}
+  m_PrefabInstance: {fileID: 929697506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1422331691
 GameObject:
   m_ObjectHideFlags: 0
@@ -15462,7 +15530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4105752842133424
 Transform:
   m_ObjectHideFlags: 0
@@ -16365,7 +16433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66970b7c1ba54c941a6e4538e2fd554f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4105752842133424}
+  target: {fileID: 1414433601}
   smoothSpeed: 1
   offset: {x: 0, y: -0.7166, z: 0}
 --- !u!95 &4334592070849216774

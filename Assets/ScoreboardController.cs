@@ -50,7 +50,6 @@ public class ScoreboardController : MonoBehaviour
     public void incrementNumMoves()
     {
         numMovesMade++;
-        Debug.Log(numMovesMade);
     }
 
     /** Locally save the scores if they were the best achieved by this player */

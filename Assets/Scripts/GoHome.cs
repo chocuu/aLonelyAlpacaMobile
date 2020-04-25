@@ -41,9 +41,6 @@ public class GoHome : MonoBehaviour
     if(confirm_selection) {
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     } else {
-      currentLevel = GameObject.Find("GameObject");
-      currentLevelScript = currentLevel.GetComponent<currentLevelName>();
-      currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
       SceneManager.LoadSceneAsync(levelSelect, LoadSceneMode.Single);
     }
     confirmScreen.SetActive(false);

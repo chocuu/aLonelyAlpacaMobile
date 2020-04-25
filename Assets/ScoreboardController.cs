@@ -5,13 +5,6 @@ public class ScoreboardController : MonoBehaviour
     // private static float[] worstScoreTimes = new[] {};
     
     // private static float[] bestScoreTimes = new[] {};
-    
-    private static int[] worstScoreNumMoves = new[] {
-                                                    999,
-                                                    999,
-                                                    999,
-                                                    999
-                                                    };
 
     private static int[] bestScoreNumMoves = new[] {
                                                     999,
@@ -25,8 +18,22 @@ public class ScoreboardController : MonoBehaviour
                                                     116,
                                                     104,
                                                     62,
-                                                    
+                                                    9,
+                                                    18,
+                                                    35,
+                                                    48,
+                                                    50,
+                                                    56,
+                                                    25,
+                                                    144,
+                                                    65,
+                                                    205,
+                                                    47,
+                                                    98,
+                                                    114,
+                                                    129
                                                     };
+
     private float levelStartTime;
 
     private int numMovesMade;
@@ -83,20 +90,14 @@ public class ScoreboardController : MonoBehaviour
     */
     public void processFinalScore(int level)
     {
-        // float timeForWorstScore = worstScoreTimes[level-1];
-        // float timeForBestScore = bestScoreTimes[level-1];
         int numMovesBestScore = bestScoreNumMoves[level-1];
-        int numMovesWorstScore = worstScoreNumMoves[level-1];
+        // moves for worst score is 40% more than best score
+        int numMovesWorstScore = (int)Mathf.Ceil(numMovesBestScore *1.4f);
 
         float timeAtLevelFinish = Time.time - levelStartTime;
         timeAtLevelFinish = Mathf.Round(timeAtLevelFinish * 100f)/100f; // Round to 2 decimal places
 
-        // Give a normalized score for each stat, 1 is the worst, 0 is the best.
-        // assert that XForWorstScore > XForBestScore always
-        // float timeScore = timeAtLevelFinish <= timeForBestScore ? 0.0f : 
-        //                     (timeAtLevelFinish >= timeForWorstScore ? 1.0f : 
-        //                     (timeAtLevelFinish-timeForBestScore)/(timeForWorstScore-timeForBestScore));
-        
+        // Give a normalized score, 1 is the worst, 0 is the best.
         float numMovesScore = numMovesMade <= numMovesBestScore ? 0.0f : 
                             (numMovesMade >= numMovesWorstScore ? 1.0f : 
                             ((float)(numMovesMade-numMovesBestScore))/(numMovesWorstScore-numMovesBestScore));

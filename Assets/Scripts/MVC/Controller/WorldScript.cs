@@ -44,7 +44,11 @@ public class WorldScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerPrefs.SetString ("lastLoadedScene", SceneManager.GetActiveScene ().name);
+		level = int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
+      	currentLevelName currentLevelScript = GameObject.Find("GameObject").GetComponent<currentLevelName>();
+      	currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
+
+		PlayerPrefs.SetString ("lastLoadedScene", currentLevelScript.currentLevelNameString);
 		if(map == null) {
 			map = new Map(100, 100);
 		}
@@ -195,7 +199,6 @@ public class WorldScript : MonoBehaviour {
 				}
 				end_timer += Time.deltaTime;
 				if(end_timer > 0.2f) {
-					int level = int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
 					// Update Farther Reached Level stat
 					if(PlayerPrefs.GetInt("LevelPassed") < level) {
 						PlayerPrefs.SetInt("LevelPassed", level);
@@ -204,10 +207,10 @@ public class WorldScript : MonoBehaviour {
 					if(end_timer < 100f) {
 						end_timer = 999f;
 						if(level != numberOfLevels){
-							// scoreboardController.processFinalScore(level);
-							// Debug.Log("T: " + PlayerPrefs.GetFloat("Level" + level+ "BestTime"));
-							// Debug.Log("N: " + PlayerPrefs.GetInt("Level" + level + "BestNumMovesMade"));
-							// Debug.Log("S: " + PlayerPrefs.GetFloat("Level" + level + "BestScore"));
+							scoreboardController.processFinalScore(level);
+							Debug.Log("T: " + PlayerPrefs.GetFloat("Level" + level+ "BestTime"));
+							Debug.Log("N: " + PlayerPrefs.GetInt("Level" + level + "BestNumMovesMade"));
+							Debug.Log("S: " + PlayerPrefs.GetFloat("Level" + level + "BestScore"));
 							SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
 						}
 					}

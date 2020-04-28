@@ -31,10 +31,20 @@ public class GoHome : MonoBehaviour
   }
 
   public void goToLevelSelectFromMainMenu() {
-    currentLevel = GameObject.Find("GameObject");
-    currentLevelScript = currentLevel.GetComponent<currentLevelName>();
+    // Set previous screen to main menu 
+    currentLevelScript = GameObject.Find("GameObject").GetComponent<currentLevelName>();
     currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
     SceneManager.LoadSceneAsync(levelSelect, LoadSceneMode.Single);
+  }
+
+  // For Level Complete Screen, when don't need confirm screen
+  public void restart_Bypass() {
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    return;
+  }
+  public void goToLevelSelect_Bypass() {
+    SceneManager.LoadSceneAsync(levelSelect, LoadSceneMode.Single);
+    return;
   }
 
   public void confirm() {

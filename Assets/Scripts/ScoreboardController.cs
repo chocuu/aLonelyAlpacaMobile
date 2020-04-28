@@ -36,9 +36,19 @@ public class ScoreboardController : MonoBehaviour
 
     private float levelStartTime;
 
+    private float timeAtLevelFinish;
+
     private int numMovesMade;
+
+    private int score;
     
     private string sceneName;
+
+    private string bestTimeKey;
+
+    private string bestNumMovesMadeKey;
+
+    private string bestScoreKey;
 
     // Start is called before the first frame update
     void Start()
@@ -52,34 +62,72 @@ public class ScoreboardController : MonoBehaviour
         numMovesMade++;
     }
 
+    private string floatToTimeString(float time) {
+        string min = ((int) (time/60)).ToString();
+        string sec = ((int) (time % 60)).ToString();
+        while (sec.Length < 2) sec = "0" + sec;
+        string mil = ((int) ((time * 100) % 100)).ToString();
+        while (mil.Length < 2) mil = "0" + mil;
+        string str = min + ":" + sec + ":" + mil;
+        if(min.Length > 3)
+            str = min + ":" + sec;
+        else if(min.Length > 7)
+            str = min;
+        return str;
+    }
+
+    public string getTotalTime() {
+        return floatToTimeString(timeAtLevelFinish);
+    }
+
+    public string getNumMovesMade() {
+        return numMovesMade.ToString();
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public string getBestTotalTime() {
+        return floatToTimeString(PlayerPrefs.GetFloat(bestTimeKey));
+    }
+
+    public string getBestNumMovesMade() {
+        return PlayerPrefs.GetInt(bestNumMovesMadeKey).ToString();
+    }
+
+    public int getBestScore() {
+        return PlayerPrefs.GetInt(bestScoreKey);
+    }
+
     /** Locally save the scores if they were the best achieved by this player */
     private void saveBestStatsIfApplicable(float timeInLevel, int numMoves, float totalScore, int levelNumber)
     {
         // save best time
-        string bestTime = "Level" + levelNumber + "BestTime";
-        if(!PlayerPrefs.HasKey(bestTime)){
-            PlayerPrefs.SetFloat(bestTime, timeInLevel);
+        bestTimeKey = "Level" + levelNumber + "BestTime";
+        if(!PlayerPrefs.HasKey(bestTimeKey)){
+            PlayerPrefs.SetFloat(bestTimeKey, timeInLevel);
         }
-        else if(timeInLevel < PlayerPrefs.GetFloat(bestTime)){
-            PlayerPrefs.SetFloat(bestTime, timeInLevel);
+        else if(timeInLevel < PlayerPrefs.GetFloat(bestTimeKey)){
+            PlayerPrefs.SetFloat(bestTimeKey, timeInLevel);
         }
 
         // save best move count
-        string bestNumMovesMade = "Level" + levelNumber +  "BestNumMovesMade";
-        if(!PlayerPrefs.HasKey(bestNumMovesMade)){
-            PlayerPrefs.SetInt(bestNumMovesMade, numMovesMade);
+        bestNumMovesMadeKey = "Level" + levelNumber +  "BestNumMovesMade";
+        if(!PlayerPrefs.HasKey(bestNumMovesMadeKey)){
+            PlayerPrefs.SetInt(bestNumMovesMadeKey, numMovesMade);
         }
-        else if(numMovesMade < PlayerPrefs.GetInt(bestNumMovesMade)){
-            PlayerPrefs.SetInt(bestNumMovesMade, numMovesMade);
+        else if(numMovesMade < PlayerPrefs.GetInt(bestNumMovesMadeKey)){
+            PlayerPrefs.SetInt(bestNumMovesMadeKey, numMovesMade);
         }
 
         // save best score
-        string bestScore = "Level" + levelNumber +  "BestScore";
-        if(!PlayerPrefs.HasKey(bestScore)){
-            PlayerPrefs.SetFloat(bestScore, totalScore);
+        bestScoreKey = "Level" + levelNumber +  "BestScore";
+        if(!PlayerPrefs.HasKey(bestScoreKey)){
+            PlayerPrefs.SetFloat(bestScoreKey, totalScore);
         }
-        else if(numMovesMade < PlayerPrefs.GetInt(bestScore)){
-            PlayerPrefs.SetFloat(bestScore, totalScore);
+        else if(numMovesMade < PlayerPrefs.GetInt(bestScoreKey)){
+            PlayerPrefs.SetFloat(bestScoreKey, totalScore);
         }
     }
 
@@ -93,7 +141,7 @@ public class ScoreboardController : MonoBehaviour
         // moves for worst score is 40% more than best score
         int numMovesWorstScore = (int)Mathf.Ceil(numMovesBestScore *1.4f);
 
-        float timeAtLevelFinish = Time.time - levelStartTime;
+        timeAtLevelFinish = Time.time - levelStartTime;
         timeAtLevelFinish = Mathf.Round(timeAtLevelFinish * 100f)/100f; // Round to 2 decimal places
 
         // Give a normalized score, 1 is the worst, 0 is the best.
@@ -104,6 +152,7 @@ public class ScoreboardController : MonoBehaviour
         // Score based only on numMoves
         float totalScore = 5.5f * (1.0f-numMovesScore) + 0.5f;
         totalScore = Mathf.Round(totalScore * 2) * 0.5f; // round to nearest 0.5
+        score = (int) totalScore; // TODO: add score
 
         saveBestStatsIfApplicable(timeAtLevelFinish, numMovesMade, totalScore, level);  
     }

@@ -34,6 +34,9 @@ public class WorldScript : MonoBehaviour {
 	public GameObject quadrant_0, quadrant_1, quadrant_2, quadrant_3;
 	private Image[] quadrants;
 
+	// leve complete! screen
+	public GameObject levelCompleteScreen;
+
 	/**
 	 * 0 = hold in quadrant to drop/pick up
 	 * 1 = hold anywhere to drop/pick up in facing direction
@@ -198,29 +201,38 @@ public class WorldScript : MonoBehaviour {
 					winSound.Play();
 				}
 				end_timer += Time.deltaTime;
-				if(end_timer > 0.2f) {
-					// Update Farther Reached Level stat
-					if(PlayerPrefs.GetInt("LevelPassed") < level) {
-						PlayerPrefs.SetInt("LevelPassed", level);
-					}
-					// Wait for just a sec, then load next level
-					if(end_timer < 100f) {
-						end_timer = 999f;
-						if(level != numberOfLevels){
-							scoreboardController.processFinalScore(level);
-							Debug.Log("T: " + PlayerPrefs.GetFloat("Level" + level+ "BestTime"));
-							Debug.Log("N: " + PlayerPrefs.GetInt("Level" + level + "BestNumMovesMade"));
-							Debug.Log("S: " + PlayerPrefs.GetFloat("Level" + level + "BestScore"));
-							SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
-						}
-					}
-					// While waiting, check if we're on the final level -- if yes load credits sequence instead.
-					else {
-						FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
-						if(final != null) final.BeatFinalLevel();
-						currBlock.b_type = Block.BlockType.NONE; // stop processing this block
-					}
+				if(end_timer > 0.25f) {
+					levelCompleteScreen.GetComponent<LevelCompleteScreen>().CompletedLevel(level, scoreboardController);
+					levelCompleteScreen.SetActive(true);
+					currBlock.b_type = Block.BlockType.NONE; // stop processing this block
 				}
+				// if(end_timer == 0) {
+				// 	winSound.Play();
+				// }
+				// end_timer += Time.deltaTime;
+				// if(end_timer > 0.2f) {
+				// 	// Update Farther Reached Level stat
+				// 	if(PlayerPrefs.GetInt("LevelPassed") < level) {
+				// 		PlayerPrefs.SetInt("LevelPassed", level);
+				// 	}
+				// 	// Wait for just a sec, then load next level
+				// 	if(end_timer < 100f) {
+				// 		end_timer = 999f;
+				// 		if(level != numberOfLevels){
+				// 			scoreboardController.processFinalScore(level);
+				// 			Debug.Log("T: " + PlayerPrefs.GetFloat("Level" + level+ "BestTime"));
+				// 			Debug.Log("N: " + PlayerPrefs.GetInt("Level" + level + "BestNumMovesMade"));
+				// 			Debug.Log("S: " + PlayerPrefs.GetFloat("Level" + level + "BestScore"));
+				// 			SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
+				// 		}
+				// 	}
+				// 	// While waiting, check if we're on the final level -- if yes load credits sequence instead.
+				// 	else {
+				// 		FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
+				// 		if(final != null) final.BeatFinalLevel();
+				// 		currBlock.b_type = Block.BlockType.NONE; // stop processing this block
+				// 	}
+				// }
 				break;
 			case Block.BlockType.GRASS: 
 			case Block.BlockType.MOVEABLE:

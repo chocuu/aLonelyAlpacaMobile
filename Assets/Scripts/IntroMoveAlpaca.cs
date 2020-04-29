@@ -10,7 +10,7 @@ public class IntroMoveAlpaca : MonoBehaviour {
 	public GameObject shadow;
 	private bool moveIt;
 	private float moveSpeed;
-	private float stop_y = 62f;//Screen.height * 0.6f;
+	private float stop_y = Screen.height * 0.041f;
 
 	void Start () {	
 		moveSpeed = 110f;
@@ -32,10 +32,10 @@ public class IntroMoveAlpaca : MonoBehaviour {
 					temp.y = stop_y;
 					pacaPicRectTransform.anchoredPosition = temp;
 					moveIt = false;
-			}
-		}		
+				}
+			}		
+		}
 	}
-}
 
 	public void setMoveIt(bool move){ 
 		// Debug.Log("set move it");

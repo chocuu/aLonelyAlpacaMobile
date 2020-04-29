@@ -10,7 +10,7 @@ public class IntroMoveAlpaca : MonoBehaviour {
 	public GameObject shadow;
 	private bool moveIt;
 	private float moveSpeed;
-	private float stop_y = Screen.height * 0.041f;
+	private float stop_y = Screen.height * 0.05f;
 
 	void Start () {	
 		moveSpeed = 110f;

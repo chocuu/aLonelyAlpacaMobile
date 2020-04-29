@@ -12250,6 +12250,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 373804768}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &373804770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2287221166190558956, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+    type: 3}
+  m_PrefabInstance: {fileID: 373804768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &374113879
 GameObject:
   m_ObjectHideFlags: 0
@@ -19633,7 +19639,7 @@ GameObject:
   - component: {fileID: 549660337}
   - component: {fileID: 549660341}
   m_Layer: 0
-  m_Name: T_F-12_(03,02)__grass_A
+  m_Name: T_F-12_(03,02)__block_beta_grass
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58375,7 +58381,7 @@ MonoBehaviour:
   _grid: {fileID: 1971292625}
   bSnapFree: 0
   _autoName: {fileID: 1652860457}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1652860459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65193,6 +65199,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114525705165156418, guid: 0fad9e511d81d40dc85d590fea90a749,
+        type: 3}
+      propertyPath: levelCompleteScreen
+      value: 
+      objectReference: {fileID: 373804770}
     - target: {fileID: 1887078852009904517, guid: 0fad9e511d81d40dc85d590fea90a749,
         type: 3}
       propertyPath: m_LocalPosition.z

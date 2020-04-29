@@ -2141,6 +2141,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114525705165156418, guid: 0fad9e511d81d40dc85d590fea90a749,
+        type: 3}
+      propertyPath: levelCompleteScreen
+      value: 
+      objectReference: {fileID: 2145725167}
     - target: {fileID: 1614527157866253842, guid: 0fad9e511d81d40dc85d590fea90a749,
         type: 3}
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
@@ -20774,3 +20779,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3c9e7f02adc60e449c6dfac7c23914c, type: 3}
+--- !u!1 &2145725167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2287221166190558956, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2145725166}
+  m_PrefabAsset: {fileID: 0}

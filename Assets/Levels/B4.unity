@@ -2842,6 +2842,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114525705165156418, guid: 0fad9e511d81d40dc85d590fea90a749,
+        type: 3}
+      propertyPath: levelCompleteScreen
+      value: 
+      objectReference: {fileID: 294385906}
     - target: {fileID: 1887078852009904517, guid: 0fad9e511d81d40dc85d590fea90a749,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4958,6 +4963,12 @@ PrefabInstance:
 --- !u!1 &294385905 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5645135253315788471, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+    type: 3}
+  m_PrefabInstance: {fileID: 294385904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &294385906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2287221166190558956, guid: a3c9e7f02adc60e449c6dfac7c23914c,
     type: 3}
   m_PrefabInstance: {fileID: 294385904}
   m_PrefabAsset: {fileID: 0}

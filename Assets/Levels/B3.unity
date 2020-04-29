@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8109,6 +8109,11 @@ PrefabInstance:
       propertyPath: num_moves_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114525705165156418, guid: 0fad9e511d81d40dc85d590fea90a749,
+        type: 3}
+      propertyPath: levelCompleteScreen
+      value: 
+      objectReference: {fileID: 1511927474}
     - target: {fileID: 1887078852009904517, guid: 0fad9e511d81d40dc85d590fea90a749,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -17762,6 +17767,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1511927474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2287221166190558956, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1511927471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1514207946
 GameObject:
   m_ObjectHideFlags: 0

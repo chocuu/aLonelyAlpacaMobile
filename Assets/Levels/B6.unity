@@ -45483,6 +45483,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114525705165156418, guid: 0fad9e511d81d40dc85d590fea90a749,
+        type: 3}
+      propertyPath: levelCompleteScreen
+      value: 
+      objectReference: {fileID: 1973757773}
     - target: {fileID: 461690835345205824, guid: 0fad9e511d81d40dc85d590fea90a749,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -102605,7 +102610,7 @@ PrefabInstance:
     - target: {fileID: 5483934454770542290, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7548328546015096816, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}
@@ -102648,6 +102653,12 @@ RectTransform:
 --- !u!1 &1973757772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5645135253315788471, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1973757770}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1973757773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2287221166190558956, guid: a3c9e7f02adc60e449c6dfac7c23914c,
     type: 3}
   m_PrefabInstance: {fileID: 1973757770}
   m_PrefabAsset: {fileID: 0}

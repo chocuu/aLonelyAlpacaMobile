@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelCompleteScreen : MonoBehaviour
+public class LevelCompleteScreen
 {
 	private const int numberOfLevels = 26;
 	public Sprite[] levelBannersArray = new Sprite[numberOfLevels];
 	public GameObject[] uiElementsArray = new GameObject[5];
+	// starsArray contains sprites for: Empty Star, Half-Star, Full Star, Star w/ face
 	public Sprite[] starSpritesArray = new Sprite[4]; 
+	// starsArray is the 3 references to the stars' images (left to right). Initialized to empty.
 	public Image [] starsArray = new Image[3];
 	public Text currentScore;
 	public Text bestScore;
@@ -41,6 +43,7 @@ public class LevelCompleteScreen : MonoBehaviour
 	// score is 1 - 6 (1=0.5 stars, 6=3 stars)
 	// starSprites: 0=empty, 1=half, 2=full, 3=full with face
 	private void drawStars(int score) {
+		Debug.Log("SCORE IS: " + score);
 		if(score > 2) // score > 1 star
 			starsArray[0].sprite = starSpritesArray[2];
 		if(score > 4) // score > 2 star
@@ -55,6 +58,8 @@ public class LevelCompleteScreen : MonoBehaviour
 		}
 	}
 
+	/* Called by next level button in level complete screen
+	**/
 	public void GoNextLevel() {
 		// Check if we're on the final level -- if yes load credits sequence instead.
 		FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
@@ -64,19 +69,8 @@ public class LevelCompleteScreen : MonoBehaviour
 		if(level != numberOfLevels){
 			Debug.Log("T: " + PlayerPrefs.GetFloat("Level" + level+ "BestTime"));
 			Debug.Log("N: " + PlayerPrefs.GetInt("Level" + level + "BestNumMovesMade"));
-			Debug.Log("S: " + PlayerPrefs.GetFloat("Level" + level + "BestScore"));
+			Debug.Log("S: " + PlayerPrefs.GetInt("Level" + level + "BestScore"));
 			SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
 		}
 	}
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

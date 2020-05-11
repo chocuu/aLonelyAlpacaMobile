@@ -101,7 +101,7 @@ public class ScoreboardController : MonoBehaviour
     }
 
     /** Locally save the scores if they were the best achieved by this player */
-    private void saveBestStatsIfApplicable(float timeInLevel, int numMoves, float totalScore, int levelNumber)
+    private void saveBestStatsIfApplicable(float timeInLevel, int numMoves, int totalScore, int levelNumber)
     {
         // save best time
         bestTimeKey = "Level" + levelNumber + "BestTime";
@@ -124,23 +124,24 @@ public class ScoreboardController : MonoBehaviour
         // save best score
         bestScoreKey = "Level" + levelNumber +  "BestScore";
         if(!PlayerPrefs.HasKey(bestScoreKey)){
-            PlayerPrefs.SetFloat(bestScoreKey, totalScore);
+            PlayerPrefs.SetInt(bestScoreKey, totalScore);
         }
         else if(numMovesMade < PlayerPrefs.GetInt(bestScoreKey)){
-            PlayerPrefs.SetFloat(bestScoreKey, totalScore);
+            PlayerPrefs.SetInt(bestScoreKey, totalScore);
         }
     }
 
-    /** Get a score for level performance.
-      * Score will be a value between 0.5 and 6.0, rounded to the nearest 0.5
+    /** Calculates a score for level performance. Saves this score if it is the best achieved for this level.
+      * Score will be a value from 1 and 6
       * Only call upon level completion.
     */
     public void processFinalScore(int level)
     {
         int numMovesBestScore = bestScoreNumMoves[level-1];
         // moves for worst score is 40% more than best score
-        int numMovesWorstScore = (int)Mathf.Ceil(numMovesBestScore *1.4f);
+        int numMovesWorstScore = (int)Mathf.Ceil(numMovesBestScore *2.0f);
 
+        // Calculate time at level finish in milliseconds
         timeAtLevelFinish = Time.time - levelStartTime;
         timeAtLevelFinish = Mathf.Round(timeAtLevelFinish * 100f)/100f; // Round to 2 decimal places
 
@@ -150,11 +151,8 @@ public class ScoreboardController : MonoBehaviour
                             ((float)(numMovesMade-numMovesBestScore))/(numMovesWorstScore-numMovesBestScore));
 
         // Score based only on numMoves
-        float totalScore = 5.5f * (1.0f-numMovesScore) + 0.5f;
-        totalScore = Mathf.Round(totalScore * 2) * 0.5f; // round to nearest 0.5
-        score = (int) totalScore; // TODO: add score
-
-        saveBestStatsIfApplicable(timeAtLevelFinish, numMovesMade, totalScore, level);  
+        score = (int)Mathf.Round(5.0f * (1.0f-numMovesScore) + 1.0f);
+        saveBestStatsIfApplicable(timeAtLevelFinish, numMovesMade, score, level);  
     }
 
 }

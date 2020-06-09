@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelCompleteScreen
+public class LevelCompleteScreen : MonoBehaviour
 {
 	private const int numberOfLevels = 26;
 	public Sprite[] levelBannersArray = new Sprite[numberOfLevels];

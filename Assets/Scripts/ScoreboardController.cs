@@ -139,7 +139,7 @@ public class ScoreboardController : MonoBehaviour
     {
         int numMovesBestScore = bestScoreNumMoves[level-1];
         // moves for worst score is 40% more than best score
-        int numMovesWorstScore = (int)Mathf.Ceil(numMovesBestScore *2.0f);
+        int numMovesWorstScore = (int)Mathf.Ceil(numMovesBestScore *1.8f);
 
         // Calculate time at level finish in milliseconds
         timeAtLevelFinish = Time.time - levelStartTime;

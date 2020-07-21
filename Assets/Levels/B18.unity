@@ -11577,6 +11577,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
+--- !u!114 &366729850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114525705165156418, guid: 0fad9e511d81d40dc85d590fea90a749,
+    type: 3}
+  m_PrefabInstance: {fileID: 366729849}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c258b507ed3418ba04775502c38a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &367408085
 GameObject:
   m_ObjectHideFlags: 0
@@ -52316,6 +52328,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 311312626368433881, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 366729850}
+    - target: {fileID: 311312626368433881, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickBlockButt
       objectReference: {fileID: 0}
     - target: {fileID: 996668562190964942, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}

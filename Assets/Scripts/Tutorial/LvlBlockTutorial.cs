@@ -35,9 +35,9 @@ public class LvlBlockTutorial : MonoBehaviour
         dropLeft.enabled = /*dropRight.enabled =*/ false;
         // quadrant0.enabled = quadrant1.enabled = quadrant2.enabled = quadrant3.enabled = false;
 
-        holdLeft.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.75f);
+        //holdLeft.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.75f);
         // holdRight.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.75f);
-        dropLeft.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.25f);
+        //dropLeft.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.25f);
         //dropRight.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.25f);
 
         //resize the quadrants
@@ -52,16 +52,16 @@ public class LvlBlockTutorial : MonoBehaviour
 		return Math.Round(a.x - b.x)  == 0 && Math.Round(a.z - b.z) == 0;
     }
 
-    bool onEdgeLeft(Vector3 a) {
-        return Math.Round(a.y) == 1 && Math.Round(a.z) == -1;
+    bool onEdgeLeft(Vector3 a, int alpacaDir) {
+        return Math.Round(a.y) == 1 && Math.Round(a.z) == -1 && alpacaDir == 3;
     }
 
-    bool onEdgeRight(Vector3 a) {
-        return Math.Round(a.y) == 1 && Math.Round(a.x) == 1 && Math.Round(a.z) == 0;
+    bool onEdgeRight(Vector3 a, int alpacaDir) {
+        return Math.Round(a.y) == 1 && Math.Round(a.x) == 1 && alpacaDir == 2;
     }
 
-    bool onEdge(Vector3 a) {
-        return onEdgeLeft(a) || onEdgeRight(a);
+    bool onEdge(Vector3 a, int alpacaDir) {
+        return onEdgeLeft(a, alpacaDir) || onEdgeRight(a, alpacaDir);
     }
 
     // Update is called once per frame
@@ -95,7 +95,7 @@ public class LvlBlockTutorial : MonoBehaviour
         		}
         		break;
             case 2:
-                dropLeft.enabled = alpaca.HasBlock() && onEdge(alpacaPos);
+                dropLeft.enabled = alpaca.HasBlock() && onEdge(alpacaPos, alpaca.dir);
                 break;
         	default:
         		break;

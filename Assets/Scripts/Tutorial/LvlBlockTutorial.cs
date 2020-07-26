@@ -17,6 +17,7 @@ public class LvlBlockTutorial : MonoBehaviour
 	public Image holdLeft;
 	// public Image holdRight;
     public Image dropLeft;
+    public Image background;
     // public Image dropRight;
 	// public Image quadrant0;
 	// public Image quadrant1;
@@ -33,6 +34,7 @@ public class LvlBlockTutorial : MonoBehaviour
     {
         holdLeft.enabled = /*holdRight.enabled =*/ false;
         dropLeft.enabled = /*dropRight.enabled =*/ false;
+        background.enabled = false;
         // quadrant0.enabled = quadrant1.enabled = quadrant2.enabled = quadrant3.enabled = false;
 
         //holdLeft.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.75f);
@@ -80,22 +82,22 @@ public class LvlBlockTutorial : MonoBehaviour
         			approachShrub.active = false;
 					arrowRight.active = false;
 					if(equals(alpacaPos, alpacaApproachLeft) && alpaca.dir == 1)
-						holdLeft.enabled = true;
+						holdLeft.enabled = background.enabled = true;
 					if(equals(alpacaPos, alpacaApproachRight) && alpaca.dir == 0)
-						holdLeft.enabled = /*quadrant0.enabled =*/ true;
+						holdLeft.enabled = background.enabled = /*quadrant0.enabled =*/ true;
         		} else if(!alpaca.HasBlock()) {
         			approachShrub.active = true;
 					arrowRight.active = true;
-					holdLeft.enabled = false;
+					holdLeft.enabled = background.enabled = false;
         		}
         		if(alpaca.HasBlock()) {
         			step += 1;
-					holdLeft.enabled = /*quadrant0.enabled =*/ false;
+					holdLeft.enabled = background.enabled =/*quadrant0.enabled =*/ false;
 					// holdRight.enabled = quadrant1.enabled = false;
         		}
         		break;
             case 2:
-                dropLeft.enabled = alpaca.HasBlock() && onEdge(alpacaPos, alpaca.dir);
+                dropLeft.enabled = background.enabled = alpaca.HasBlock() && onEdge(alpacaPos, alpaca.dir);
                 break;
         	default:
         		break;

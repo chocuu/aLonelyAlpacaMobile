@@ -13,7 +13,7 @@ public class BlockButt : MonoBehaviour
     private Color lightWhite; 
     private bool pickUp;
     private float timer = 0f;
-    private float timer_duration= 0.3f;
+    private float timer_duration= 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +52,7 @@ public class BlockButt : MonoBehaviour
         if (pickUp && timer < timer_duration) {
             timer += Time.deltaTime;
             buttImgBg.color = orange;
-        } else if (pickUp && timer < timer_duration*2f) {
+        } else if (pickUp && timer < timer_duration*1.5f) {
             timer += Time.deltaTime;
             buttImgBg.color = lightOrange;
         } else if (pickUp) {

@@ -318,7 +318,7 @@ public class WorldScript : MonoBehaviour {
     		control_scheme = 2;
     	} else {
     		control_scheme = 0;
-    		blockButt.SetColor(new Color(1, 1, 1, 0));
+    		blockButt.SetNoBlock();
     	}
     	t.text = control_scheme.ToString();
     }
@@ -338,7 +338,7 @@ public class WorldScript : MonoBehaviour {
     	}
 
     	if(map.IsBlockHeld()) {
-    		blockButt.SetColor(new Color(1, 1, 1, 1));
+    		blockButt.SetDrop();
 			return;
     	}
 
@@ -347,16 +347,16 @@ public class WorldScript : MonoBehaviour {
 
 		// Is there a block above attempted block?
     	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE) {
-    		blockButt.SetColor(new Color(1, 1, 1, 0));
+    		blockButt.SetNoBlock();
 			return;
     	}
     	lastHighlightBlock = GetBlockAt(dest);
     	// Is there a block in front of you?
     	if(lastHighlightBlock != null && lastHighlightBlock.b_type == Block.BlockType.MOVEABLE) {
     		lastHighlightBlock.Highlight();
-    		blockButt.SetColor(new Color(0.85f, 0.85f, 0.85f, 0.5f));
+    		blockButt.SetPickUp();
     	} else {
-    		blockButt.SetColor(new Color(1, 1, 1, 0));
+    		blockButt.SetNoBlock();
     	}
     }
 
@@ -378,6 +378,8 @@ public class WorldScript : MonoBehaviour {
     	} else {
     		map.LoadTryHoldBlock(dest, false);
     	}
+    	if(control_scheme == 2)
+    		UpdateBlockButt();
     	return temp;
     }
 
@@ -441,13 +443,12 @@ public class WorldScript : MonoBehaviour {
 
 			// if in process of loading of holding/dropping a block,
 			// don't process input
-			if(get) {
+			if(control_scheme != 2 && get) {
 				//Debug.Log("holding");
 				tilPickup += Time.deltaTime;
 				if(tilPickup > 0.3f) { // timer reached, actually process
 					alpaca.StopWalk();
 					get = false;
-					if(control_scheme == 2) return;
 					AttemptPickUpOrPlaceBlock();
 					lastTimeClicked = 999;
 				}
@@ -462,7 +463,7 @@ public class WorldScript : MonoBehaviour {
 				// 	alpaca.SetFacingDirection(clickedWhere);
 				// 	alpaca.UpdateWalk();
 				// }
-				if(lastTimeClicked < 100) { //did not pick up block
+				if(control_scheme == 2 || lastTimeClicked < 100) { //did not pick up block
 					MoveOnClick();
 					map.LoadTryHoldBlock(new Vector3(0,0,0), false);
 				}
@@ -483,7 +484,7 @@ public class WorldScript : MonoBehaviour {
 				}
 				lastTimeClicked += Time.deltaTime;
 				// attempt to pick up block after certain time
-				if(flag && lastTimeClicked > 0.25f) {
+				if(control_scheme != 2 && flag && lastTimeClicked > 0.25f) {
 					map.PreviewBlock(alpaca.GetCurrAlpacaDest(clickedWhere));
 					LoadTryHoldBlock(true);
 					flag = false;
@@ -493,7 +494,7 @@ public class WorldScript : MonoBehaviour {
 			}
 			HandleFrontBlockHighlight();
 			if(control_scheme == 2)
-				UpdateBlockButt();
+    			UpdateBlockButt();
 			didClick = ClickedNow();
 		} else {
 		///// PANNING MODE /////

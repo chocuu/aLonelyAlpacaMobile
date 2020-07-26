@@ -19,6 +19,10 @@ public class LvlBlockTutorial_2 : MonoBehaviour
     private GameObject[] quadrants;
     WorldScript world;
 	public Alpaca alpaca;
+    public Image zoomText;
+    public Image zoomBg;
+    public Image panText;
+    public Image panBg;
     Vector3 alpacaDrop0 = new Vector3(1, 1, -4);
 	Vector3 alpacaDrop1 = new Vector3(1, 1, -5);
 	Vector3 alpacaDrop2 = new Vector3(2, -2, -4);

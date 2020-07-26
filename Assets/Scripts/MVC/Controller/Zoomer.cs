@@ -80,6 +80,11 @@ public class Zoomer : MonoBehaviour {
 		}
 	}
 
+	/* Return if we are Zoomed out (For zoom tutorial) */
+	public bool isZoomed() {
+		return zState == ZoomState.ZOOMED_OUT || zState == ZoomState.ZOOMING_OUT;
+	}
+
 	/* Lerp the camera from [start] to [end]. */
 	void moveCam(float start, float end) {
 		cam.orthographicSize = Mathf.Lerp(start, end, lerp_timer);

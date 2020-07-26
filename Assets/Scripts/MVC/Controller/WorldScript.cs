@@ -247,10 +247,6 @@ public class WorldScript : MonoBehaviour {
 	Block highlighted; // block highlighted if you're holding a block
 
 	void HandleFrontBlockHighlight() {
-		if( lastClickedWhere != clickedWhere) {
-			alpaca.UpdateWalk();
-			return;
-		}
 		if(highlighted != null)
 			highlighted.Unhighlight();
 		if(!alpaca.HasBlock())
@@ -271,12 +267,18 @@ public class WorldScript : MonoBehaviour {
 	void MoveOnClick() {
 		// change facing direction before walking in that direction
 		if( lastClickedWhere != clickedWhere) {
+			// Debug.Log("lastClickedWhere " + lastClickedWhere + " clickedWhere " + clickedWhere);
+			alpaca.SetFacingDirection(clickedWhere);
 			alpaca.UpdateWalk();
 			lastClickedWhere = clickedWhere;
 			return;
 		}
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
+
+    	Debug.Log("curr" + curr);
+    	Debug.Log("dest" + dest);
+    	Debug.Log(GetBlockBelow(dest));
 
 		if(GetBlockAt(dest) != null) { // Is there a block right in front? --> climb mode
 			if(GetBlockAbove(curr) != null) // Is there a block above alpaca?
@@ -308,7 +310,6 @@ public class WorldScript : MonoBehaviour {
 			}
 		}
 
-		lastClickedWhere = clickedWhere;
     }
 
     public void FlagControlScheme(Text t) {
@@ -367,7 +368,6 @@ public class WorldScript : MonoBehaviour {
     bool AttemptPickUpOrPlaceBlock() {
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
-    	lastClickedWhere = clickedWhere;
     	// Is there a block above attempted block?
     	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE)
 			return false;
@@ -391,7 +391,6 @@ public class WorldScript : MonoBehaviour {
     	if(control_scheme == 2) return false;
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
-    	lastClickedWhere = clickedWhere;
     	// Is there a moveable block above attempted block?
     	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE)
 			return false;
@@ -456,22 +455,23 @@ public class WorldScript : MonoBehaviour {
 			}
 
 			if(!ClickedNow() && didClick) { // click just ended
-				// if(control_scheme == 1) {
-				// 	clickPos = Input.mousePosition;
-				// 	clickedWhere = ClickedWhere();
-				// 	HighlightQuadrant();
-				// 	alpaca.SetFacingDirection(clickedWhere);
-				// 	alpaca.UpdateWalk();
-				// }
+				if(control_scheme == 0 || control_scheme == 2)
+					alpaca.StopWalk();
+				if(control_scheme == 1) {
+					clickPos = Input.mousePosition;
+					clickedWhere = ClickedWhere();
+					HighlightQuadrant();
+					alpaca.SetFacingDirection(clickedWhere);
+					alpaca.UpdateWalk();
+				}
 				if(control_scheme == 2 || lastTimeClicked < 100) { //did not pick up block
 					MoveOnClick();
 					map.LoadTryHoldBlock(new Vector3(0,0,0), false);
 				}
 				lastTimeClicked = 0;
 				ClearHighlights();
-				if(control_scheme == 0 || control_scheme == 2)
-					alpaca.StopWalk();
 				flag = true;
+				lastClickedWhere = clickedWhere;
 			} else if(ClickedNow()) { // click is happening
 				if(control_scheme == 0 || control_scheme == 2) {
 					clickPos = Input.mousePosition;
@@ -479,8 +479,6 @@ public class WorldScript : MonoBehaviour {
 						return;
 					clickedWhere = ClickedWhere();
 					HighlightQuadrant();
-					alpaca.SetFacingDirection(clickedWhere);
-					alpaca.UpdateWalk();
 				}
 				lastTimeClicked += Time.deltaTime;
 				// attempt to pick up block after certain time

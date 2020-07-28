@@ -83,8 +83,10 @@ public class LvlBlockTutorial : MonoBehaviour
 					arrowRight.active = false;
 					if(equals(alpacaPos, alpacaApproachLeft) && alpaca.dir == 1)
 						holdLeft.enabled = background.enabled = true;
-					if(equals(alpacaPos, alpacaApproachRight) && alpaca.dir == 0)
+					else if(equals(alpacaPos, alpacaApproachRight) && alpaca.dir == 0)
 						holdLeft.enabled = background.enabled = /*quadrant0.enabled =*/ true;
+                    else 
+                        holdLeft.enabled = background.enabled = false;
         		} else if(!alpaca.HasBlock()) {
         			approachShrub.active = true;
 					arrowRight.active = true;

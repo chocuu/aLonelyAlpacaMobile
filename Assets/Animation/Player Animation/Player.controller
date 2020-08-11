@@ -523,6 +523,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: is_blockpaca
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: poof
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102820796803061662}
   m_Solo: 0
@@ -4039,7 +4042,7 @@ AnimatorStateMachine:
     m_Position: {x: 1476, y: 660, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102765644015701742}
-    m_Position: {x: -180, y: 660, z: 0}
+    m_Position: {x: -190, y: 740, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102648246566364922}
     m_Position: {x: 810, y: 740, z: 0}
@@ -4175,7 +4178,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0

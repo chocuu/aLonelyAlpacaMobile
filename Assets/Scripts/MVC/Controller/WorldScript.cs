@@ -379,7 +379,10 @@ public class WorldScript : MonoBehaviour {
     		map.LoadTryHoldBlock(dest, false);
     	}
     	if(control_scheme == 2)
+		{
     		UpdateBlockButt();
+			alpaca.StopWalk();
+		}
     	return temp;
     }
 

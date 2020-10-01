@@ -6,6 +6,7 @@ using UnityEngine.UI;
 /** NOTE: Pan Button is brought into view by Zoomer.cs */
 public class PanButtonController : MonoBehaviour
 {
+    private const float panSpeed = 15f;
     public Image panImage;
     public Sprite panSpriteSelected;
     public Sprite panSpriteUnselected;
@@ -50,19 +51,19 @@ public class PanButtonController : MonoBehaviour
         Vector3 finalPosition;
         switch(dir){
             case 0 :
-                finalPosition = cameraTransform.position - moveX;
+                finalPosition = cameraTransform.position + panSpeed*Time.deltaTime*Vector3.left;
                 cameraTransform.position = finalPosition;
                 break;
             case 1 :
-                finalPosition = cameraTransform.position + moveZ;
+                finalPosition = cameraTransform.position + panSpeed*Time.deltaTime*Vector3.forward;
                 cameraTransform.position = finalPosition;
                 break;
             case 2 :
-                finalPosition = cameraTransform.position + moveX;
+                finalPosition = cameraTransform.position + panSpeed*Time.deltaTime*Vector3.right;
                 cameraTransform.position = finalPosition;
                 break;
             case 3 :
-                finalPosition = cameraTransform.position - moveZ;
+                finalPosition = cameraTransform.position + panSpeed*Time.deltaTime*Vector3.back;
                 cameraTransform.position = finalPosition;
                 break;
             default : break;

@@ -276,10 +276,6 @@ public class WorldScript : MonoBehaviour {
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = alpaca.GetCurrAlpacaDest(clickedWhere);
 
-    	Debug.Log("curr" + curr);
-    	Debug.Log("dest" + dest);
-    	Debug.Log(GetBlockBelow(dest));
-
 		if(GetBlockAt(dest) != null) { // Is there a block right in front? --> climb mode
 			if(GetBlockAbove(curr) != null) // Is there a block above alpaca?
 				return;

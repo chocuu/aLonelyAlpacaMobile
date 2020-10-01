@@ -43,7 +43,6 @@ public class LevelCompleteScreen : MonoBehaviour
 	// score is 1 - 6 (1=0.5 stars, 6=3 stars)
 	// starSprites: 0=empty, 1=half, 2=full, 3=full with face
 	private void drawStars(int score) {
-		Debug.Log("SCORE IS: " + score);
 		if(score > 2) // score > 1 star
 			starsArray[0].sprite = starSpritesArray[2];
 		if(score > 4) // score > 2 star

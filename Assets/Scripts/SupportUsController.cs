@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Monetization;
+﻿using UnityEngine;
+using UnityEngine.Advertisements;
 using UnityEngine.UI;
 
-public class SupportUsController : MonoBehaviour
+public class SupportUsController : MonoBehaviour, IUnityAdsListener
 {
     /** Store information */
     private string appleID = "3203751";
     private string googleID = "3203750";
-    private string videoAdID = "rewardedVideo";
+    private string videoAdPlacementID = "rewardedVideo";
     private string appID = "com.MangoSnoopers.ALonelyAlpaca";
-    [SerializeField] private bool testMode = false;
+    [SerializeField] private bool testMode = true;
 
     /* UI Stuff */
     [SerializeField] GameObject supportUsMenu;
@@ -31,15 +29,31 @@ public class SupportUsController : MonoBehaviour
     private float lerp_timer;
 
 
-    // Start is called before the first frame update
     void Start()
     {
-        Monetization.Initialize(googleID, testMode);
-        Monetization.Initialize(appleID, testMode);
-        supportUsMenu.SetActive(false);
-        supportOptionsMenu.SetActive(false);
-        donateMenu.SetActive(false);
+    // UI
+    supportUsMenu.SetActive(false);
+    supportOptionsMenu.SetActive(false);
+    donateMenu.SetActive(false);
+
+    // Monetization
+        Advertisement.AddListener(this);
+#if UNITY_ANDROID
+        Advertisement.Initialize(googleID, testMode);
+#elif UNITY_IPHONE
+        Advertisement.Initialize(appleID, testMode);
+#endif
     }
+
+
+    private void Update() 
+    {
+        ResolveSupportButton();
+    }
+
+
+/* ===================================================================================================== */
+#region  UI Control
 
     /**
      * Used for the button entering the support screen,
@@ -72,8 +86,9 @@ public class SupportUsController : MonoBehaviour
         }
     }
 
-    /** Called every frame */
-    void Update () {
+
+    /** Brings the support button up or down if needed */
+    void ResolveSupportButton () {
         if(comingDown) {
             lerp_timer += 2 * Time.deltaTime;
 			supportButtTransform.anchoredPosition = Vector3.Lerp(supportButtTransform.anchoredPosition, selectedPosition, lerp_timer);
@@ -86,57 +101,120 @@ public class SupportUsController : MonoBehaviour
             lerp_timer = 0;
         }
     }
-    /**
-     * Used for support options page -> donate page
-     */
+
+
+    /**  Used togo from support options page -> donate page (*/
     public void goDonatePage()
     {
         supportOptionsMenu.SetActive(false);
         donateMenu.SetActive(true);
     }
 
-    public void showAd()
-    {
-        if (Monetization.IsReady(videoAdID))
-        {
-            ShowAdPlacementContent ad = null;
-            ad = Monetization.GetPlacementContent(videoAdID) as ShowAdPlacementContent;
 
-            if (ad != null)
-            {
-                ad.Show();
-                supportOptionsMenu.SetActive(false);
-                thanksImage.SetActive(true);
-            }
+    private void DisplayThanksImage()
+    {
+        supportOptionsMenu.SetActive(false);
+        thanksImage.SetActive(true);
+    }
+
+
+#endregion // UI Cotrol
+/* ===================================================================================================== */
+#region Monetization Control
+
+    /* ================================================================================================= */
+    #region  Advertisements 
+
+
+    public void ShowAd()
+    {
+        if (Advertisement.IsReady(videoAdPlacementID)) {
+            Advertisement.Show(videoAdPlacementID);
+        }
+        else {
+            Debug.Log("Rewarded video not ready. Try again later!");
+        }        
+    }
+
+
+    public void OnUnityAdsDidFinish (string placementId, ShowResult showResult) 
+    {
+        if (showResult == ShowResult.Finished) {
+            DisplayThanksImage();
+        } 
+        else if (showResult == ShowResult.Skipped) {
+            // Do not reward the user for skipping the ad.
+        } 
+        else if (showResult == ShowResult.Failed) {
+            Debug.LogWarning ("The ad did not finish due to an error.");
         }
     }
 
-    public void OpenReviewPage() {
-        #if UNITY_ANDROID
+
+    public void OnUnityAdsReady (string placementId) {
+        // If the ready Placement is rewarded, show the ad:
+        if (placementId == videoAdPlacementID) {
+            // Optional actions to take when the placement becomes ready(For example, enable the rewarded ads button)
+        }
+    }
+
+
+    public void OnUnityAdsDidError (string message) {
+        // Log the error.
+    }
+
+
+    public void OnUnityAdsDidStart (string placementId) {
+        // Optional actions to take when the end-users triggers an ad.
+    } 
+
+
+    #endregion //Advertisements
+    /* ================================================================================================= */
+    #region Reviews
+
+
+    public void OpenReviewPage() 
+    {
+#if UNITY_ANDROID
         Application.OpenURL("market://details?id=" + appID);
-        #elif UNITY_IPHONE
+#elif UNITY_IPHONE
         Application.OpenURL("itms-apps://itunes.apple.com/app/id" + appID);
-        #else
+#else
         Debug.Log("NOT ON MOBILE DEVICE");
-        #endif
+#endif
     }
 
-    // Donation Methods
-    public void DonatePressed1Dollar() {
+
+    #endregion // Reviews
+    /* ================================================================================================= */
+    #region In App Purchases
+
+
+    /* Donation Methods */
+    public void DonatePressed1Dollar() 
+    {
         IAPManager.Instance.PurchaseDonation1Dollar();
-        donateMenu.SetActive(false);
-        thanksImage.SetActive(true);
+        DisplayThanksImage();
     }
 
-    public void DonatePressed3Dollar() {
+    public void DonatePressed3Dollar() 
+    {
         IAPManager.Instance.PurchaseDonation3Dollar();
-        donateMenu.SetActive(false);
-        thanksImage.SetActive(true);
+        DisplayThanksImage();
     }
 
-    public void DonatePressed5Dollar() {
+    public void DonatePressed5Dollar() 
+    {
         IAPManager.Instance.PurchaseDonation5Dollar();
-        donateMenu.SetActive(false);
-        thanksImage.SetActive(true);
+        DisplayThanksImage();
     }
+
+
+    #endregion // In App Purchases
+    /* ================================================================================================= */
+
+
+#endregion // Monetization Control
+/* ===================================================================================================== */
 }

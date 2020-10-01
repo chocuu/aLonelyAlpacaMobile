@@ -46633,7 +46633,7 @@ GameObject:
   - component: {fileID: 907716086}
   - component: {fileID: 907716085}
   m_Layer: 0
-  m_Name: T_F-30_(01,-03)__grass_I
+  m_Name: T_F-30_(01,-03)__block_beta_grass
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97446,7 +97446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1775833641516320, guid: a3c9e7f02adc60e449c6dfac7c23914c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114413331158596200, guid: a3c9e7f02adc60e449c6dfac7c23914c,
         type: 3}

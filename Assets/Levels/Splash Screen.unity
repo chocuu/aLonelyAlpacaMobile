@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -537,6 +538,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -814,7 +816,7 @@ MonoBehaviour:
   endOfSceneLocation: B0 - Menu
   currSceneTime: 2.5
   skipFade: 0
-  spaceToSpeedUp: 0
+  spaceToSpeedUp: 1
 --- !u!114 &1138746128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,6 +864,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -895,7 +898,7 @@ GameObject:
   - component: {fileID: 1978124119}
   - component: {fileID: 1978124118}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: MangoSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

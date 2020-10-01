@@ -60,13 +60,23 @@ public class CutsceneController : MonoBehaviour {
 					if(nextSceneImage!=null)
 						nextSceneImage.enabled = true;
 				}
-                else if(spaceToSpeedUp && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))){
+                else if(spaceToSpeedUp && Input.GetMouseButtonDown(0)){
 					FIScript.fadeRate = 10.0f;
 					timeAccum = currSceneTime+1;
+					if(SceneManager.GetActiveScene().name == "Splash Screen")
+					{
+						GameObject.Find("MangoSound").GetComponent<AudioSource>().volume = 0.0f;
+					}
 				}
 			}
-            else if(spaceToSpeedUp && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
-					FIScript.fadeRate = 10.0f;
+            else if(spaceToSpeedUp && Input.GetMouseButtonDown(0))
+			{
+				FIScript.fadeRate = 10.0f;
+				if(SceneManager.GetActiveScene().name == "Splash Screen")
+				{
+					GameObject.Find("MangoSound").GetComponent<AudioSource>().volume = 0.0f;
+				}
+			}
 		}
 		else if(!endScene && wasEnabled){
 			endScene = true;

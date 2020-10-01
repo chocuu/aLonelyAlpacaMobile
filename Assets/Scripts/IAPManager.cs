@@ -17,10 +17,14 @@ public class IAPManager : MonoBehaviour, IStoreListener
     public static string DONATION_3_DOLLAR = "donation_3_dollar";
     public static string DONATION_5_DOLLAR = "donation_5_dollar";
 
-    private void Awake() {
+    private void Awake() 
+    {
         Instance = this;
     }
-    private void Start() {
+
+
+    private void Start() 
+    {
         // If we haven't set up the Unity Purchasing reference
         if (m_StoreController == null) {
             // Begin to configure our connection to Purchasing
@@ -28,7 +32,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
         }
     }
 
-    public void InitializePurchasing() {
+
+    public void InitializePurchasing() 
+    {
         // If we have already connected to Purchasing ...
         if (IsInitialized())
         {
@@ -49,24 +55,33 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UnityPurchasing.Initialize(this, builder);
     }
 
-    private bool IsInitialized() {
+    private bool IsInitialized() 
+    {
         // Only say we are initialized if both the Purchasing references are set.
         return m_StoreController != null && m_StoreExtensionProvider != null;
     }
 
-    public void PurchaseDonation1Dollar() {
+
+    public void PurchaseDonation1Dollar() 
+    {
         BuyProductID(DONATION_1_DOLLAR);
     }
 
-    public void PurchaseDonation3Dollar() {
+
+    public void PurchaseDonation3Dollar() 
+    {
         BuyProductID(DONATION_3_DOLLAR);
     }
 
-    public void PurchaseDonation5Dollar() {
+
+    public void PurchaseDonation5Dollar() 
+    {
         BuyProductID(DONATION_5_DOLLAR);
     }
 
-    private void BuyProductID(string productId) {
+
+    private void BuyProductID(string productId) 
+    {
         if (IsInitialized())
         {
             //  Look up the Product reference with the general product identifier and the Purchasing 

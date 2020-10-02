@@ -114,6 +114,7 @@ public class SupportUsController : MonoBehaviour, IUnityAdsListener
     private void DisplayThanksImage()
     {
         supportOptionsMenu.SetActive(false);
+        donateMenu.SetActive(false);
         thanksImage.SetActive(true);
     }
 

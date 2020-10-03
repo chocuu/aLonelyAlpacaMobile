@@ -7,7 +7,7 @@ using Anonym.Isometric;
 public class FinalWinBlockController : MonoBehaviour
 {
 
-  private AudioSource endSong;
+  [SerializeField] private AudioSource endSong;
   /** star's main gameobject and iso2d object */
   public GameObject star_obj;
   public GameObject star_Iso2d;
@@ -30,20 +30,22 @@ public class FinalWinBlockController : MonoBehaviour
   private const float final_pan_pos = 17.3775f;
   private const float final_pan_pos_c = 19f;
 
+
+  private void Awake() {
+    startCredits = false;
+    moveItStar = true;
+    moveItCam = true;
+  }
+
   // Use this for initialization
   void Start()
   {
     Destroy(GameObject.Find("MusicTime"));
-    endSong = GameObject.Find("EndMusicTime").GetComponent<AudioSource>();
     DontDestroyOnLoad(endSong);
-    endSong.Stop();
     star_animator = star_Iso2d.GetComponent<Animator>();
     star_tf = star_obj.GetComponent<Transform>();
     cam_tf = cam.GetComponent<Transform>();
     FIScript = Background.GetComponent<FadeOutWSprite>();
-    startCredits = false;
-    moveItStar = true;
-    moveItCam = true;
   }
 
   public void BeatFinalLevel(){

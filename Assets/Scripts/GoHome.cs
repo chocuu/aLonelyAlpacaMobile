@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GoHome : MonoBehaviour
 {
-  private const int numLevels = 26;
+  public static readonly int numLevels = 26;
   public string menuLevel = "B0 - Menu";
   public string levelSelect = "Level Select Menu Mobile";
   public GameObject confirmScreen;

@@ -12,6 +12,7 @@ public class Zoomer : MonoBehaviour {
 	private PanButtonController pan_ctrlr;
 	private RectTransform panTransform;
 	/* Position of the pan button on the screen when it's shown or not*/
+	private const float panDropHeight = 80f;
 	private Vector3 panPosInitial;
 	private Vector3 panPosFinal;
 	/* The size of a full-zoomed camera. */
@@ -53,8 +54,8 @@ public class Zoomer : MonoBehaviour {
 		background2 = GameObject.Find("Background_peaks");
 		pan_ctrlr = GameObject.Find("Pan Butt").GetComponent<PanButtonController>();
 		if(pan_ctrlr != null) panTransform = pan_ctrlr.GetComponent<RectTransform>();
-		panPosInitial = new Vector3(-385, 40, 0);
-		panPosFinal = new Vector3(-385, -40, 0);
+		panPosInitial = panTransform.anchoredPosition;
+		panPosFinal = new Vector3(panPosInitial.x, panPosInitial.y - panDropHeight, panPosInitial.z);
 	}
 
 	/* Player toggled camera, update the state and play the right sound. */

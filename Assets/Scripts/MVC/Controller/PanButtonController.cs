@@ -16,8 +16,6 @@ public class PanButtonController : MonoBehaviour
     public GameObject panBorderC;
     private Transform cameraTransform;
     private FollowAlpaca follow_alpaca_script;
-    private Vector3 moveX;
-    private Vector3 moveZ;
     private bool isPanning;
 
     private void SetPanBorder(bool set) {
@@ -29,8 +27,6 @@ public class PanButtonController : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         isPanning = false;
-        moveX = new Vector3(1.0f, 0, 0);
-        moveZ = new Vector3(0, 0, 1.0f);
         GameObject camera_prefab = GameObject.FindWithTag("MainCamera");
 		cameraTransform = camera_prefab.GetComponent<Transform>();
         follow_alpaca_script = camera_prefab.GetComponent<FollowAlpaca>();

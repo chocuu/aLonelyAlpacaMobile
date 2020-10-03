@@ -7,8 +7,6 @@ using System.Text.RegularExpressions;
 
 public class UpdateLevelSelectMenu : MonoBehaviour
 {   
-    // Number of Levels
-    public const int numberOfLevels = 26; 
     // Selector Gameobject dragged in from hierarchy
     public GameObject alpacaCursor;
     public Animator alpacaCursorAnim;
@@ -16,9 +14,9 @@ public class UpdateLevelSelectMenu : MonoBehaviour
     public GameObject ImagePreviewUI;
     public GameObject LevelBannerUI;
     // Collection of image previews
-    public Sprite[] imagePreviewsArray = new Sprite[numberOfLevels];
+    public Sprite[] imagePreviewsArray = new Sprite[GoHome.numLevels];
     // Collection of level banners
-    public Sprite[] levelBannersArray = new Sprite[numberOfLevels];
+    public Sprite[] levelBannersArray = new Sprite[GoHome.numLevels];
         // Gameobject of "Next Level" button
     public GameObject nextLevelButtArrow;
         // Gameobject of "Prex Level" button
@@ -79,7 +77,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
             currentLevel = (currentLevel == 0) ? int.Parse(PlayerPrefs.GetString("lastLoadedScene").Substring(1))-1: (currentLevel - 1);
         }
 
-        if(currentLevel < 0 || currentLevel >= numberOfLevels) 
+        if(currentLevel < 0 || currentLevel >= GoHome.numLevels) 
             currentLevel = 0;
 
         // Load components
@@ -93,7 +91,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
         // Make level arrows disappear if starting at certain levels
         if(currentLevel == 0)
             PrevLevelImage.enabled = false;
-        else if(currentLevel == numberOfLevels-1)
+        else if(currentLevel == GoHome.numLevels-1)
             NextLevelImage.enabled = false; 
         // Make next level arrow disappear if player hasn't made it that far yet
         if(currentLevel == PlayerPrefs.GetInt("LevelPassed")) NextLevelImage.enabled = false;
@@ -115,7 +113,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
 
     public void NextLevelClicked() {
         // Update alpaca sprite position
-        if(currentLevel < (numberOfLevels - 1)){
+        if(currentLevel < (GoHome.numLevels - 1)){
             currentLevel++;
             alpacaPos.position = levelPositions[currentLevel];
         }
@@ -126,7 +124,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
         
         // Make level arrows appear/disapper at certain level
         if(currentLevel == 1) PrevLevelImage.enabled = true;
-        else if(currentLevel == numberOfLevels-1) NextLevelImage.enabled = false;
+        else if(currentLevel == GoHome.numLevels-1) NextLevelImage.enabled = false;
         // Make next level arrow disappear if player hasn't made it that far yet
         if(currentLevel == PlayerPrefs.GetInt("LevelPassed")) NextLevelImage.enabled = false;
 
@@ -137,7 +135,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
 
     public void PrevLevelClicked() {
         // Update alpaca sprite position
-        if(currentLevel > 0 && currentLevel < numberOfLevels){
+        if(currentLevel > 0 && currentLevel < GoHome.numLevels){
             currentLevel--;
             alpacaPos.position = levelPositions[currentLevel];
         }
@@ -148,7 +146,7 @@ public class UpdateLevelSelectMenu : MonoBehaviour
         
         // Make level arrows appear/disapper at certain level
         if(currentLevel == 0) PrevLevelImage.enabled = false;
-        else if(currentLevel == numberOfLevels-2) NextLevelImage.enabled = true;
+        else if(currentLevel == GoHome.numLevels-2) NextLevelImage.enabled = true;
         if (currentLevel == (PlayerPrefs.GetInt("LevelPassed") - 1)) NextLevelImage.enabled = true; 
         // Update image preview and level banner
         ImagePreviewImage.sprite = imagePreviewsArray[currentLevel];

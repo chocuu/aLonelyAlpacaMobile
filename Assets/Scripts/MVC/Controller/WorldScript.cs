@@ -15,7 +15,6 @@ using Anonym.Isometric;
  */
 public class WorldScript : MonoBehaviour {
 
-	private const int numberOfLevels = 26;
 	Map map;
 	Alpaca alpaca;
 	private int level;
@@ -73,7 +72,8 @@ public class WorldScript : MonoBehaviour {
 		quadrants[3].enabled = false;
 
 		clickedWhere = lastClickedWhere = 2;
-		pan_ctrlr = GameObject.Find("Pan Butt").GetComponent<PanButtonController>();
+		if(level != GoHome.numLevels) // don't try on last level
+			pan_ctrlr = GameObject.Find("Pan Butt").GetComponent<PanButtonController>();
 	}
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -202,9 +202,16 @@ public class WorldScript : MonoBehaviour {
 				}
 				end_timer += Time.deltaTime;
 				if(end_timer > 0.25f) {
-					levelCompleteScreen.GetComponent<LevelCompleteScreen>().CompletedLevel(level, scoreboardController);
-					levelCompleteScreen.SetActive(true);
+					if(level != GoHome.numLevels) {
+						levelCompleteScreen.GetComponent<LevelCompleteScreen>().CompletedLevel(level, scoreboardController);
+						levelCompleteScreen.SetActive(true);
+					}
+					else {
+						FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
+						if(final != null) final.BeatFinalLevel();
+					}
 					currBlock.b_type = Block.BlockType.NONE; // stop processing this block
+
 				}
 				// if(end_timer == 0) {
 				// 	winSound.Play();
@@ -218,7 +225,7 @@ public class WorldScript : MonoBehaviour {
 				// 	// Wait for just a sec, then load next level
 				// 	if(end_timer < 100f) {
 				// 		end_timer = 999f;
-				// 		if(level != numberOfLevels){
+				// 		if(level != GoHome.numLevels){
 				// 			scoreboardController.processFinalScore(level);
 				// 			Debug.Log("T: " + PlayerPrefs.GetFloat("Level" + level+ "BestTime"));
 				// 			Debug.Log("N: " + PlayerPrefs.GetInt("Level" + level + "BestNumMovesMade"));
@@ -327,7 +334,7 @@ public class WorldScript : MonoBehaviour {
     Block lastHighlightBlock = null; // used to unhighlight block in front
 
     void UpdateBlockButt() {
-    	if(blockButt == null && control_scheme != 2) return;
+    	if(blockButt == null || control_scheme != 2) return;
 
     	if(lastHighlightBlock != null) {
     		lastHighlightBlock.Unhighlight();
@@ -490,7 +497,7 @@ public class WorldScript : MonoBehaviour {
 				}
 			}
 			HandleFrontBlockHighlight();
-			if(control_scheme == 2)
+			if(control_scheme == 2 && blockButt != null)
     			UpdateBlockButt();
 			didClick = ClickedNow();
 		} else {

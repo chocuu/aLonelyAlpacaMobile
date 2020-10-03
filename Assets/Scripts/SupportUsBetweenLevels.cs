@@ -12,7 +12,7 @@ public class SupportUsBetweenLevels : MonoBehaviour
     [SerializeField] private float imageFlashPeriod; //the period of an on-off flash for the clickMeText
     
     // Constants
-    [Range(0, 1f)] private const float probabilityOfShowing = 1f; // The probability that the donateButton will appear on the level complete screen.
+    [Range(0, 1f)] private const float probabilityOfShowing = 0.4f; // The probability that the donateButton will appear on the level complete screen.
     private static readonly string[] possibleDonateMessages = new string[]{
                                                                 "Click me if you enjoy the game!",
                                                                 "Tap me to support us!",

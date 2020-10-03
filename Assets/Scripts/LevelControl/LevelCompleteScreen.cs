@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelCompleteScreen : MonoBehaviour
-{
-	private const int numberOfLevels = 26;
-	public Sprite[] levelBannersArray = new Sprite[numberOfLevels];
+{	public Sprite[] levelBannersArray = new Sprite[GoHome.numLevels];
 	public GameObject[] uiElementsArray = new GameObject[5];
 	// starsArray contains sprites for: Empty Star, Half-Star, Full Star, Star w/ face
 	public Sprite[] starSpritesArray = new Sprite[4]; 
@@ -30,10 +28,12 @@ public class LevelCompleteScreen : MonoBehaviour
 		bestScore.text = "| " + scoreboardController.getBestNumMovesMade()
 						 + "\n| " + scoreboardController.getBestTotalTime();
 		drawStars(scoreboardController.getScore());
+
 		// Update Farther Reached Level stat
 		if(PlayerPrefs.GetInt("LevelPassed") < level) {
 			PlayerPrefs.SetInt("LevelPassed", level);
 		}
+		
 		// Disable other UI elements
 		foreach(GameObject o in uiElementsArray) {
 			if(o != null) o.SetActive(false);
@@ -65,10 +65,10 @@ public class LevelCompleteScreen : MonoBehaviour
 		if(final != null) final.BeatFinalLevel();
 
 		// Load next level
-		if(level != numberOfLevels){
-			Debug.Log("T: " + PlayerPrefs.GetFloat("Level" + level+ "BestTime"));
-			Debug.Log("N: " + PlayerPrefs.GetInt("Level" + level + "BestNumMovesMade"));
-			Debug.Log("S: " + PlayerPrefs.GetInt("Level" + level + "BestScore"));
+		if(level != GoHome.numLevels){
+			// Debug.Log("T: " + PlayerPrefs.GetFloat("Level" + level+ "BestTime"));
+			// Debug.Log("N: " + PlayerPrefs.GetInt("Level" + level + "BestNumMovesMade"));
+			// Debug.Log("S: " + PlayerPrefs.GetInt("Level" + level + "BestScore"));
 			SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
 		}
 	}

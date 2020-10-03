@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace Anonym.Isometric
 {
 	using Util;
@@ -10,6 +11,7 @@ namespace Anonym.Isometric
 	[ExecuteInEditMode]
     public class Iso2DObject : Iso2DBase
     {
+
         public enum Type
         {
             Overlay,

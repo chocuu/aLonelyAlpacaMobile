@@ -527,8 +527,8 @@ namespace Anonym.Isometric
       bOnMoving = bDashing = false;
       UpdateAnimatorParams();
 
-      GameObject player = GameObject.FindWithTag("Player");
-      player.transform.position = player.GetComponent<KeyInputAssist>().BoundAlpacaToBlock();
+      // GameObject player = GameObject.FindWithTag("Player");
+      // player.transform.position = player.GetComponent<KeyInputAssist>().BoundAlpacaToBlock();
 
       // if (!alive) {
       //     alive = false;
@@ -574,13 +574,13 @@ namespace Anonym.Isometric
         {
           ExecuteDir(DirQ.Dequeue());
         }
-        if (fireBlockCollisionScript.hasCollided() && (alive || deathType == deathByFalling))
-        {
-          alive = false;
-          deathType = deathByFire; // deathType sent to animator
-                                   //Get grid location where Player was standing before they fell to their doom.
-          // var deathlocation = GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
-        }
+        // if (fireBlockCollisionScript.hasCollided() && (alive || deathType == deathByFalling))
+        // {
+        //   alive = false;
+        //   deathType = deathByFire; // deathType sent to animator
+        //                            //Get grid location where Player was standing before they fell to their doom.
+        //   // var deathlocation = GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
+        // }
 
         if (!alive)
         {

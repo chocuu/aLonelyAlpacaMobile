@@ -276,7 +276,6 @@ public class WorldScript : MonoBehaviour {
 		if( lastClickedWhere != clickedWhere) {
 			// Debug.Log("lastClickedWhere " + lastClickedWhere + " clickedWhere " + clickedWhere);
 			alpaca.SetFacingDirection(clickedWhere);
-			alpaca.UpdateWalk();
 			lastClickedWhere = clickedWhere;
 			return;
 		}
@@ -461,14 +460,13 @@ public class WorldScript : MonoBehaviour {
 			}
 
 			if(!ClickedNow() && didClick) { // click just ended
-				if(control_scheme == 0 || control_scheme == 2)
-					alpaca.StopWalk();
+				// if(control_scheme == 0 || control_scheme == 2)
+				// 	alpaca.StopWalk();
 				if(control_scheme == 1) {
 					clickPos = Input.mousePosition;
 					clickedWhere = ClickedWhere();
 					HighlightQuadrant();
 					alpaca.SetFacingDirection(clickedWhere);
-					alpaca.UpdateWalk();
 				}
 				if(control_scheme == 2 || lastTimeClicked < 100) { //did not pick up block
 					MoveOnClick();

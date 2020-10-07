@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -550,6 +550,7 @@ GameObject:
   - component: {fileID: 47043885}
   - component: {fileID: 47043884}
   - component: {fileID: 47043883}
+  - component: {fileID: 47043886}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -638,6 +639,30 @@ Transform:
   m_Father: {fileID: 1162118119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &47043886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47043882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 47043884}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!114 &48021805 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 996668562190964942, guid: a3c9e7f02adc60e449c6dfac7c23914c,
@@ -802,7 +827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 125840377}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1239014330}
   _autoName: {fileID: 125840373}
   _so: {fileID: 125840376}
   _attachedList:
@@ -1830,6 +1855,7 @@ GameObject:
   - component: {fileID: 208464377}
   - component: {fileID: 208464376}
   - component: {fileID: 208464375}
+  - component: {fileID: 208464378}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -1918,6 +1944,30 @@ Transform:
   m_Father: {fileID: 1135553919}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &208464378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208464374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 208464376}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &221086979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,6 +2122,7 @@ GameObject:
   - component: {fileID: 249609560}
   - component: {fileID: 249609562}
   - component: {fileID: 249609561}
+  - component: {fileID: 249609563}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -2160,6 +2211,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &249609563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249609559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 249609562}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &249783627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,6 +2521,7 @@ GameObject:
   - component: {fileID: 277887205}
   - component: {fileID: 277887204}
   - component: {fileID: 277887203}
+  - component: {fileID: 277887206}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -2534,6 +2610,30 @@ Transform:
   m_Father: {fileID: 1746103395}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &277887206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277887202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 277887204}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &280527614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,6 +2997,7 @@ GameObject:
   - component: {fileID: 301183375}
   - component: {fileID: 301183374}
   - component: {fileID: 301183373}
+  - component: {fileID: 301183376}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -2985,6 +3086,30 @@ Transform:
   m_Father: {fileID: 309096031}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &301183376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301183372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 301183374}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &309096030
 GameObject:
   m_ObjectHideFlags: 0
@@ -3414,6 +3539,7 @@ GameObject:
   - component: {fileID: 360797261}
   - component: {fileID: 360797260}
   - component: {fileID: 360797259}
+  - component: {fileID: 360797262}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -3502,6 +3628,30 @@ Transform:
   m_Father: {fileID: 8844650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &360797262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360797258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 360797260}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &364097688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3514,6 +3664,7 @@ GameObject:
   - component: {fileID: 364097690}
   - component: {fileID: 364097689}
   - component: {fileID: 364097692}
+  - component: {fileID: 364097693}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -3621,6 +3772,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &364097693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364097688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 364097690}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &394230291
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,6 +3807,7 @@ GameObject:
   - component: {fileID: 394230294}
   - component: {fileID: 394230293}
   - component: {fileID: 394230292}
+  - component: {fileID: 394230295}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -3720,6 +3896,30 @@ Transform:
   m_Father: {fileID: 1889104504}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &394230295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394230291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 394230293}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &412535117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3821,7 +4021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 430821195}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1239014330}
   _autoName: {fileID: 430821194}
   _so: {fileID: 430821193}
   _attachedList:
@@ -4006,6 +4206,7 @@ GameObject:
   - component: {fileID: 492936661}
   - component: {fileID: 492936660}
   - component: {fileID: 492936659}
+  - component: {fileID: 492936662}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -4094,6 +4295,30 @@ Transform:
   m_Father: {fileID: 610364777}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &492936662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492936658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 492936660}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &498122090
 GameObject:
   m_ObjectHideFlags: 0
@@ -4105,6 +4330,7 @@ GameObject:
   - component: {fileID: 498122093}
   - component: {fileID: 498122092}
   - component: {fileID: 498122091}
+  - component: {fileID: 498122094}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -4193,6 +4419,30 @@ Transform:
   m_Father: {fileID: 270085443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &498122094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498122090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 498122092}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &527064651
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,6 +4520,7 @@ GameObject:
   - component: {fileID: 545890788}
   - component: {fileID: 545890787}
   - component: {fileID: 545890786}
+  - component: {fileID: 545890789}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -4358,6 +4609,201 @@ Transform:
   m_Father: {fileID: 1275155552}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &545890789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545890785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 545890787}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
+--- !u!1 &552037068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552037070}
+  - component: {fileID: 552037069}
+  m_Layer: 0
+  m_Name: Magma Light (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &552037069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552037068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5b5f70b88ca54ebf7cef4a934b47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bOnOff: 1
+  bStaticLight: 0
+  UniquePriority: 6
+  type: 1
+  customRangeCollider: {fileID: 0}
+  bSimpleShadow: 0
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.5077262, b: 0.0990566, a: 1}
+    key1: {r: 0.8773585, g: 0.22414939, b: 0, a: 1}
+    key2: {r: 0.7830189, g: 0.09064705, b: 0, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 43176
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 193
+    atime1: 51464
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  colorCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.095939636
+      value: 0.80181885
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.49468037
+      value: 0.80100995
+      inSlope: 0.23437974
+      outSlope: 0.23437974
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.56011003
+      value: 0.8591812
+      inSlope: 0.3994383
+      outSlope: 0.3994383
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0061035
+      value: 1.0110588
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorCurveRange: {x: 0.15, y: 0.4}
+  AxisWeightForDistance: {x: 0.3, y: 0.3, z: 0.3}
+  bAffectOverRange: 1
+  targetList:
+  - {fileID: 47043886}
+  - {fileID: 208464378}
+  - {fileID: 249609563}
+  - {fileID: 277887206}
+  - {fileID: 301183376}
+  - {fileID: 360797262}
+  - {fileID: 364097693}
+  - {fileID: 394230295}
+  - {fileID: 492936662}
+  - {fileID: 498122094}
+  - {fileID: 545890789}
+  - {fileID: 618010031}
+  - {fileID: 659946937}
+  - {fileID: 700948759}
+  - {fileID: 718616897}
+  - {fileID: 735677188}
+  - {fileID: 885940257}
+  - {fileID: 904203179}
+  - {fileID: 1053669791}
+  - {fileID: 1056596195}
+  - {fileID: 1071208713}
+  - {fileID: 1094316517}
+  - {fileID: 1123699474}
+  - {fileID: 1136042856}
+  - {fileID: 1156561616}
+  - {fileID: 1180270509}
+  - {fileID: 1209770278}
+  - {fileID: 1228137382}
+  - {fileID: 1255941966}
+  - {fileID: 1422331695}
+  - {fileID: 1536124725}
+  - {fileID: 1591425967}
+  - {fileID: 1592931848}
+  - {fileID: 1628690624}
+  - {fileID: 1704314617}
+  - {fileID: 1807533554}
+  - {fileID: 1814237678}
+  - {fileID: 1859306803}
+  - {fileID: 1882703441}
+  - {fileID: 1907077942}
+  - {fileID: 1922903701}
+  - {fileID: 1926477090}
+  - {fileID: 1959949746}
+  - {fileID: 2008962786}
+  - {fileID: 2125850253}
+  - {fileID: 2126915920}
+--- !u!4 &552037070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552037068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1181396894}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &556351370
 GameObject:
   m_ObjectHideFlags: 0
@@ -4919,6 +5365,7 @@ GameObject:
   - component: {fileID: 618010030}
   - component: {fileID: 618010029}
   - component: {fileID: 618010028}
+  - component: {fileID: 618010031}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -5007,6 +5454,30 @@ Transform:
   m_Father: {fileID: 753331410}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &618010031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618010027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 618010029}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &630886269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5240,6 +5711,7 @@ GameObject:
   - component: {fileID: 659946936}
   - component: {fileID: 659946935}
   - component: {fileID: 659946934}
+  - component: {fileID: 659946937}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -5328,6 +5800,30 @@ Transform:
   m_Father: {fileID: 1955043750}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &659946937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659946933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 659946935}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &667943389
 GameObject:
   m_ObjectHideFlags: 0
@@ -5482,6 +5978,7 @@ GameObject:
   - component: {fileID: 700948758}
   - component: {fileID: 700948757}
   - component: {fileID: 700948756}
+  - component: {fileID: 700948759}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -5570,6 +6067,30 @@ Transform:
   m_Father: {fileID: 751438420}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &700948759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700948755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 700948757}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &701711475
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,6 +6245,7 @@ GameObject:
   - component: {fileID: 718616896}
   - component: {fileID: 718616895}
   - component: {fileID: 718616894}
+  - component: {fileID: 718616897}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -5812,6 +6334,30 @@ Transform:
   m_Father: {fileID: 1434243812}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &718616897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718616893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 718616895}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &724715562
 GameObject:
   m_ObjectHideFlags: 0
@@ -5889,6 +6435,7 @@ GameObject:
   - component: {fileID: 735677187}
   - component: {fileID: 735677186}
   - component: {fileID: 735677185}
+  - component: {fileID: 735677188}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -5977,6 +6524,30 @@ Transform:
   m_Father: {fileID: 1145937953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &735677188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735677184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 735677186}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &746940428
 GameObject:
   m_ObjectHideFlags: 0
@@ -6287,7 +6858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 767276430}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1239014330}
   _autoName: {fileID: 767276429}
   _so: {fileID: 767276428}
   _attachedList:
@@ -7033,6 +7604,7 @@ GameObject:
   - component: {fileID: 885940256}
   - component: {fileID: 885940255}
   - component: {fileID: 885940254}
+  - component: {fileID: 885940257}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -7121,6 +7693,30 @@ Transform:
   m_Father: {fileID: 280527615}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &885940257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885940253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 885940255}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &904203175
 GameObject:
   m_ObjectHideFlags: 0
@@ -7132,6 +7728,7 @@ GameObject:
   - component: {fileID: 904203176}
   - component: {fileID: 904203178}
   - component: {fileID: 904203177}
+  - component: {fileID: 904203179}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -7220,6 +7817,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &904203179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904203175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 904203178}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &923845350
 GameObject:
   m_ObjectHideFlags: 0
@@ -7374,6 +7995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1535350428743942, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7423,7 +8048,48 @@ PrefabInstance:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 1323403258}
-    m_RemovedComponents: []
+    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522387108762816042, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: IsoDynamicLightList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522387108762816042, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: IsoDynamicLightList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1165806291}
+    - target: {fileID: 7522387108762816042, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: DynamicLightColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522387108762816042, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: DynamicLightColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522387108762816042, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: DynamicLightColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7522387108762816042, guid: a766938edf27ac3478ad5627f052337e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
 --- !u!1 &952073328
 GameObject:
@@ -7460,7 +8126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 952073332}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1239014330}
   _autoName: {fileID: 952073331}
   _so: {fileID: 952073330}
   _attachedList:
@@ -7788,6 +8454,7 @@ GameObject:
   - component: {fileID: 1053669790}
   - component: {fileID: 1053669789}
   - component: {fileID: 1053669788}
+  - component: {fileID: 1053669791}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -7876,6 +8543,30 @@ Transform:
   m_Father: {fileID: 780089208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1053669791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053669787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1053669789}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1056596191
 GameObject:
   m_ObjectHideFlags: 0
@@ -7887,6 +8578,7 @@ GameObject:
   - component: {fileID: 1056596192}
   - component: {fileID: 1056596194}
   - component: {fileID: 1056596193}
+  - component: {fileID: 1056596195}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -7975,6 +8667,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1056596195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056596191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1056596194}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1060874159
 GameObject:
   m_ObjectHideFlags: 0
@@ -8195,6 +8911,7 @@ GameObject:
   - component: {fileID: 1071208712}
   - component: {fileID: 1071208711}
   - component: {fileID: 1071208710}
+  - component: {fileID: 1071208713}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -8283,6 +9000,30 @@ Transform:
   m_Father: {fileID: 336908228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1071208713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071208709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1071208711}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1094316513
 GameObject:
   m_ObjectHideFlags: 0
@@ -8294,6 +9035,7 @@ GameObject:
   - component: {fileID: 1094316516}
   - component: {fileID: 1094316515}
   - component: {fileID: 1094316514}
+  - component: {fileID: 1094316517}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -8382,6 +9124,30 @@ Transform:
   m_Father: {fileID: 275371746}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1094316517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094316513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1094316515}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1097726105
 GameObject:
   m_ObjectHideFlags: 0
@@ -8602,6 +9368,7 @@ GameObject:
   - component: {fileID: 1123699473}
   - component: {fileID: 1123699472}
   - component: {fileID: 1123699471}
+  - component: {fileID: 1123699474}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -8690,6 +9457,30 @@ Transform:
   m_Father: {fileID: 1651245703}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1123699474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123699470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1123699472}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1135553918
 GameObject:
   m_ObjectHideFlags: 0
@@ -8767,6 +9558,7 @@ GameObject:
   - component: {fileID: 1136042855}
   - component: {fileID: 1136042854}
   - component: {fileID: 1136042853}
+  - component: {fileID: 1136042856}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -8855,6 +9647,30 @@ Transform:
   m_Father: {fileID: 1319673162}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1136042856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136042852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1136042854}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1138196189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1775833641516320, guid: a3c9e7f02adc60e449c6dfac7c23914c,
@@ -9004,6 +9820,7 @@ GameObject:
   - component: {fileID: 1156561615}
   - component: {fileID: 1156561614}
   - component: {fileID: 1156561613}
+  - component: {fileID: 1156561616}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -9092,6 +9909,30 @@ Transform:
   m_Father: {fileID: 1139726234}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1156561616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156561612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1156561614}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1162118118
 GameObject:
   m_ObjectHideFlags: 0
@@ -9158,6 +9999,131 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1165806290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165806292}
+  - component: {fileID: 1165806291}
+  m_Layer: 0
+  m_Name: Magma Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1165806291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165806290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5b5f70b88ca54ebf7cef4a934b47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bOnOff: 1
+  bStaticLight: 0
+  UniquePriority: 3
+  type: 1
+  customRangeCollider: {fileID: 0}
+  bSimpleShadow: 0
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.5077262, b: 0.0990566, a: 1}
+    key1: {r: 0.8773585, g: 0.22414939, b: 0, a: 1}
+    key2: {r: 0.7830189, g: 0.09064705, b: 0, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 43176
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 193
+    atime1: 51464
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  colorCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.095939636
+      value: 0.80181885
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.49468037
+      value: 0.80100995
+      inSlope: 0.23437974
+      outSlope: 0.23437974
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.56011003
+      value: 0.8591812
+      inSlope: 0.3994383
+      outSlope: 0.3994383
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0061035
+      value: 1.0110588
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorCurveRange: {x: 0.15, y: 0.4}
+  AxisWeightForDistance: {x: 0.3, y: 0.3, z: 0}
+  bAffectOverRange: 1
+  targetList: []
+--- !u!4 &1165806292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165806290}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1181396894}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180270505
 GameObject:
   m_ObjectHideFlags: 0
@@ -9169,6 +10135,7 @@ GameObject:
   - component: {fileID: 1180270508}
   - component: {fileID: 1180270507}
   - component: {fileID: 1180270506}
+  - component: {fileID: 1180270509}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -9257,6 +10224,67 @@ Transform:
   m_Father: {fileID: 724715563}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1180270509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180270505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1180270507}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
+--- !u!1 &1181396893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1181396894}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1181396894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181396893}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1165806292}
+  - {fileID: 2001111396}
+  - {fileID: 1430967712}
+  - {fileID: 1219238049}
+  - {fileID: 1676726752}
+  - {fileID: 552037070}
+  - {fileID: 1676252876}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199637766
 GameObject:
   m_ObjectHideFlags: 0
@@ -9411,6 +10439,7 @@ GameObject:
   - component: {fileID: 1209770277}
   - component: {fileID: 1209770276}
   - component: {fileID: 1209770275}
+  - component: {fileID: 1209770278}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -9499,6 +10528,201 @@ Transform:
   m_Father: {fileID: 592691855}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1209770278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209770274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1209770276}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
+--- !u!1 &1219238047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1219238049}
+  - component: {fileID: 1219238048}
+  m_Layer: 0
+  m_Name: Magma Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1219238048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219238047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5b5f70b88ca54ebf7cef4a934b47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bOnOff: 1
+  bStaticLight: 0
+  UniquePriority: 4
+  type: 1
+  customRangeCollider: {fileID: 0}
+  bSimpleShadow: 0
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.5077262, b: 0.0990566, a: 1}
+    key1: {r: 0.8773585, g: 0.22414939, b: 0, a: 1}
+    key2: {r: 0.7830189, g: 0.09064705, b: 0, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 43176
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 193
+    atime1: 51464
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  colorCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.095939636
+      value: 0.80181885
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.49468037
+      value: 0.80100995
+      inSlope: 0.23437974
+      outSlope: 0.23437974
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.56011003
+      value: 0.8591812
+      inSlope: 0.3994383
+      outSlope: 0.3994383
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0061035
+      value: 1.0110588
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorCurveRange: {x: 0.15, y: 0.4}
+  AxisWeightForDistance: {x: 0.3, y: 0.3, z: 0.3}
+  bAffectOverRange: 1
+  targetList:
+  - {fileID: 47043886}
+  - {fileID: 208464378}
+  - {fileID: 249609563}
+  - {fileID: 277887206}
+  - {fileID: 301183376}
+  - {fileID: 360797262}
+  - {fileID: 364097693}
+  - {fileID: 394230295}
+  - {fileID: 492936662}
+  - {fileID: 498122094}
+  - {fileID: 545890789}
+  - {fileID: 618010031}
+  - {fileID: 659946937}
+  - {fileID: 700948759}
+  - {fileID: 718616897}
+  - {fileID: 735677188}
+  - {fileID: 885940257}
+  - {fileID: 904203179}
+  - {fileID: 1053669791}
+  - {fileID: 1056596195}
+  - {fileID: 1071208713}
+  - {fileID: 1094316517}
+  - {fileID: 1123699474}
+  - {fileID: 1136042856}
+  - {fileID: 1156561616}
+  - {fileID: 1180270509}
+  - {fileID: 1209770278}
+  - {fileID: 1228137382}
+  - {fileID: 1255941966}
+  - {fileID: 1422331695}
+  - {fileID: 1536124725}
+  - {fileID: 1591425967}
+  - {fileID: 1592931848}
+  - {fileID: 1628690624}
+  - {fileID: 1704314617}
+  - {fileID: 1807533554}
+  - {fileID: 1814237678}
+  - {fileID: 1859306803}
+  - {fileID: 1882703441}
+  - {fileID: 1907077942}
+  - {fileID: 1922903701}
+  - {fileID: 1926477090}
+  - {fileID: 1959949746}
+  - {fileID: 2008962786}
+  - {fileID: 2125850253}
+  - {fileID: 2126915920}
+--- !u!4 &1219238049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219238047}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1181396894}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219279100
 GameObject:
   m_ObjectHideFlags: 0
@@ -9740,6 +10964,7 @@ GameObject:
   - component: {fileID: 1228137379}
   - component: {fileID: 1228137381}
   - component: {fileID: 1228137380}
+  - component: {fileID: 1228137382}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -9828,6 +11053,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1228137382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228137378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1228137381}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1239014327
 GameObject:
   m_ObjectHideFlags: 0
@@ -10038,6 +11287,7 @@ GameObject:
   - component: {fileID: 1255941965}
   - component: {fileID: 1255941964}
   - component: {fileID: 1255941963}
+  - component: {fileID: 1255941966}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -10126,6 +11376,30 @@ Transform:
   m_Father: {fileID: 1440749920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1255941966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255941962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1255941964}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1275155551
 GameObject:
   m_ObjectHideFlags: 0
@@ -10912,6 +12186,7 @@ GameObject:
   - component: {fileID: 1422331694}
   - component: {fileID: 1422331693}
   - component: {fileID: 1422331692}
+  - component: {fileID: 1422331695}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -11000,6 +12275,201 @@ Transform:
   m_Father: {fileID: 870280985}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1422331695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422331691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1422331693}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
+--- !u!1 &1430967710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430967712}
+  - component: {fileID: 1430967711}
+  m_Layer: 0
+  m_Name: Magma Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1430967711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430967710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5b5f70b88ca54ebf7cef4a934b47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bOnOff: 1
+  bStaticLight: 0
+  UniquePriority: 8
+  type: 1
+  customRangeCollider: {fileID: 0}
+  bSimpleShadow: 0
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.5077262, b: 0.0990566, a: 1}
+    key1: {r: 0.8773585, g: 0.22414939, b: 0, a: 1}
+    key2: {r: 0.7830189, g: 0.09064705, b: 0, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 43176
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 193
+    atime1: 51464
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  colorCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.095939636
+      value: 0.80181885
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.49468037
+      value: 0.80100995
+      inSlope: 0.23437974
+      outSlope: 0.23437974
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.56011003
+      value: 0.8591812
+      inSlope: 0.3994383
+      outSlope: 0.3994383
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0061035
+      value: 1.0110588
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorCurveRange: {x: 0.15, y: 0.4}
+  AxisWeightForDistance: {x: 0.3, y: 0.3, z: 0.3}
+  bAffectOverRange: 1
+  targetList:
+  - {fileID: 47043886}
+  - {fileID: 208464378}
+  - {fileID: 249609563}
+  - {fileID: 277887206}
+  - {fileID: 301183376}
+  - {fileID: 360797262}
+  - {fileID: 364097693}
+  - {fileID: 394230295}
+  - {fileID: 492936662}
+  - {fileID: 498122094}
+  - {fileID: 545890789}
+  - {fileID: 618010031}
+  - {fileID: 659946937}
+  - {fileID: 700948759}
+  - {fileID: 718616897}
+  - {fileID: 735677188}
+  - {fileID: 885940257}
+  - {fileID: 904203179}
+  - {fileID: 1053669791}
+  - {fileID: 1056596195}
+  - {fileID: 1071208713}
+  - {fileID: 1094316517}
+  - {fileID: 1123699474}
+  - {fileID: 1136042856}
+  - {fileID: 1156561616}
+  - {fileID: 1180270509}
+  - {fileID: 1209770278}
+  - {fileID: 1228137382}
+  - {fileID: 1255941966}
+  - {fileID: 1422331695}
+  - {fileID: 1536124725}
+  - {fileID: 1591425967}
+  - {fileID: 1592931848}
+  - {fileID: 1628690624}
+  - {fileID: 1704314617}
+  - {fileID: 1807533554}
+  - {fileID: 1814237678}
+  - {fileID: 1859306803}
+  - {fileID: 1882703441}
+  - {fileID: 1907077942}
+  - {fileID: 1922903701}
+  - {fileID: 1926477090}
+  - {fileID: 1959949746}
+  - {fileID: 2008962786}
+  - {fileID: 2125850253}
+  - {fileID: 2126915920}
+--- !u!4 &1430967712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430967710}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1181396894}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1434243811
 GameObject:
   m_ObjectHideFlags: 0
@@ -11573,6 +13043,7 @@ GameObject:
   - component: {fileID: 1536124722}
   - component: {fileID: 1536124721}
   - component: {fileID: 1536124724}
+  - component: {fileID: 1536124725}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -11681,6 +13152,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1536124725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536124720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1536124722}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1591425963
 GameObject:
   m_ObjectHideFlags: 0
@@ -11692,6 +13187,7 @@ GameObject:
   - component: {fileID: 1591425966}
   - component: {fileID: 1591425965}
   - component: {fileID: 1591425964}
+  - component: {fileID: 1591425967}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -11780,6 +13276,30 @@ Transform:
   m_Father: {fileID: 1357082473}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1591425967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591425963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1591425965}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1592931844
 GameObject:
   m_ObjectHideFlags: 0
@@ -11791,6 +13311,7 @@ GameObject:
   - component: {fileID: 1592931845}
   - component: {fileID: 1592931847}
   - component: {fileID: 1592931846}
+  - component: {fileID: 1592931848}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -11879,6 +13400,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1592931848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592931844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1592931847}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1628690620
 GameObject:
   m_ObjectHideFlags: 0
@@ -11890,6 +13435,7 @@ GameObject:
   - component: {fileID: 1628690623}
   - component: {fileID: 1628690622}
   - component: {fileID: 1628690621}
+  - component: {fileID: 1628690624}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -11978,6 +13524,30 @@ Transform:
   m_Father: {fileID: 1971122809}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1628690624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628690620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1628690622}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1640310887 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1055367784236320, guid: 0fad9e511d81d40dc85d590fea90a749,
@@ -12325,6 +13895,348 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1676252875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1676252876}
+  - component: {fileID: 1676252877}
+  m_Layer: 0
+  m_Name: Magma Light (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1676252876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676252875}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1181396894}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1676252877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676252875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5b5f70b88ca54ebf7cef4a934b47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bOnOff: 1
+  bStaticLight: 0
+  UniquePriority: 7
+  type: 1
+  customRangeCollider: {fileID: 0}
+  bSimpleShadow: 0
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.5077262, b: 0.0990566, a: 1}
+    key1: {r: 0.8773585, g: 0.22414939, b: 0, a: 1}
+    key2: {r: 0.7830189, g: 0.09064705, b: 0, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 43176
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 193
+    atime1: 51464
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  colorCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.095939636
+      value: 0.80181885
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.49468037
+      value: 0.80100995
+      inSlope: 0.23437974
+      outSlope: 0.23437974
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.56011003
+      value: 0.8591812
+      inSlope: 0.3994383
+      outSlope: 0.3994383
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0061035
+      value: 1.0110588
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorCurveRange: {x: 0.15, y: 0.4}
+  AxisWeightForDistance: {x: 0.3, y: 0.3, z: 0.3}
+  bAffectOverRange: 1
+  targetList:
+  - {fileID: 47043886}
+  - {fileID: 208464378}
+  - {fileID: 249609563}
+  - {fileID: 277887206}
+  - {fileID: 301183376}
+  - {fileID: 360797262}
+  - {fileID: 364097693}
+  - {fileID: 394230295}
+  - {fileID: 492936662}
+  - {fileID: 498122094}
+  - {fileID: 545890789}
+  - {fileID: 618010031}
+  - {fileID: 659946937}
+  - {fileID: 700948759}
+  - {fileID: 718616897}
+  - {fileID: 735677188}
+  - {fileID: 885940257}
+  - {fileID: 904203179}
+  - {fileID: 1053669791}
+  - {fileID: 1056596195}
+  - {fileID: 1071208713}
+  - {fileID: 1094316517}
+  - {fileID: 1123699474}
+  - {fileID: 1136042856}
+  - {fileID: 1156561616}
+  - {fileID: 1180270509}
+  - {fileID: 1209770278}
+  - {fileID: 1228137382}
+  - {fileID: 1255941966}
+  - {fileID: 1422331695}
+  - {fileID: 1536124725}
+  - {fileID: 1591425967}
+  - {fileID: 1592931848}
+  - {fileID: 1628690624}
+  - {fileID: 1704314617}
+  - {fileID: 1807533554}
+  - {fileID: 1814237678}
+  - {fileID: 1859306803}
+  - {fileID: 1882703441}
+  - {fileID: 1907077942}
+  - {fileID: 1922903701}
+  - {fileID: 1926477090}
+  - {fileID: 1959949746}
+  - {fileID: 2008962786}
+  - {fileID: 2125850253}
+  - {fileID: 2126915920}
+--- !u!1 &1676726750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1676726752}
+  - component: {fileID: 1676726751}
+  m_Layer: 0
+  m_Name: Magma Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1676726751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676726750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5b5f70b88ca54ebf7cef4a934b47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bOnOff: 1
+  bStaticLight: 0
+  UniquePriority: 5
+  type: 1
+  customRangeCollider: {fileID: 0}
+  bSimpleShadow: 0
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.5077262, b: 0.0990566, a: 1}
+    key1: {r: 0.8773585, g: 0.22414939, b: 0, a: 1}
+    key2: {r: 0.7830189, g: 0.09064705, b: 0, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 43176
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 193
+    atime1: 51464
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  colorCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.095939636
+      value: 0.80181885
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.49468037
+      value: 0.80100995
+      inSlope: 0.23437974
+      outSlope: 0.23437974
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.56011003
+      value: 0.8591812
+      inSlope: 0.3994383
+      outSlope: 0.3994383
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0061035
+      value: 1.0110588
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorCurveRange: {x: 0.15, y: 0.4}
+  AxisWeightForDistance: {x: 0.3, y: 0.3, z: 0.3}
+  bAffectOverRange: 1
+  targetList:
+  - {fileID: 47043886}
+  - {fileID: 208464378}
+  - {fileID: 249609563}
+  - {fileID: 277887206}
+  - {fileID: 301183376}
+  - {fileID: 360797262}
+  - {fileID: 364097693}
+  - {fileID: 394230295}
+  - {fileID: 492936662}
+  - {fileID: 498122094}
+  - {fileID: 545890789}
+  - {fileID: 618010031}
+  - {fileID: 659946937}
+  - {fileID: 700948759}
+  - {fileID: 718616897}
+  - {fileID: 735677188}
+  - {fileID: 885940257}
+  - {fileID: 904203179}
+  - {fileID: 1053669791}
+  - {fileID: 1056596195}
+  - {fileID: 1071208713}
+  - {fileID: 1094316517}
+  - {fileID: 1123699474}
+  - {fileID: 1136042856}
+  - {fileID: 1156561616}
+  - {fileID: 1180270509}
+  - {fileID: 1209770278}
+  - {fileID: 1228137382}
+  - {fileID: 1255941966}
+  - {fileID: 1422331695}
+  - {fileID: 1536124725}
+  - {fileID: 1591425967}
+  - {fileID: 1592931848}
+  - {fileID: 1628690624}
+  - {fileID: 1704314617}
+  - {fileID: 1807533554}
+  - {fileID: 1814237678}
+  - {fileID: 1859306803}
+  - {fileID: 1882703441}
+  - {fileID: 1907077942}
+  - {fileID: 1922903701}
+  - {fileID: 1926477090}
+  - {fileID: 1959949746}
+  - {fileID: 2008962786}
+  - {fileID: 2125850253}
+  - {fileID: 2126915920}
+--- !u!4 &1676726752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676726750}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1181396894}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1684279897
 GameObject:
   m_ObjectHideFlags: 0
@@ -12479,6 +14391,7 @@ GameObject:
   - component: {fileID: 1704314616}
   - component: {fileID: 1704314615}
   - component: {fileID: 1704314614}
+  - component: {fileID: 1704314617}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -12567,6 +14480,30 @@ Transform:
   m_Father: {fileID: 1960027534}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1704314617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704314613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1704314615}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1711640595
 GameObject:
   m_ObjectHideFlags: 0
@@ -12853,6 +14790,7 @@ GameObject:
   - component: {fileID: 1807533553}
   - component: {fileID: 1807533552}
   - component: {fileID: 1807533551}
+  - component: {fileID: 1807533554}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -12941,6 +14879,30 @@ Transform:
   m_Father: {fileID: 133046758}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1807533554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807533550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1807533552}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1814237674
 GameObject:
   m_ObjectHideFlags: 0
@@ -12952,6 +14914,7 @@ GameObject:
   - component: {fileID: 1814237677}
   - component: {fileID: 1814237676}
   - component: {fileID: 1814237675}
+  - component: {fileID: 1814237678}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -13040,6 +15003,30 @@ Transform:
   m_Father: {fileID: 2001814362}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1814237678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814237674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1814237676}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1842823871
 GameObject:
   m_ObjectHideFlags: 0
@@ -13337,6 +15324,7 @@ GameObject:
   - component: {fileID: 1859306802}
   - component: {fileID: 1859306801}
   - component: {fileID: 1859306800}
+  - component: {fileID: 1859306803}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -13425,6 +15413,30 @@ Transform:
   m_Father: {fileID: 1654748841}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1859306803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859306799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1859306801}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1860634722
 GameObject:
   m_ObjectHideFlags: 0
@@ -13722,6 +15734,7 @@ GameObject:
   - component: {fileID: 1882703438}
   - component: {fileID: 1882703440}
   - component: {fileID: 1882703439}
+  - component: {fileID: 1882703441}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -13810,6 +15823,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1882703441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882703437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1882703440}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1889104503
 GameObject:
   m_ObjectHideFlags: 0
@@ -13887,6 +15924,7 @@ GameObject:
   - component: {fileID: 1907077941}
   - component: {fileID: 1907077940}
   - component: {fileID: 1907077939}
+  - component: {fileID: 1907077942}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -13975,6 +16013,30 @@ Transform:
   m_Father: {fileID: 99827885}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1907077942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907077938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1907077940}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1922903697
 GameObject:
   m_ObjectHideFlags: 0
@@ -13986,6 +16048,7 @@ GameObject:
   - component: {fileID: 1922903700}
   - component: {fileID: 1922903699}
   - component: {fileID: 1922903698}
+  - component: {fileID: 1922903701}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -14074,6 +16137,30 @@ Transform:
   m_Father: {fileID: 1669571102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1922903701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922903697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1922903699}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1926477086
 GameObject:
   m_ObjectHideFlags: 0
@@ -14085,6 +16172,7 @@ GameObject:
   - component: {fileID: 1926477089}
   - component: {fileID: 1926477088}
   - component: {fileID: 1926477087}
+  - component: {fileID: 1926477090}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -14173,6 +16261,30 @@ Transform:
   m_Father: {fileID: 2062351533}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1926477090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926477086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1926477088}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1955043749
 GameObject:
   m_ObjectHideFlags: 0
@@ -14250,6 +16362,7 @@ GameObject:
   - component: {fileID: 1959949745}
   - component: {fileID: 1959949744}
   - component: {fileID: 1959949743}
+  - component: {fileID: 1959949746}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -14338,6 +16451,30 @@ Transform:
   m_Father: {fileID: 1060874160}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &1959949746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959949742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 1959949744}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &1960027533
 GameObject:
   m_ObjectHideFlags: 0
@@ -14680,6 +16817,176 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1979271667}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2001111393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001111396}
+  - component: {fileID: 2001111395}
+  - component: {fileID: 2001111394}
+  m_Layer: 0
+  m_Name: Cloud Shadow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2001111394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001111393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dce95d75779464484c75a125734020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingObject: {fileID: 2001111396}
+  target: {x: 21, y: 8, z: 0}
+  moveSpeed: 2
+  go: 0
+--- !u!114 &2001111395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001111393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5b5f70b88ca54ebf7cef4a934b47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bOnOff: 1
+  bStaticLight: 0
+  UniquePriority: 1
+  type: 0
+  customRangeCollider: {fileID: 0}
+  bSimpleShadow: 0
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 0}
+    key1: {r: 0.7735849, g: 0.7699359, b: 0.7699359, a: 1}
+    key2: {r: 1, g: 1, b: 1, a: 1}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 193
+    ctime1: 64957
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  colorCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -1.0067593
+      outSlope: -1.0067593
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99328613
+      value: 0
+      inSlope: -1.0067593
+      outSlope: -1.0067593
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorCurveRange: {x: 3.84, y: 11.44}
+  AxisWeightForDistance: {x: 1.5, y: 0, z: 0}
+  bAffectOverRange: 1
+  targetList:
+  - {fileID: 47043886}
+  - {fileID: 208464378}
+  - {fileID: 249609563}
+  - {fileID: 277887206}
+  - {fileID: 301183376}
+  - {fileID: 360797262}
+  - {fileID: 364097693}
+  - {fileID: 394230295}
+  - {fileID: 492936662}
+  - {fileID: 498122094}
+  - {fileID: 545890789}
+  - {fileID: 618010031}
+  - {fileID: 659946937}
+  - {fileID: 700948759}
+  - {fileID: 718616897}
+  - {fileID: 735677188}
+  - {fileID: 885940257}
+  - {fileID: 904203179}
+  - {fileID: 1053669791}
+  - {fileID: 1056596195}
+  - {fileID: 1071208713}
+  - {fileID: 1094316517}
+  - {fileID: 1123699474}
+  - {fileID: 1136042856}
+  - {fileID: 1156561616}
+  - {fileID: 1180270509}
+  - {fileID: 1209770278}
+  - {fileID: 1228137382}
+  - {fileID: 1255941966}
+  - {fileID: 1422331695}
+  - {fileID: 1536124725}
+  - {fileID: 1591425967}
+  - {fileID: 1592931848}
+  - {fileID: 1628690624}
+  - {fileID: 1704314617}
+  - {fileID: 1807533554}
+  - {fileID: 1814237678}
+  - {fileID: 1859306803}
+  - {fileID: 1882703441}
+  - {fileID: 1907077942}
+  - {fileID: 1922903701}
+  - {fileID: 1926477090}
+  - {fileID: 1959949746}
+  - {fileID: 2008962786}
+  - {fileID: 2125850253}
+  - {fileID: 2126915920}
+--- !u!4 &2001111396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001111393}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.36, y: 8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1181396894}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001814361
 GameObject:
   m_ObjectHideFlags: 0
@@ -14757,6 +17064,7 @@ GameObject:
   - component: {fileID: 2008962785}
   - component: {fileID: 2008962784}
   - component: {fileID: 2008962783}
+  - component: {fileID: 2008962786}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -14845,6 +17153,30 @@ Transform:
   m_Father: {fileID: 39463006}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &2008962786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008962782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 2008962784}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &2017820864
 GameObject:
   m_ObjectHideFlags: 0
@@ -15112,7 +17444,7 @@ PrefabInstance:
     - target: {fileID: 114525705165156418, guid: 0fad9e511d81d40dc85d590fea90a749,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114525705165156418, guid: 0fad9e511d81d40dc85d590fea90a749,
         type: 3}
@@ -15133,7 +17465,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2121374717}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640310887}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8c258b507ed3418ba04775502c38a3d, type: 3}
   m_Name: 
@@ -15149,6 +17481,7 @@ GameObject:
   - component: {fileID: 2125850252}
   - component: {fileID: 2125850251}
   - component: {fileID: 2125850250}
+  - component: {fileID: 2125850253}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -15237,6 +17570,30 @@ Transform:
   m_Father: {fileID: 141477817}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &2125850253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125850249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 2125850251}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &2126915916
 GameObject:
   m_ObjectHideFlags: 0
@@ -15248,6 +17605,7 @@ GameObject:
   - component: {fileID: 2126915919}
   - component: {fileID: 2126915918}
   - component: {fileID: 2126915917}
+  - component: {fileID: 2126915920}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -15336,6 +17694,30 @@ Transform:
   m_Father: {fileID: 1711640596}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!114 &2126915920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126915916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprr: {fileID: 2126915918}
+  BackupedSpriteRendererColor: {r: 1, g: 1, b: 1, a: 1}
+  StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
+  DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
+  IsoStaticLightList: []
+  IsoDynamicLightList:
+  - {fileID: 2001111395}
+  - {fileID: 1219238048}
+  - {fileID: 1676726751}
+  - {fileID: 552037069}
+  - {fileID: 1676252877}
+  - {fileID: 1430967711}
 --- !u!1 &2130827095
 GameObject:
   m_ObjectHideFlags: 0
@@ -16178,7 +18560,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535351232970326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d74c3eb3828a3444db77e9963f32f8a3, type: 3}
   m_Name: 

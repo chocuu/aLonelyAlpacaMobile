@@ -17,7 +17,7 @@ public class Alpaca : MonoBehaviour {
 	
 	private bool isMoving = false; 
 	private Vector3 movingDest; // where alpaca is being sent if it's moving
-	private float moveSpeed = 12; // how fast alpaca moves
+	private float moveSpeed = 10; // how fast alpaca moves
 
 	const float OFFSET = 0.23f; // sketchy offset that you shift alpaca down for
 	public AudioSource landSound;
@@ -82,6 +82,7 @@ public class Alpaca : MonoBehaviour {
 			if(Vector3.Distance(transform.position, movingDest) <= 0.005){
 				transform.position	= movingDest;
 				isMoving = false;
+				StopWalk();
 			}
 		}
 	}
@@ -154,11 +155,12 @@ public class Alpaca : MonoBehaviour {
     			squash = true;
 			gameObject.transform.position =  new Vector3(dir.x, coords.y, dir.z);
 			dest_y = dir.y - OFFSET;
-		} else {
-			UpdateWalk();
+		} 
+		else {
 			isMoving = true;
 			dir.y -= OFFSET;
 			movingDest = dir;
+			UpdateWalk(); // turn on animation for walking
 			//gameObject.transform.position = dir;
 		}
     }
@@ -248,7 +250,16 @@ public class Alpaca : MonoBehaviour {
     public void SetFacingDirection(int dir) {
     	if(dir == -1) return;
 		this.dir = dir;
+		UpdateWalk();
+		//StopWalk();
+		StartCoroutine(StopWalkAfterSeconds(0.1f));
     }
+
+	IEnumerator StopWalkAfterSeconds(float s)
+	{
+		yield return new WaitForSeconds(s);
+		StopWalk();
+	}
 
     public void StopWalk() {
     	animator.SetBool("poof", false);

@@ -32,7 +32,7 @@ public class GoHome : MonoBehaviour
 
   public void goToLevelSelectFromMainMenu() {
     // Set previous screen to main menu 
-    currentLevelScript = GameObject.Find("GameObject").GetComponent<currentLevelName>();
+    currentLevelScript = GameObject.Find("PersistentObjects(DontDestroy)").GetComponent<currentLevelName>();
     currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
     SceneManager.LoadSceneAsync(levelSelect, LoadSceneMode.Single);
   }
@@ -86,7 +86,7 @@ public class GoHome : MonoBehaviour
   }
 
   public void goBackToPreviousLevel() {
-    previousLevel = GameObject.Find("GameObject");
+    previousLevel = GameObject.Find("PersistentObjects(DontDestroy)");
     if (previousLevel == null) goHome();
     else {
       previousLevelScript = previousLevel.GetComponent<currentLevelName>();

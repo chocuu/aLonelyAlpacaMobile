@@ -417,7 +417,7 @@ public class LevelMenuControllerScript : MonoBehaviour
     }
 
     // Debug.Log("levelPassed: " + levelPassed);
-    GameObject previousLevel = GameObject.Find("GameObject");
+    GameObject previousLevel = GameObject.Find("PersistentObjects(DontDestroy)");
     if (previousLevel != null) {
         levelPassed = int.Parse(Regex.Match(previousLevel.GetComponent<currentLevelName>().currentLevelNameString, @"\d+").Value);
     }

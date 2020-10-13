@@ -145,6 +145,21 @@ namespace Anonym.Isometric
             ApplyLightColor();
         }
 
+
+        #region Josh's Improvements For Performance
+        // Josh's method. Only call if you are CERTAIN this will only be called once by each
+        // light that's trying to target this reciver. Basically just skips over a bunch of checks
+        // to make sure it isn't already added.
+        public void AddLightDynamic_Once(IsoLight light)
+        {
+            IsoDynamicLightList.Add(light);
+            IsoDynamicLightList.Sort((x, y) => x.UniquePriority.CompareTo(y.UniquePriority));
+            UpdateLightColor(light.bStaticLight);
+            //ApplyLightColor();
+        }
+        #endregion //Josh's Improvements For Performance
+
+
         public void RemoveLight(IsoLight light)
         {
             removeLightFromStaticList(light);

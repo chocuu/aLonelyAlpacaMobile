@@ -13,6 +13,7 @@ public class Map {
     Block held_block = null;
     Block try_held_block = null;
     static Vector3 hideCoords = new Vector3(-100, -100, -100);
+    
 
     /**
      * Creates a Map model. 
@@ -24,6 +25,7 @@ public class Map {
         map = new Dictionary<Vector2Int, SortedList<int, Block>>();
     }
 
+
     /**
      * Adds a block
      * @param {[type]} string          name   [Name of block object (has type)]
@@ -31,7 +33,7 @@ public class Map {
      * @param {[type]} Vector3         coords [Coords of this block now]
      * @param {[type]} GridCoordinates obj    [Grid coordinates obj tied to this block (for movement)]
      */
-    public void AddBlock(string name, Vector3 last, Vector3 coords, GridCoordinates obj) {
+    public void AddBlock(string name, Vector3 last, Vector3 coords, GridCoordinates obj, in EnvironmentController ec) {
         Block.BlockType bt = Block.BlockType.WALL;
         if (name.Contains("grass") || name.Contains("start")) {
             bt = Block.BlockType.GRASS;
@@ -68,14 +70,15 @@ public class Map {
                 map.Add(xz, get);
                 get.Add((int)coords.y, block);
             }
-            // if(name.Contains("start")) {
-                // Debug.Log(name + " " + block.getCoords() + " " + block.b_type);
-                // Block get_b;
-                // if(get.TryGetValue((int)coords.y, out get_b)) {
-                //     Debug.Log("get block in block block: " + get_b.getCoords());
-                //     Debug.Log("get block in block block: " + get_b.b_type);
-                // }
-            // }
+            
+
+            // Add lights to magma blocks
+            if(bt == Block.BlockType.LAVA) {
+                ec.AddLightsToMagmaBlock(block);
+            }
+            else if (bt == Block.BlockType.WIN) {
+                ec.AddLightsToStarBlock(block);
+            } 
         }
     }
 

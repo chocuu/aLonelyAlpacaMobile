@@ -251,15 +251,9 @@ public class Alpaca : MonoBehaviour {
     	if(dir == -1) return;
 		this.dir = dir;
 		UpdateWalk();
-		//StopWalk();
-		StartCoroutine(StopWalkAfterSeconds(0.1f));
+		Invoke("StopWalk", 0.1f);
     }
 
-	IEnumerator StopWalkAfterSeconds(float s)
-	{
-		yield return new WaitForSeconds(s);
-		StopWalk();
-	}
 
     public void StopWalk() {
     	animator.SetBool("poof", false);

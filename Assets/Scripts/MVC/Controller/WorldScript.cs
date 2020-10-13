@@ -22,6 +22,9 @@ public class WorldScript : MonoBehaviour {
 	// Scoreboard keeps track of level time and numberOfMoves
 	public ScoreboardController scoreboardController;
 
+	// Environment Controller processes the world ambiance
+	[SerializeField] private EnvironmentController environmentController;
+
 	// Sounds
     public AudioSource winSound;
     public AudioSource jumpSound;
@@ -33,7 +36,7 @@ public class WorldScript : MonoBehaviour {
 	public GameObject quadrant_0, quadrant_1, quadrant_2, quadrant_3;
 	private Image[] quadrants;
 
-	// leve complete! screen
+	// level complete! screen
 	public GameObject levelCompleteScreen;
 
 	/**
@@ -44,10 +47,12 @@ public class WorldScript : MonoBehaviour {
 	private int control_scheme = 2;
 	private BlockButt blockButt;
 
+	
 	// Use this for initialization
-	void Start () {
+	private void Awake()
+	{
 		level = int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
-      	currentLevelName currentLevelScript = GameObject.Find("GameObject").GetComponent<currentLevelName>();
+      	currentLevelName currentLevelScript = GameObject.Find("PersistentObjects(DontDestroy)").GetComponent<currentLevelName>();
       	currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
 
 		PlayerPrefs.SetString ("lastLoadedScene", currentLevelScript.currentLevelNameString);
@@ -72,14 +77,16 @@ public class WorldScript : MonoBehaviour {
 		quadrants[3].enabled = false;
 
 		clickedWhere = lastClickedWhere = 2;
+
+		environmentController.SetMap(ref map);
 		if(level != GoHome.numLevels) // don't try on last level
 			pan_ctrlr = GameObject.Find("Pan Butt").GetComponent<PanButtonController>();
 	}
 
+
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = QUADRANT HIGHLIGHTING
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
 	/**
 	 * Remove all highlights from screen
 	 */
@@ -116,7 +123,7 @@ public class WorldScript : MonoBehaviour {
 		if(map == null) {
 			map = new Map(100, 100);
 		}
-		map.AddBlock(name, last, coords, obj);
+		map.AddBlock(name, last, coords, obj, in environmentController);
 	}
 
 	/**
@@ -140,8 +147,19 @@ public class WorldScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		ProcessEnvironment();
 		ProcessCurrBlock();
 		ProcessInput();
+	}
+
+
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  ENVIRONMENT PROCESSING
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+	private void ProcessEnvironment()
+	{
+
 	}
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

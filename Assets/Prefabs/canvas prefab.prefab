@@ -712,7 +712,6 @@ GameObject:
   - component: {fileID: 114044045961873226}
   - component: {fileID: 114574601035621800}
   - component: {fileID: 114003162114014332}
-  - component: {fileID: 114778941200126130}
   m_Layer: 5
   m_Name: Music Butt
   m_TagString: Untagged
@@ -843,24 +842,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe242f4d39268b459b26a46f65a35cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  childImage: {fileID: 5844022062861203415}
   musicFull: {fileID: 21300000, guid: bdd967182b9e2034bbbc89cbbb4fde1d, type: 3}
   musicHalf: {fileID: 21300000, guid: db4732c488bacc74cbe3840a30414dad, type: 3}
   musicOff: {fileID: 21300000, guid: ac328718d40857942822b081844e7e0a, type: 3}
---- !u!114 &114778941200126130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700700145845266}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0358d47963038140a2a505f6d5f9214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverTextImage: {fileID: 0}
-  mouseOffset: {x: 0, y: 0, z: 0}
+  musicImage: {fileID: 7465196687215183226}
 --- !u!1 &1775833641516320
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +911,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &114110304292703232
 MonoBehaviour:

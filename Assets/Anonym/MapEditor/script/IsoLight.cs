@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace Anonym.Isometric
@@ -32,7 +33,7 @@ namespace Anonym.Isometric
         [SerializeField]
         public bool bStaticLight = false;
 
-        [SerializeField, Range(0, 10)]
+        [SerializeField]
         public int UniquePriority = 0;
 
         [SerializeField]
@@ -64,7 +65,7 @@ namespace Anonym.Isometric
         bool bAffectOverRange = true;
 
         [SerializeField, HideInInspector]
-        List<IsoLightReciver> targetList = new List<IsoLightReciver>();
+        public List<IsoLightReciver> targetList = new List<IsoLightReciver>(); // current targetlist for this isolight
         public List<IsoLightReciver> TargetList { get { return targetList; } }
 
         void OnValidate()
@@ -121,6 +122,7 @@ namespace Anonym.Isometric
             DebugLog_TotalTargetCount("Add");
         }
 
+
         public void RemoveTarget(GameObject lookupGameObject, bool bIncludeChild)
         {
             if (lookupGameObject == null)
@@ -167,6 +169,95 @@ namespace Anonym.Isometric
             DebugLog_TotalTargetCount("All");
         }
 
+
+        #region Josh's Improvements For Performance
+
+        /* Slightly optimized routine to add targets. Improves performance, but can still be quite slow 
+           when adding many targets. **/
+        public void AddTarget_All_Cached_Dynamic(EnvironmentController ec)
+        {
+            if(!ec.areLightsThisLevelCached) {
+                ec.allRecivers = FindObjectsOfType<Iso2DBase>().Select(r => AddReciverToIso2D(r));//.ToArray();
+                ec.allBlocklessReceiversInScene = FindObjectsOfType<IsoLightReciver>().Where(r => r.GetComponent<Iso2DBase>() == null);//.ToArray();
+                ec.allInteractiveRecivers = ec.allRecivers.Where(x => x.transform.parent.parent.tag == "Clickable");
+                ec.areLightsThisLevelCached = true;
+            }
+
+            // clear current target list
+            targetList.Clear();
+
+            // add this light to all of the objects within radius with an Iso2DBase component (whether they have a receiver or not)
+            foreach (IsoLightReciver x in ec.allRecivers) {
+                targetList.Add(x);
+                x.AddLightDynamic_Once(this); //TODO: Look into changing the sort/List in IsoLightReciver to a Priority Queue
+            }
+
+            foreach (IsoLightReciver x in ec.allInteractiveRecivers) { // target all interactable blocks (if not already targeted)
+                if (!targetList.Contains(x)) { // x may have been added to the list when adding from ec.allrecivers
+                    targetList.Add(x);
+                    x.AddLightDynamic_Once(this); 
+                }
+            }
+
+            // add this light to all receivers that do not have an Iso2DBase component (e.g. alpaca)
+            foreach (IsoLightReciver x in ec.allBlocklessReceiversInScene) {
+                targetList.Add(x);
+                x.AddLightDynamic_Once(this);
+            }
+        }
+
+        /** Helper function for AddTarget_AllWithinRadius_Cached() **/
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] 
+        private IsoLightReciver AddReciverToIso2D(Iso2DBase x)
+        {
+            IsoLightReciver r = x.gameObject.GetComponent<IsoLightReciver>();
+            if (r == null) {
+                r = x.gameObject.AddComponent<IsoLightReciver>();
+                r.Init();
+            }
+            return r;
+        }
+        /** Add all targets within a certain radius of this light + adds all targets that have no ISO2D component (e.g. alpaca).
+            Useful for adding fewer targets to lights, improving performance. 
+            NOTE: Added Lights MUST be dynamic**/
+        public void AddTarget_AllWithinRadius_Cached_Dynamic(float radius, EnvironmentController ec)
+        {
+            // cache all iso2d objects and all light receivers
+            if(!ec.areLightsThisLevelCached) {
+                ec.allRecivers = FindObjectsOfType<Iso2DBase>().Select(r => AddReciverToIso2D(r));//.ToArray();
+                ec.allBlocklessReceiversInScene = FindObjectsOfType<IsoLightReciver>().Where(r => r.GetComponent<Iso2DBase>() == null);//.ToArray();
+                ec.allInteractiveRecivers = ec.allRecivers.Where(x => x.transform.parent.parent.tag == "Clickable");
+                ec.areLightsThisLevelCached = true;
+            }
+
+            // clear current target list
+            targetList.Clear();
+
+            // add this light to all of the objects within radius with an Iso2DBase component (whether they have a receiver or not)
+            foreach(IsoLightReciver x in ec.allRecivers) {
+                if(Vector3.Distance(x.transform.position, this.transform.position) <= radius) {
+                    targetList.Add(x);
+                    x.AddLightDynamic_Once(this);
+                }
+            }
+
+            foreach(IsoLightReciver x in ec.allInteractiveRecivers) { // target all interactable blocks (if not already targeted)
+                if (!targetList.Contains(x)) { // x may have been added to the list when adding from ec.allrecivers
+                    targetList.Add(x);
+                    x.AddLightDynamic_Once(this);
+                }
+            }
+
+            // add this light to all receivers that do not have an Iso2DBase component
+            foreach(IsoLightReciver x in ec.allBlocklessReceiversInScene) {
+                targetList.Add(x);
+                x.AddLightDynamic_Once(this);
+            }
+        }
+
+        #endregion //Josh's Improvements For Performance
+
+        
         public void AddTarget_All(LayerMask layerMask)
         {
             var targetObjects = FindObjectsOfType<Iso2DBase>();

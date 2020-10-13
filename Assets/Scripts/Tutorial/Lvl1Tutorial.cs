@@ -6,8 +6,7 @@ using UnityEngine.EventSystems;
 
 /**
  * Script for first and second level with control scheme. Shows
- * quadrants and "tap to move" as well as showing direction arrows
- * guiding where to tap.
+ * "tap to move" 
  * 
  * This is a lot of code reuse form other scripts idk if this is good style LOL
  * From World Controller & Show Level Banner Controller
@@ -15,62 +14,26 @@ using UnityEngine.EventSystems;
 public class Lvl1Tutorial : MonoBehaviour
 {
 	public Image tutImage;
-	// used to highlight four quadrants
-	public GameObject quadrant_0, quadrant_1, quadrant_2, quadrant_3;
-    public GameObject allarrows;
-	private Image[] quadrants;
-
 	bool didFade = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        quadrants = new Image[4]{quadrant_0.GetComponent<Image>(), 
-										quadrant_1.GetComponent<Image>(), 
-										quadrant_2.GetComponent<Image>(), 
-										quadrant_3.GetComponent<Image>()};
-		quadrants[0].enabled = false;
-		quadrants[1].enabled = false;
-		quadrants[2].enabled = false;
-		quadrants[3].enabled = false;
 
+    private void Awake()
+    {
         if(tutImage != null) {
             tutImage.color = new Color(1, 1, 1, 0);
             StartCoroutine(fadeIn(true));
         }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if(ClickedNow()) { // click is happening
-        	//Begin Fading
-			if(!didFade)
-				StartCoroutine(fadeOut(true));
-    		HighlightQuadrant(ClickedWhere(Input.mousePosition));
-    	} else {
-    		ClearHighlights();
+        if(!didFade && ClickedNow()) { // Begin fading upon click
+            StartCoroutine(fadeOut(true));
     	}
     }
 
-    /**
-	 * Remove all highlights from screen
-	 */
-	void ClearHighlights() {
-		quadrants[0].enabled = false;
-		quadrants[1].enabled = false;
-		quadrants[2].enabled = false;
-		quadrants[3].enabled = false;
-    }
 
-    /**
-     * Makes the current click position highlighted
-     */
-    void HighlightQuadrant(int clickedWhere) {
-    	ClearHighlights();
-        if(clickedWhere == -1) return;
-    	quadrants[clickedWhere].enabled = true;
-    }
-
+    /** Fade in the Tutorial image*/
     IEnumerator fadeIn(bool fadeAway) {
 		yield return new WaitForSeconds(0.2f);
 		if (fadeAway)
@@ -86,6 +49,8 @@ public class Lvl1Tutorial : MonoBehaviour
         }
 	}
 
+
+    /** Fade out the Tutorial image*/
     IEnumerator fadeOut(bool fadeAway) {
     	didFade = true;
 		yield return new WaitForSeconds(1f);
@@ -104,6 +69,8 @@ public class Lvl1Tutorial : MonoBehaviour
         }
 	}
 
+
+    ///////////// HELPER FUNCTIONS ////////////////
     /**
 	 * Returns true iff there was a click during this update.
 	 */
@@ -116,6 +83,7 @@ public class Lvl1Tutorial : MonoBehaviour
 		
 		return Input.GetMouseButton(0) && !(results.Count > 0);	
 	}
+
 
     // Used to determine which quadrant is clicked
     int padding = Screen.height / 12;

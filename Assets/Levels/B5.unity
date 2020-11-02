@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1849,6 +1849,137 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &172255203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172255205}
+  - component: {fileID: 172255204}
+  m_Layer: 0
+  m_Name: Star Light(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &172255204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172255203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5b5f70b88ca54ebf7cef4a934b47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bOnOff: 1
+  bStaticLight: 0
+  UniquePriority: 3
+  type: 1
+  customRangeCollider: {fileID: 0}
+  bSimpleShadow: 0
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.6097561, b: 0, a: 1}
+    key1: {r: 1, g: 0.85, b: 0, a: 0.49019608}
+    key2: {r: 1, g: 0.79904807, b: 0, a: 0.20784314}
+    key3: {r: 1, g: 0.85, b: 0, a: 0.20784314}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 51079
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 193
+    atime1: 31611
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  colorCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0019073486
+      value: 1.0046997
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.028964847
+      value: 0.43229467
+      inSlope: -1.5291173
+      outSlope: -1.5291173
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8206107
+      value: -0.005489022
+      inSlope: -0.0030071544
+      outSlope: -0.0030071544
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9637451
+      value: -0.0047073364
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorCurveRange: {x: 0.15, y: 0.05}
+  AxisWeightForDistance: {x: 0.3, y: 0.3, z: 0.3}
+  bAffectOverRange: 1
+  targetList:
+  - {fileID: 779892347}
+  - {fileID: 1090557478}
+  - {fileID: 1309607035}
+  - {fileID: 1487386080}
+  - {fileID: 2116301764}
+  - {fileID: 1430498527}
+--- !u!4 &172255205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172255203}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1889293875}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &189369193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,7 +2513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 215707336}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 215707332}
   _so: {fileID: 215707335}
   _attachedList:
@@ -2446,6 +2577,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53911080, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 103331763, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 279576607, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 845161453, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 930169926, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1055367784236320, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
       propertyPath: m_Name
       value: World
@@ -3973,7 +4124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 375184278}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 375184274}
   _so: {fileID: 375184277}
   _attachedList:
@@ -8820,6 +8971,7 @@ MonoBehaviour:
   IsoStaticLightList: []
   IsoDynamicLightList:
   - {fileID: 1191121276}
+  - {fileID: 172255204}
 --- !u!1 &788635083
 GameObject:
   m_ObjectHideFlags: 0
@@ -10156,7 +10308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 885096958}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 885096954}
   _so: {fileID: 885096957}
   _attachedList:
@@ -11656,7 +11808,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05aaf1e6b7b6a4bbd806f123dfdda1ea, type: 3}
   m_Color: {r: 0.99127024, g: 0.99127024, b: 0.99127024, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11856,7 +12008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1053773226}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 346201489}
   _autoName: {fileID: 1053773222}
   _so: {fileID: 1053773225}
   _attachedList:
@@ -11999,7 +12151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1057608004}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 1057608000}
   _so: {fileID: 1057608003}
   _attachedList:
@@ -12247,6 +12399,7 @@ MonoBehaviour:
   IsoStaticLightList: []
   IsoDynamicLightList:
   - {fileID: 1191121276}
+  - {fileID: 172255204}
 --- !u!1 &1093975025
 GameObject:
   m_ObjectHideFlags: 0
@@ -13070,6 +13223,7 @@ MonoBehaviour:
   target: {x: 21, y: 8, z: 0}
   moveSpeed: 2
   go: 0
+  destroyOnArrival: 0
 --- !u!114 &1191121276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14530,6 +14684,7 @@ MonoBehaviour:
   IsoStaticLightList: []
   IsoDynamicLightList:
   - {fileID: 1191121276}
+  - {fileID: 172255204}
 --- !u!1 &1321185878
 GameObject:
   m_ObjectHideFlags: 0
@@ -15424,17 +15579,17 @@ PrefabInstance:
     - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.99137163
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.99137163
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.99137163
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212413659681596994, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
@@ -15459,6 +15614,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+--- !u!114 &1430498527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7522387108762816042, guid: a766938edf27ac3478ad5627f052337e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1430498526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430498530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7304471259524184b5f1decf81b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1430498530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1535350428743942, guid: a766938edf27ac3478ad5627f052337e,
@@ -16091,7 +16258,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3404e4df959ad4f2ca1ad321d9a87f1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16274,6 +16441,7 @@ MonoBehaviour:
   IsoStaticLightList: []
   IsoDynamicLightList:
   - {fileID: 1191121276}
+  - {fileID: 172255204}
 --- !u!1 &1491351655
 GameObject:
   m_ObjectHideFlags: 0
@@ -17332,7 +17500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1573135877}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 1573135873}
   _so: {fileID: 1573135876}
   _attachedList:
@@ -18127,7 +18295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1677982799}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 19976648}
   _autoName: {fileID: 1677982798}
   _so: {fileID: 1677982797}
   _attachedList:
@@ -18723,7 +18891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1717059463}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 1717059459}
   _so: {fileID: 1717059462}
   _attachedList:
@@ -20487,6 +20655,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 345616104}
+  - {fileID: 172255205}
   m_Father: {fileID: 1194972318}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21726,7 +21895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2090416358}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 346201489}
   _autoName: {fileID: 2090416354}
   _so: {fileID: 2090416357}
   _attachedList:
@@ -21935,7 +22104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2105209597}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 346201489}
   _autoName: {fileID: 2105209593}
   _so: {fileID: 2105209596}
   _attachedList:
@@ -22111,6 +22280,7 @@ MonoBehaviour:
   IsoStaticLightList: []
   IsoDynamicLightList:
   - {fileID: 1191121276}
+  - {fileID: 172255204}
 --- !u!1 &2138273945
 GameObject:
   m_ObjectHideFlags: 0

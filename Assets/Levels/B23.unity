@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2605,6 +2605,7 @@ MonoBehaviour:
   DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
   IsoStaticLightList: []
   IsoDynamicLightList:
+  - {fileID: 1086076043}
   - {fileID: 555690336}
   - {fileID: 36392240}
   - {fileID: 1536927071}
@@ -26287,6 +26288,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 654215866}
+  - {fileID: 1086076042}
   m_Father: {fileID: 175586210}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27599,6 +27601,7 @@ MonoBehaviour:
   DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
   IsoStaticLightList: []
   IsoDynamicLightList:
+  - {fileID: 1086076043}
   - {fileID: 555690336}
   - {fileID: 36392240}
   - {fileID: 1536927071}
@@ -39554,7 +39557,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05aaf1e6b7b6a4bbd806f123dfdda1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -43742,7 +43745,8 @@ MonoBehaviour:
   StaticLightColor: {r: 1, g: 1, b: 1, a: 1}
   DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
   IsoStaticLightList: []
-  IsoDynamicLightList: []
+  IsoDynamicLightList:
+  - {fileID: 1086076043}
 --- !u!1 &1073233565
 GameObject:
   m_ObjectHideFlags: 0
@@ -44444,6 +44448,138 @@ MonoBehaviour:
   - {fileID: 223885940}
   - {fileID: 1888887282}
   - {fileID: 261507490}
+--- !u!1 &1086076041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086076042}
+  - component: {fileID: 1086076043}
+  m_Layer: 0
+  m_Name: Star Light(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1086076042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086076041}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 601079080}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1086076043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086076041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5b5f70b88ca54ebf7cef4a934b47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bOnOff: 1
+  bStaticLight: 0
+  UniquePriority: 3
+  type: 1
+  customRangeCollider: {fileID: 0}
+  bSimpleShadow: 0
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.6097561, b: 0, a: 1}
+    key1: {r: 1, g: 0.85, b: 0, a: 0.49019608}
+    key2: {r: 1, g: 0.79904807, b: 0, a: 0.20784314}
+    key3: {r: 1, g: 0.85, b: 0, a: 0.20784314}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 51079
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 193
+    atime1: 31611
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  colorCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0019073486
+      value: 1.0046997
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.028964847
+      value: 0.43229467
+      inSlope: -1.5291173
+      outSlope: -1.5291173
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8206107
+      value: -0.005489022
+      inSlope: -0.0030071544
+      outSlope: -0.0030071544
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9637451
+      value: -0.0047073364
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colorCurveRange: {x: 0.15, y: 0.05}
+  AxisWeightForDistance: {x: 0.3, y: 0.3, z: 0.3}
+  bAffectOverRange: 1
+  targetList:
+  - {fileID: 1070447558}
+  - {fileID: 1585003888}
+  - {fileID: 56973225}
+  - {fileID: 628158104}
+  - {fileID: 1713194351}
+  - {fileID: 1965400652}
+  - {fileID: 1109874178}
 --- !u!1 &1088416692
 GameObject:
   m_ObjectHideFlags: 0
@@ -62533,7 +62669,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05aaf1e6b7b6a4bbd806f123dfdda1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -64905,6 +65041,7 @@ MonoBehaviour:
   DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
   IsoStaticLightList: []
   IsoDynamicLightList:
+  - {fileID: 1086076043}
   - {fileID: 1524604094}
 --- !u!1 &1585405907
 GameObject:
@@ -70446,6 +70583,7 @@ MonoBehaviour:
   DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
   IsoStaticLightList: []
   IsoDynamicLightList:
+  - {fileID: 1086076043}
   - {fileID: 555690336}
   - {fileID: 36392240}
   - {fileID: 1536927071}
@@ -79690,6 +79828,7 @@ MonoBehaviour:
   DynamicLightColor: {r: 1, g: 1, b: 1, a: 1}
   IsoStaticLightList: []
   IsoDynamicLightList:
+  - {fileID: 1086076043}
   - {fileID: 555690336}
   - {fileID: 36392240}
   - {fileID: 1536927071}
